@@ -9,8 +9,7 @@ RUN apt-get -y install vim texlive texlive-latex-extra python-dev python-pip lib
 RUN apt-get -y install git 
 #ADD https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim /root/.vimrc
 
-RUN pip install requests jenkinsapi Jinja2 Pillow pytz PyYAML
-
 RUN git clone https://github.com/indigo-dc/sqa-reports /srv/sqa-reports
-WORKDIR /srv/sqa-reports/src
+WORKDIR /srv/sqa-reports/
+RUN pip install -r requirements.txt
 #RUN python generate_reports.py templates/report.tex specs/accounting.yaml --output-dir=/srv/sqa-reports/build
