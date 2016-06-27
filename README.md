@@ -12,7 +12,7 @@ There is an additional [data](data) directory, where extended information that w
 
 ## How to run it
 
-1. Through Python's virtualenv.
+### Through Python's virtualenv.
 
 *Note that in this case additional development libraries need to be available in the OS before installing the requirements.txt*
 
@@ -25,7 +25,7 @@ python generate_reports.py templates/report.tex specs/ --output-dir=/srv/sqa-rep
 
 If the execution succeed, the TEX and PDF reports should be available in /srv/sqa-reports/build.
 
-2. Through Docker
+### Through Docker
 
 A [Dockerfile](docker/Dockerfile) has been provided to facilitate the setup of the adequate environment for the report generation.
 
