@@ -1,0 +1,6 @@
+requests
+jenkinsapi
+Jinja2
+pytz
+PyYAML
+Pillow
