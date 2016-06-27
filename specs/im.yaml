@@ -59,7 +59,7 @@ config_management:
     jenkins_job: im-ansible
     build:
         - version: Ubuntu 14.04 LTS
-          successful: False  # True, False
+          successful: True  # True, False
           url: https://jenkins.indigo-datacloud.eu:8080/job/im-ansible/label=ansible-ubuntu/
         - version: CentOS7
           successful: True  # True, False
