@@ -10,7 +10,7 @@ tasks:
           progress: 100
         - name: "Code style specification"
           id: 3815
-          progress: 0
+          progress: 50
         - name: "Unit testing coverage"
           id: 3818
           progress: 0
@@ -32,8 +32,11 @@ code_style:
     standard: 
     exceptions: 0
     jenkins_job:
+	- fgapiserver-codestyle
+	- fgapiserverdaemon-codestyle
+	- fgtools-codestyle
     comments:
-        - "Standard still to be confirmed by the team."
+        - "Team has proposed a code style standard but it is currently failing to comply with it."
 unit_test:
     status_notcomplete: True
     coverage: 
