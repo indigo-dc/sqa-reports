@@ -66,4 +66,3 @@ config_management:
           url: https://jenkins.indigo-datacloud.eu:8080/job/im-ansible/label=ansible-centos/
     comments:
         - "Ansible playbook does cover the full deployment (installation and configuration)."
-        - "WP3 working on Ubuntu 14.04 execution, currently failing."
