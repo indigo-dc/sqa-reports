@@ -29,7 +29,9 @@ repository:
         - https://github.com/indigo-dc/fgTools
         - https://github.com/indigo-dc/APIServerDaemon
 code_style:
-    standard: 
+    standard:
+        - pep8
+        - java_sun
     exceptions: 0
     jenkins_job:
         - fgapiserver-codestyle
@@ -38,16 +40,23 @@ code_style:
     comments:
         - "Team has proposed a code style standard but it is currently failing to comply with it."
 unit_test:
-    status_notcomplete: True
-    coverage: 
+    wp3_in_progress: True
+    coverage: 1
     jenkins_job:
+    comments:
+        - "Jenkins job is still to be defined at INDIGO Jenkins CI."
 func_int_test:
-    status_notcomplete: True
+    wp3_in_progress: True
     url: # links to external CIs
+    comments:
+        - "Team has provided reports of some integration tests."
+        - "Automated functionality testing has not been provided."
 gitbook:
+    status_notcomplete: True
     url: 
     types:
 config_management:
+    status_notcomplete: True
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration
