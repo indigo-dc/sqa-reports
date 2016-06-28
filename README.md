@@ -12,6 +12,10 @@ There is an additional [data](data) directory, where extended information that w
 
 ## How to run it
 
+The main script [generate_reports.py](generate_reports.py) has different options, see `--help` option for displaying them.
+
+Two arguments are needed: the template file and the specs directory. Note: *The latter can be also a file, useful while debugging*.
+
 ### Through Docker
 
 A [Dockerfile](docker/Dockerfile) has been provided to facilitate the setup of the adequate environment for the report generation.
