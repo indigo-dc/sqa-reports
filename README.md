@@ -12,9 +12,15 @@ There is an additional [data](data) directory, where extended information that w
 
 ## How to run it
 
-The main script [generate_reports.py](generate_reports.py) has different options, see `--help` option for displaying them.
+The main script [generate_reports.py](generate_reports.py) has different **options**, see `--help` option for displaying them. Three **arguments** are needed: 1) the template file 2) the specs directory 3) report period range, e.g:
+```{r, engine='bash', count_lines}
+(container)$ python generate_reports.py templates/report.tex specs/ "20-24 Jun 2016" --output-dir=/srv/sqa-reports/build
+```
 
-Two arguments are needed: the template file and the specs directory. Note: *The latter can be also a file, useful while debugging*.
+**Note**: The second argument (spec directory) can be also a file, useful while debugging. For instance:
+```{r, engine='bash', count_lines}
+(container)$ python generate_reports.py templates/report.tex specs/opie.yaml "20-24 Jun 2016" --output-dir=/srv/sqa-reports/build
+```
 
 ### Through Docker
 
@@ -24,7 +30,7 @@ A [Dockerfile](docker/Dockerfile) has been provided to facilitate the setup of t
 docker pull indigodatacloud/sqa-reports
 docker run -it indigodatacloud/sqa-reports bash
 
-(container)$ python generate_reports.py templates/report.tex specs/ --output-dir=/srv/sqa-reports/build
+(container)$ python generate_reports.py templates/report.tex specs/ "20-24 Jun 2016" --output-dir=/srv/sqa-reports/build
 ```
 
 TEX and PDF reports should be available in /srv/sqa-reports/build.
@@ -37,7 +43,7 @@ TEX and PDF reports should be available in /srv/sqa-reports/build.
 virtualenv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python generate_reports.py templates/report.tex specs/ --output-dir=/srv/sqa-reports/build
+python generate_reports.py templates/report.tex specs/ "20-24 Jun 2016" --output-dir=/srv/sqa-reports/build
 ```
 
 TEX and PDF reports should be available in /srv/sqa-reports/build.

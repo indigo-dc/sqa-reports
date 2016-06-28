@@ -35,6 +35,10 @@ def parse_args():
 			metavar="YAML_SPECS_DIR",
 			type=str,
 			help="Directory with the YAML specs for each product.")
+    parser.add_argument('period',
+			metavar="PERIOD",
+			type=str,
+			help="Period date that the report data will reflect.")
     parser.add_argument('--code-style',
                         metavar="YAML_FILE",
                         type=str,
@@ -87,7 +91,7 @@ def add_jenkins_job(specs, job_type):
 
 
 
-def main(fname, specdir, output=None, code_style=None):
+def main(fname, specdir, period, output=None, code_style=None):
     if os.path.isdir(specdir):
         spec_yaml_files = glob.glob(os.path.join(specdir, "*.yaml"))
     elif os.path.isfile(specdir):
@@ -172,7 +176,7 @@ def main(fname, specdir, output=None, code_style=None):
 
         # latex
         #FIXME(orviz) these values must be CLI arguments
-        period="20-24 Jun 2016"
+        period=period
         weeks=12
         current_week=10
         logger.info("Reports being generated for period '%s' (week %s out of %s)" % (period, current_week, weeks))
@@ -217,5 +221,6 @@ if __name__ == "__main__":
     args = parse_args()
     main(args.template,
          args.specdir,
+         args.period,
          code_style=args.code_style,
          output=args.output_dir)
