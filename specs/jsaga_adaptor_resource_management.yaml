@@ -1,0 +1,62 @@
+id: "jSAGA RM API"
+name: "jSAGA Resource Management API"
+status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4016
+        progress: 0
+    children:
+        - name: "Repository synchronization"
+          id: 4019
+          progress: 0
+        - name: "Code style specification"
+          id: 4022 
+          progress: 0
+        - name: "Unit testing coverage"
+          id: 4025
+          progress: 0
+        - name: "Functional and integration testing coverage"
+          id: 4028
+          progress: 0
+        - name: "Configuration management"
+          id: 4031
+          progress: 0
+        - name: "GitBook documentation"
+          id: 4034
+          progress: 0
+repository: 
+    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    url:
+code_style:
+    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    standard:
+    exceptions: 
+    jenkins_job:
+unit_test:
+    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    coverage:
+    jenkins_job:
+    comments:
+func_int_test:
+    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    jenkins_job:
+    url_external: # links to external CIs
+gitbook:
+    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    url:
+    types:
+config_management:
+    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    wp3_in_progress: True
+    tool:   # e.g. ansible, ..
+    url:
+    level:  # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:
+    comments:
