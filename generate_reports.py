@@ -5,6 +5,7 @@ import glob
 import os
 import shutil
 from subprocess import Popen, PIPE
+import sys
 
 import jinja2
 from jinja2 import Template
@@ -171,10 +172,10 @@ def main(fname, specdir, output=None, code_style=None):
 
         # latex
         #FIXME(orviz) these values must be CLI arguments
-        period="20-24 Jun 2016",
-        weeks=12,
-        current_week=10,
-        logger.info("Reports being generated for period '%s' (week %s out of %s)" % (period, weeks, current_week))
+        period="20-24 Jun 2016"
+        weeks=12
+        current_week=10
+        logger.info("Reports being generated for period '%s' (week %s out of %s)" % (period, current_week, weeks))
         template = latex_jinja_env.get_template(os.path.basename(fname))
         r = template.render(
             product=specs,
@@ -192,7 +193,6 @@ def main(fname, specdir, output=None, code_style=None):
 
     if output:
         pdfdir = os.path.join(output, "pdf")
-        logger.info("Report PDFs stored in '%s'" % pdfdir)
         if not os.path.exists(pdfdir):
             os.makedirs(pdfdir)
         for f in glob.glob(os.path.join(os.path.dirname(fname), "title_*.tex")):
@@ -202,10 +202,15 @@ def main(fname, specdir, output=None, code_style=None):
             logger.debug("Building LaTeX doc: %s" % f)
             cmd = ["pdflatex", "-output-directory=%s" % pdfdir, f]
             logger.debug("Running command: %s" % ' '.join(cmd))
-            p = Popen(cmd, stdout=PIPE, stderr=PIPE)
+            #p = Popen(["timeout", "60"]+cmd, stdout=PIPE, stderr=PIPE)
+            logfile = '.'.join([texfile, ".log"])
+            p = Popen(["timeout", "60"]+cmd, stdout=PIPE)
             stdout, stderr = p.communicate()
-            if stderr:
-                logger.error(stdout)
+            if p.returncode != 0:
+                open("logfile.log", 'w').write(stdout)
+                logger.error("pdflatex command did not succeed! Check output at log: %s" % logfile)
+                sys.exit(-1)
+        logger.info("Report PDFs successfully generated in '%s'" % pdfdir)
 
 
 if __name__ == "__main__":
