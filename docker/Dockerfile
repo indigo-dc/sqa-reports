@@ -7,7 +7,9 @@ RUN apt-get clean
 RUN apt-get update
 RUN apt-get -y install vim texlive texlive-latex-extra python-dev python-pip libjpeg8-dev zlib1g-dev libtiff5-dev
 RUN apt-get -y install git 
-#ADD https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim /root/.vimrc
+RUN apt-get -y install coreutils
+
+ADD https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim /root/.vimrc
 
 RUN git clone https://github.com/indigo-dc/sqa-reports /srv/sqa-reports
 WORKDIR /srv/sqa-reports/
