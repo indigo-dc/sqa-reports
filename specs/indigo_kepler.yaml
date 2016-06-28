@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3530
-        progress: 33
+        progress: 57
     children:
         - name: "Repository synchronization"
           id: 3833
@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3536
-          progress: 0
+          progress: 39
         - name: "Functional and integration testing coverage"
           id: 3539
           progress: 0
@@ -23,7 +23,7 @@ tasks:
           progress: 0
         - name: "GitBook documentation"
           id: 3545
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/indigoclient
@@ -36,19 +36,22 @@ code_style:
         - indigokepler-codestyle
 unit_test:
     wp3_in_progress: True
-    coverage: 
+    coverage: 39
     jenkins_job:
-        - indigokepler-unittest
+        - indigoclient-unittest
     comments:
-        - "Job fails to run due to a dependency issue (with indigoclient)."
+        - "For indigo-dc/indigokepler, there are no unit tests. Actors are just proxies for indigoclient calls. Actors work only as part of Kepler platform."
+        - "Conditional coverage is the one at 39\\%, setting the progress aligned with this value."
 func_int_test:
     status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
 gitbook:
-    url: 
+    url: https://indigo-dc.gitbooks.io/indigokepler/content/
     types:
+        - Readme
 config_management:
+    status_notcomplete: True
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

@@ -4,7 +4,7 @@ status_complete: True   # values: status_accepted, status_notcomplete, status_in
 tasks:
     parent:
         id: 2963
-        progress: 87 
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 3872
@@ -17,7 +17,7 @@ tasks:
           progress: 66
         - name: "Functional and integration testing coverage"
           id: 2972
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 2975
           progress: 100
@@ -43,9 +43,15 @@ func_int_test:
     wp3_in_progress: True
     jenkins_job:
     url_external: # links to external CIs
+    description:
+        - "Create Infrastructure"
+        - "Get Infrastructure information"
+        - "Reconfigure a Infrastructure"
+        - "Add a node to a Infrastructure"
+        - "Remove a node from a Infrastructure"
+        - "Destroy a Infrastructure"
     comments:
         - "Functional tests have been provided and integration in Jenkins started: \\href{https://jenkins.indigo-datacloud.eu:8080/job/im-functional/}{im-functional}."
-        - "Missing a description (in the task) of functionalities being checked in the provided tests."
 gitbook:
     url: https://indigo-dc.gitbooks.io/im/content/
     types:
