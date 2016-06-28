@@ -1,4 +1,5 @@
-id: "JSAGA Adaptor for the TOSCA orchestrator"
+id: "JSAGA FG Adaptors"
+name: "JSAGA FutureGateway Adaptors (TOSCA, rOCCI)"
 status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
