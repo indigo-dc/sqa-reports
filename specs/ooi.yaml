@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 2843 
-        progress: 48 
+        progress: 65
     children:
         - name: "Repository synchronization"
           id: 3902 
@@ -22,7 +22,7 @@ tasks:
           progress: 0
         - name: "GitBook documentation"
           id: 2846
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/ooi.git 
@@ -39,8 +39,9 @@ func_int_test:
     status_notcomplete: True
     url:
 gitbook:
-    url:
+    url: https://indigo-dc.gitbooks.io/ooi/content/
     types:
+        - Readme
 config_management:
     tool:   # e.g. ansible, ..
     url:
