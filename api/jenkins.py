@@ -1,4 +1,5 @@
 import json
+import logging
 import os.path
 import requests
 from StringIO import StringIO
@@ -11,6 +12,7 @@ from PIL import Image
 
 JENKINS_URL = "https://jenkins.indigo-datacloud.eu:8080/"
 
+logger = logging.getLogger(__name__)
 requests.packages.urllib3.disable_warnings()
 
 
