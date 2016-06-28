@@ -32,9 +32,9 @@ code_style:
     standard: 
     exceptions: 0
     jenkins_job:
-	- fgapiserver-codestyle
-	- fgapiserverdaemon-codestyle
-	- fgtools-codestyle
+        - fgapiserver-codestyle
+        - fgapiserverdaemon-codestyle
+        - fgtools-codestyle
     comments:
         - "Team has proposed a code style standard but it is currently failing to comply with it."
 unit_test:
