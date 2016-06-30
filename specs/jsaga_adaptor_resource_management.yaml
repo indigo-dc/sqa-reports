@@ -4,26 +4,26 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 4016
-        progress: 0
+        progress: 20
     children:
         - name: "Repository synchronization"
           id: 4019
           progress: 0
         - name: "Code style specification"
           id: 4022 
-          progress: 0
+          progress: 10
         - name: "Unit testing coverage"
           id: 4025
-          progress: 0
+          progress: 10
         - name: "Functional and integration testing coverage"
           id: 4028
           progress: 0
         - name: "Configuration management"
           id: 4031
-          progress: 0
+          progress: 30
         - name: "GitBook documentation"
           id: 4034
-          progress: 0
+          progress: 100
 repository: 
     status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
     url:

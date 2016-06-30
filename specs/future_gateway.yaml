@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3809
-        progress: 17
+        progress: 55
     children:
         - name: "Repository synchronization"
           id: 3812
@@ -16,13 +16,13 @@ tasks:
           progress: 0
         - name: "Functional and integration testing coverage"
           id: 3821
-          progress: 0
+          progress: 80
         - name: "Configuration management"
           id: 3824
           progress: 0
         - name: "GitBook documentation"
           id: 3827
-          progress: 0
+          progress: 100
 repository: 
     url: 
         - https://github.com/indigo-dc/fgAPIServer 

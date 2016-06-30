@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3434
-        progress: 25
+        progress: 37
     children:
         - name: "Repository synchronization"
           id: 3830
@@ -13,7 +13,7 @@ tasks:
           progress: 50
         - name: "Unit testing coverage"
           id: 3437
-          progress: 0
+          progress: 20
         - name: "Functional and integration testing coverage"
           id: 3440
           progress: 0
@@ -22,7 +22,7 @@ tasks:
           progress: 0
         - name: "GitBook documentation"
           id: 3446
-          progress: 0
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/indigo-omt
