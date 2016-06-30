@@ -1,0 +1,266 @@
+\documentclass[a4wide,11pt]{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{csvsimple}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage{textcomp}
+
+\usepackage{pgfgantt}
+
+\usepackage{enumitem}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\pagestyle{fancy}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33}
+\definecolor{statusred}{RGB}{204,0,0}
+\definecolor{statusgreen}{RGB}{0,153,0}
+\definecolor{statusorange}{RGB}{245,184,0}
+\definecolor{statusyellow}{RGB}{255,255,61}
+\renewcommand\sfdefault{phv}
+%\renewcommand\mddefault{mc} % this causes bold, italic, .. not to be displayed
+\renewcommand\bfdefault{bc}
+\setganttlinklabel{s-s}{START-TO-START}
+\setganttlinklabel{f-s}{FINISH-TO-START}
+\setganttlinklabel{f-f}{FINISH-TO-FINISH}
+\sffamily
+
+\usepackage{titling}
+
+\pretitle{%
+    \begin{center}
+    \LARGE
+    \includegraphics[scale=1.2]{logo/INDIGO_logo_transparent.png}\\[\bigskipamount]
+}
+\posttitle{\end{center}}
+
+
+\begin{document}
+
+\newcommand{\greenbox}[1]{\colorbox{statusgreen!90}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\graybox}[1]{\colorbox{gray!90}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\lightgraybox}[1]{\colorbox{gray!40}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\redbox}[1]{\colorbox{statusred}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{27 Jun - 01 July 2016}\\[1.5em] 
+       \huge{\texttt{onedata}}\\
+}
+
+\date{} 
+\maketitle
+
+\Large
+\vspace{-3em}
+\begin{center}
+    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}47\% done\end{huge}} 
+\end{center}
+
+\vspace{4em}
+
+\large
+\begin{center}
+\begin{tabular}{ll}
+    \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
+    \hyperref[sec:code_style]{Code style adherence} & \graybox{IN PROGRESS - WP3} \\
+    \hyperref[sec:unit_test]{Code coverage} & \graybox{IN PROGRESS - WP3}\\ 
+    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
+    %    canvas/.append style={fill=none, draw=none},
+    %    hgrid style/.style={draw=none, fill=none},
+    %    vgrid={*1{draw=none, fill=none}},
+    %    title/.style={draw=none, fill=none},
+    %    title label font=\bfseries\footnotesize,
+    %    title label node/.append style={below=7pt},
+    %    include title in canvas=false,
+    %    bar label font=\mdseries\small\color{black!70},
+    %    bar label node/.append style={left=2cm},
+    %    bar/.append style={draw=none, fill=black!63},
+    %    bar incomplete/.append style={fill=barblue},
+    %    bar progress label font=\mdseries\footnotesize\color{black!70},
+    %    bar top shift=1, bar height=0.8
+    %    ]{1}{5}
+    %    \ganttbar[progress=None]{}{1}{5}
+    %\end{ganttchart} \vspace{0.6em}\\
+    %\hyperref[sec:func_int_test]{Functional/integration testing} & \graybox{IN PROGRESS - WP3} \\
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \graybox{IN PROGRESS - WP3} \\
+    \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
+    \hyperref[sec:configuration]{Automated deployment} & \greenbox{COMPLETE} \\
+\end{tabular}
+\end{center}
+
+
+\normalsize 
+\newpage
+
+\part{Task Progress for the 1st Release}
+
+%
+% OpenProject tasks - pgfgantt
+%
+\hspace{-5em}
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    today=10,
+    today rule/.style={
+    draw=black!64,
+    dash pattern=on 3.5pt off 4.5pt,
+    line width=1.5pt
+    },
+    today label font=\small\bfseries,
+    title/.style={draw=none, fill=none},
+    title label font=\bfseries\footnotesize,
+    title label node/.append style={below=7pt},
+    include title in canvas=false,
+    bar label font=\mdseries\small\color{black!70},
+    bar label node/.append style={left=2cm},
+    bar/.append style={draw=none, fill=black!63},
+    bar incomplete/.append style={fill=barblue},
+    bar progress label font=\mdseries\footnotesize\color{black!70},
+    group incomplete/.append style={fill=groupblue},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={left=.6cm},
+    group progress label font=\bfseries\small,
+    link/.style={-latex, line width=1.5pt, linkred},
+    link label font=\scriptsize\bfseries,
+    link label node/.append style={below left=-2pt and 0pt}
+]{1}{12}
+    \gantttitle[
+        title label node/.append style={below left=7pt and -3pt}
+    ]{WEEKS:\quad1}{1}
+    \gantttitlelist{2,...,12}{1} \\
+    \ganttgroup[progress=47]{\textbf{\#3101} onedata SQA FOR 1ST RELEASE}{1}{12} \\
+            \ganttbar[
+            progress=100,
+            name=WBS1A
+        ]{\textbf{\#3104} Repository synchronization}{1}{12} \\
+            \ganttbar[
+            progress=50,
+            name=WBS1A
+        ]{\textbf{\#3851} Code style specification}{1}{12} \\
+            \ganttbar[
+            progress=10,
+            name=WBS1A
+        ]{\textbf{\#3107} Unit testing coverage}{1}{12} \\
+            \ganttbar[
+            progress=10,
+            name=WBS1A
+        ]{\textbf{\#3110} Functional and integration testing coverage}{1}{12} \\
+            \ganttbar[
+            progress=100,
+            name=WBS1A
+        ]{\textbf{\#3113} Configuration management}{1}{12} \\
+            \ganttbar[
+            progress=50,
+            name=WBS1A
+        ]{\textbf{\#3116} GitBook documentation}{1}{12} \\
+     [grid]
+\end{ganttchart}
+
+%\newpage
+
+\input{templates/title_repository.tex}
+\label{sec:repository}
+Repository exists under \texttt{indigo-dc} GitHub organization:
+    \begin{itemize}
+        \item \url{https://github.com/indigo-dc/onedata}\
+        \item \url{https://github.com/indigo-dc/onezone}\
+        \item \url{https://github.com/indigo-dc/oneclient}\
+        \item \url{https://github.com/indigo-dc/luma}\
+        \end{itemize}
+
+
+\input{templates/title_codestyle.tex}
+\label{sec:code_style}
+\begin{tabular}{ll}
+    Code style definition &
+        \href{http://erlang.org/doc/man/dialyzer.html}{The Dialyzer, a DIscrepancy AnalYZer for ERlang programs} \\
+    Community/de-facto standard &
+        \graybox{Yes} \\ 
+    Exceptions & 
+        \graybox{0} \\
+    Richness & \graybox{\strut 18} \hspace{0.3em} \graybox{\strut Errors 0} \graybox{\strut Warnings 18} \href{http://erlang.org/doc/man/dialyzer.html}{link}
+\end{tabular}
+
+
+
+ 
+ 
+\input{templates/title_unittest.tex}
+\label{sec:unit_test}
+
+
+\subsection{Observations}
+\begin{itemize}
+        \item Currently figuring out the best approach to gather reports from their external CI.
+    \end{itemize}
+
+
+\input{templates/title_functional_integration.tex}
+\label{sec:func_int_test}
+
+    Tests currently being defined at Jenkins CI service.
+    
+    
+\subsection{Observations}
+\begin{itemize}
+        \item Currently figuring out the best approach to gather reports from their external CI.
+    \end{itemize}
+
+
+\input{templates/title_gitbook.tex}
+\label{sec:gitbook}
+Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0.1em} \begin{center}\url{https://groundnuty.gitbooks.io/onedata-documentation/content/}\end{center} 
+\subsection{Types of documentation currently provided}
+\begin{center}
+\graybox{\strut Readme}
+\graybox{\strut User documentation}
+\graybox{\strut Administrator documentation}
+\end{center}
+\subsection{Observations}
+\begin{itemize}
+        \item GitBook's indigo-dc organization has currently reached the limit of books for the free account. When this situation is sorted out, documentation will be made available at indigo-dc organization.
+    \end{itemize}
+
+
+\input{templates/title_configuration.tex}
+\label{sec:configuration}
+
+
+
+\subsection{Observations}
+\begin{itemize}
+        \item Quoting team comments:\begin{itemize} \item When one installs oneprovider/onezone they really just install instance of onepanel. Oneprovider/zone are cluster (multinode) solutions. After installing oneprovider/zone on a number of nodes. User logs into onepanel on any of them, onepanel then detects other instances of onepanel running on other nodes. User uses onepanel to chose which services will be installed on which nodes. \item Onepanel itself has no configuration variables when installed, hence the packages of oneprovider/onezone (and oneclient) has not configuration options on its own. \item Onedata currently is being mainly tested and used using docker containers. We provide packages deb/rmps but we prefer for now that users focus on docker releases. Introducing another configuration layer on top of onepanel/docker containers would make the process of installing onedata even harder to grasp. \item It is possible that in near future it will be possible to integrate our custom solution with ex. Ansible. For that reason, that task is being suspended for now.\end{itemize}
+    \end{itemize}
+
+
+\newpage
+\input{templates/title_annex.tex}
+
+\end{document}
