@@ -1,5 +1,5 @@
 id: "dCache"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2852 
@@ -35,14 +35,14 @@ code_style:
         - "Jenkins job cannot be implemented since the code-style is IDE-specific and cannot be ran through command-line."
 unit_test:
     wp3_in_progress: True
-    coverage: 
+    coverage: 70 
     jenkins_job:
     comments:
-        - "Product team needs to point to the unit testing check within the dCache CI server at https://ci.dcache.org."
+        - "PT provided links to the reports for the code coverage and functiona testing "
 func_int_test:
     status_notcomplete: True
     jenkins_job:
-    url_external: # links to external CIs
+        url_external: https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/ # links to external CIs
     comments:
         - "WP3 needs to track the functionality checks for the specific parts of the contribution to INDIGO project. Please provide them by either pointing to already existant CI jobs, documentation, etc."
 gitbook:
