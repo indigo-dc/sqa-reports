@@ -1,5 +1,5 @@
 id: "ONEDock"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3026
@@ -50,9 +50,9 @@ gitbook:
         - Readme
         - Deployment documentation
 config_management:
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/onedock/tree/master/ansible
+    level: installation  # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS

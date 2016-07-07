@@ -3,14 +3,14 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3041
-        progress: 25 
+        progress: 27 
     children:
         - name: "Repository synchronization"
           id: 3044
           progress: 100
         - name: "Code style specification"
           id: 3047
-          progress: 50
+          progress: 60
         - name: "Unit testing coverage"
           id: 3050
           progress: 0
