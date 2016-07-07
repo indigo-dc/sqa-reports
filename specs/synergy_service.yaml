@@ -1,5 +1,5 @@
 id: "Synergy Service"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2996
