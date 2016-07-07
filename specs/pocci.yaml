@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2951
-          progress: 22
+          progress: 33
         - name: "Functional and integration testing coverage"
           id: 2954
           progress: 90
@@ -33,14 +33,14 @@ code_style:
     jenkins_job:
         - pocci-codestyle
 unit_test:
-    coverage: 22 
+    coverage: 33 
     jenkins_job: pocci-unittest
 func_int_test:
-    status_notcomplete: True
+    status_inprogress: True
     url:
     comments:
         - "Integration tests provided, currently figuring out whether it will be implemented in INDIGO Jenkins CI."
-        - "Missing a description (in the task) of functionalities being checked in the provided tests."
+        - "The requested description (in the task) of functionalities being checked in the provided tests was provided."
 gitbook:
     url: https://indigo-dc.gitbooks.io/pocci/content/
     types:
