@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 2876 
-        progress: 57 
+        progress: 65 
     children:
         - name: "Repository synchronization"
           id: 3950
@@ -14,13 +14,13 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2879
-          progress: 10
+          progress: 20
         - name: "Functional and integration testing coverage"
           id: 2894
-          progress: 10
+          progress: 20
         - name: "Configuration management"
           id: 2882
-          progress: 0
+          progress: 50
         - name: "GitBook documentation"
           id: 2885
           progress: 100
@@ -34,11 +34,11 @@ code_style:
     jenkins_job:
         - idh-codestyle
 unit_test:
-    status_notcomplete: True
+    status_inprogress: True
     coverage: 0
     jenkins_job: idh-unittest
     comments:
-        - "The command provided by the product team for running the tests is currently failing."
+        - "The JaCoCo plugin for Jenkins was installed - the job should be reconfigured - on WP3."
 func_int_test:
     status_notcomplete: True
     jenkins_job:
@@ -52,8 +52,8 @@ gitbook:
         - "User documentation"
 config_management:
     tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    url: https://indigo-dc.gitbooks.io/identity-harmonization/content/doc/admin.html
+    level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS

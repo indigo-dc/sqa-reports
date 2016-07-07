@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{27 Jun - 01 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{04 - 08 July 2016}\\[1.5em] 
        \huge{\texttt{idh (INDIGO-DataCLoud Identity-Harmonization Service)}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}57\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}65\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -155,7 +155,7 @@
         title label node/.append style={below left=7pt and -3pt}
     ]{WEEKS:\quad1}{1}
     \gantttitlelist{2,...,12}{1} \\
-    \ganttgroup[progress=57]{\textbf{\#2876} idh SQA FOR 1ST RELEASE}{1}{12} \\
+    \ganttgroup[progress=65]{\textbf{\#2876} idh SQA FOR 1ST RELEASE}{1}{12} \\
             \ganttbar[
             progress=100,
             name=WBS1A
@@ -165,15 +165,15 @@
             name=WBS1A
         ]{\textbf{\#3953} Code style specification}{1}{12} \\
             \ganttbar[
-            progress=10,
+            progress=20,
             name=WBS1A
         ]{\textbf{\#2879} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=10,
+            progress=20,
             name=WBS1A
         ]{\textbf{\#2894} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
-            progress=0,
+            progress=50,
             name=WBS1A
         ]{\textbf{\#2882} Configuration management}{1}{12} \\
             \ganttbar[
@@ -218,7 +218,7 @@ Last build status on Jenkins CI
 
 \subsection{Observations}
 \begin{itemize}
-        \item The command provided by the product team for running the tests is currently failing.
+        \item The JaCoCo plugin for Jenkins was installed - the job should be reconfigured - on WP3.
     \end{itemize}
 
 
