@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{27 Jun - 01 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{04 - 08 July 2016}\\[1.5em] 
        \huge{\texttt{OOI (OpenStack OCCI Interface)}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}82\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\graybox{\strut IN PROGRESS}\\[0.5em]\graybox{\strut \begin{huge}97%\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -85,7 +85,7 @@
 \begin{tabular}{ll}
     \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
     \hyperref[sec:code_style]{Code style adherence} & \greenbox{COMPLETE} \\
-    \hyperref[sec:unit_test]{Code coverage} & \graybox{91\%}\\ 
+    \hyperref[sec:unit_test]{Code coverage} & \graybox{87\%}\\ 
     %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
     %    canvas/.append style={fill=none, draw=none},
     %    hgrid style/.style={draw=none, fill=none},
@@ -101,12 +101,12 @@
     %    bar progress label font=\mdseries\footnotesize\color{black!70},
     %    bar top shift=1, bar height=0.8
     %    ]{1}{5}
-    %    \ganttbar[progress=91]{}{1}{5}
+    %    \ganttbar[progress=87]{}{1}{5}
     %\end{ganttchart} \vspace{0.6em}\\
     %\hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
-    \hyperref[sec:configuration]{Automated deployment} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:configuration]{Automated deployment} & \greenbox{COMPLETE} \\
 \end{tabular}
 \end{center}
 
@@ -155,7 +155,7 @@
         title label node/.append style={below left=7pt and -3pt}
     ]{WEEKS:\quad1}{1}
     \gantttitlelist{2,...,12}{1} \\
-    \ganttgroup[progress=82]{\textbf{\#2843} OOI (OpenStack OCCI Interface) SQA FOR 1ST RELEASE}{1}{12} \\
+    \ganttgroup[progress=97%]{\textbf{\#2843} OOI (OpenStack OCCI Interface) SQA FOR 1ST RELEASE}{1}{12} \\
             \ganttbar[
             progress=100,
             name=WBS1A
@@ -169,11 +169,11 @@
             name=WBS1A
         ]{\textbf{\#3908} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=0,
+            progress=90,
             name=WBS1A
         ]{\textbf{\#3911} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
-            progress=0,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#2849} Configuration management}{1}{12} \\
             \ganttbar[
@@ -284,8 +284,21 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 \input{templates/title_configuration.tex}
 \label{sec:configuration}
 
+\begin{center}
+\begin{tabular}{ll}
+    Tool & \graybox{puppet} \\
+    Deployment coverage & \graybox{installation/configuration} \\
+    Manifest link & \url{https://github.com/indigo-dc/puppet-ooi} \\
+\end{tabular}
+\end{center}
 
-Product does not currently provide a automated deployment solution.
+\subsection{Build status}
+\begin{center}
+\begin{tabular}{ll}
+        \href{None}{Ubuntu 14.04 LTS} & \redbox{failed}\\
+        \href{None}{CentOS7} & \redbox{failed}\\
+    \end{tabular}
+\end{center}
 
 
 
