@@ -1,9 +1,9 @@
 id: "INDIGO-DataCloud CDMI Server"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2888
-        progress: 50 
+        progress: 65 
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -19,7 +19,7 @@ tasks:
           progress: 0
         - name: "Configuration management"
           id: 2900
-          progress: 0
+          progress: 90
         - name: "GitBook documentation"
           id: 2903
           progress: 100
@@ -47,8 +47,8 @@ gitbook:
         - "User documentation"
 config_management:
     tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    url: https://indigo-dc.gitbooks.io/cdmi-qos/content/doc/installing_cdmi-qos.html
+    level:  installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
