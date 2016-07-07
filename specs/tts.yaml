@@ -1,10 +1,10 @@
 id: "tts"
 name: "Token Translation Service"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2867
-        progress: 92
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3956 
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2873
-          progress: 50
+          progress: 90
 repository: 
     url:
         - https://github.com/indigo-dc/tts 
@@ -34,26 +34,25 @@ code_style:
     jenkins_job:
         - tts-codestyle
 unit_test:
-    coverage: 60
+    coverage: 70
     jenkins_job: tts-unittest
 func_int_test:
     jenkins_job: tts-functional
     comments:
-        - "Still getting some errors in Jenkins, locally it works."
-        - "Missing a description (in the task) of functionalities being checked in the provided tests."
+        - "a functional test coverage of 70% is reached and all tests are passing locally and on jenkins build server"
 gitbook:
     url: https://indigo-dc.gitbooks.io/token-translation-service/content/
     types:
-        - "Readme"
+        - "Readme, User and Admin, Developers Guide, TTSc doc, REST API"
     comments:
-        - "Checking with the product team if the documentation is complete. Setting progress to 50\\%"
+        - "Documentation is geting almost done! Setting progress to 90\\%"
 config_management:
-    status_notcomplete: True
+    status_complete: True
     comments:
         - "Ansible configuration is on its way."
     tool: ansible  # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    url: https://github.com/indigo-dc/ansible-role-tts
+    level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
