@@ -50,9 +50,9 @@ gitbook:
         - Readme
 config_management:
     wp3_in_progress: True
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/clues-indigo/blob/master/ansible/playbook.yml
+    level: installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS

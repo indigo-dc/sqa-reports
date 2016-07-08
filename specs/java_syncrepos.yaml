@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3065 
-        progress: 72
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 3068
@@ -19,10 +19,10 @@ tasks:
           progress: 50
         - name: "Configuration management"
           id: 3080
-          progress: 0
+          progress: 70
         - name: "GitBook documentation"
           id: 3083
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/java-syncrepos 
@@ -50,9 +50,9 @@ gitbook:
         - "GitBook's indigo-dc organization has currently reached the limit of books for the free account. When this situation is sorted out, documentation will be made available at indigo-dc organization."
 
 config_management:
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/java-syncrepos/tree/master/ansible
+    level:  installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
