@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3101
-        progress: 47 
+        progress: 58
     children:
         - name: "Repository synchronization"
           id: 3104
@@ -13,7 +13,7 @@ tasks:
           progress: 50
         - name: "Unit testing coverage"
           id: 3107
-          progress: 10
+          progress: 30
         - name: "Functional and integration testing coverage"
           id: 3110
           progress: 10
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3116
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/onedata
