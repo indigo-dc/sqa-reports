@@ -3,20 +3,20 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 4037
-        progress: 47 
+        progress: 57 
     children:
         - name: "Repository synchronization"
           id: 4040
           progress: 100
         - name: "Code style specification"
           id: 4043 
-          progress: 50
+          progress: 80
         - name: "Unit testing coverage"
           id: 4046
-          progress: 0
+          progress: 10
         - name: "Functional and integration testing coverage"
           id: 4049
-          progress: 30
+          progress: 50
         - name: "Configuration management"
           id: 4052
           progress: 0
@@ -33,8 +33,7 @@ code_style:
     jenkins_job:
         - liferayiam-codestyle
     comments:
-        - "Jenkins job is currently failing since there is no pom.xml available. Trying to address this situation with the developer."
-        - "Setting progress to 50\\% until the code style can be checked."
+        - "Setting progress to 80\\% because the team provided reports with results."
 unit_test:
     status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
     coverage:
