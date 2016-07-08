@@ -3,14 +3,14 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3809
-        progress: 55
+        progress: 62
     children:
         - name: "Repository synchronization"
           id: 3812
           progress: 100
         - name: "Code style specification"
           id: 3815
-          progress: 50
+          progress: 70
         - name: "Unit testing coverage"
           id: 3818
           progress: 0
@@ -19,7 +19,7 @@ tasks:
           progress: 80
         - name: "Configuration management"
           id: 3824
-          progress: 0
+          progress: 20
         - name: "GitBook documentation"
           id: 3827
           progress: 100
@@ -38,7 +38,7 @@ code_style:
         - fgapiserverdaemon-codestyle
         - fgtools-codestyle
     comments:
-        - "Team has proposed a code style standard but it is currently failing to comply with it."
+        - "Team has proposed a code style standard and the first job (fgapiserver-codestyle) is successful."
 unit_test:
     wp3_in_progress: True
     coverage: 1
@@ -53,13 +53,14 @@ func_int_test:
         - "Automated functionality testing has not been provided."
 gitbook:
     status_notcomplete: True
-    url: 
-    types:
+    url:  https://www.gitbook.com/book/ricsxn/futuregateway/details
+    types: 
+        - "Instalaltion, Usage"
 config_management:
     status_notcomplete: True
-    tool:   # e.g. ansible, ..
+    tool:   scripts and doc # e.g. ansible, ..
     url:
-    level:  # values: installation, configuration, installation/configuration
+    level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
