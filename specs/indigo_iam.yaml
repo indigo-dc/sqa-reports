@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3248
-        progress: 67 
+        progress: 73 
     children:
         - name: "Repository synchronization"
           id: 3254 
@@ -14,10 +14,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3257
-          progress: 45
+          progress: 52
         - name: "Functional and integration testing coverage"
           id: 3260
-          progress: 50
+          progress: 90
         - name: "Configuration management"
           id: 3263
           progress: 100
@@ -44,7 +44,7 @@ unit_test:
 func_int_test:
     wp3_in_progress: True
     jenkins_job:
-    url_external: 
+        url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-master/lastBuild/testReport/
     description:
         - "Endpoints extended from \\href{https://github.com/mitreid-connect/OpenID-Connect-Java-Spring-Server}{mitreid-connect}."
         - "Endpoints added by IAM, some integration tests are provided through unit tests."
