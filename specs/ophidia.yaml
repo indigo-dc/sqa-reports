@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3452
-        progress: 32 
+        progress: 52 
     children:
         - name: "Repository synchronization"
           id: 3455 
@@ -16,13 +16,13 @@ tasks:
           progress: 0
         - name: "Functional and integration testing coverage"
           id: 3464
-          progress: 0
+          progress: 60
         - name: "Configuration management"
           id: 3467
-          progress: 0
+          progress: 50
         - name: "GitBook documentation"
           id: 3470
-          progress: 90
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/ophidia-analytics-framework
@@ -45,7 +45,7 @@ func_int_test:
     status_notcomplete: True
     url:
     comments:
-        - "Product team will make scripts available (from their local CI service)."
+        - "Product team made the scripts available (from their local CI service) and working with ."
 gitbook:
     status_notcomplete: True
     url: https://sandrofiore.gitbooks.io/ophidiabigdata/content/
@@ -55,11 +55,11 @@ gitbook:
         - "Developer documentation"
         - "Administration documentation"
     comments:
-        - "GitBook's indigo-dc organization has currently reached the limit of books for the free account. When this situation is sorted out, documentation will be made available at indigo-dc organization."
+        - "GitBook updated. The team will keep the gitbook page of Ophidia updated throughout the entire project lifetime."
 config_management:
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool:  ansible  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/ansible-role-ophidia-terminal
+    level:  installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
