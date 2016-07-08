@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3530
-        progress: 57
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3833
@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3536
-          progress: 39
+          progress: 86
         - name: "Functional and integration testing coverage"
           id: 3539
           progress: 0
@@ -36,12 +36,12 @@ code_style:
         - indigokepler-codestyle
 unit_test:
     wp3_in_progress: True
-    coverage: 39
+    coverage: 86
     jenkins_job:
         - indigoclient-unittest
     comments:
         - "For indigo-dc/indigokepler, there are no unit tests. Actors are just proxies for indigoclient calls. Actors work only as part of Kepler platform."
-        - "Conditional coverage is the one at 39\\%, setting the progress aligned with this value."
+        - "Conditional coverage is the one at 86\\%, above the 70% threshold."
 func_int_test:
     status_notcomplete: True
     jenkins_job:
