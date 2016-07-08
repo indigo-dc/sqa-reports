@@ -34,7 +34,7 @@ code_style:
     jenkins_job:
         - zabbix-probes-codestyle
     comments:
-        - "Progress set to 50\\% since the product is adhered to a standard, but not currently compliant with it."
+        - "Progress set to 70\\% since the product is adhered to a standard, but not currently compliant with it."
 unit_test:
     coverage: 0 
     jenkins_job:
