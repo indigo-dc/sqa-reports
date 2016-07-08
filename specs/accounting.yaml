@@ -4,7 +4,7 @@ tasks:
 # http://bit.ly/accounting_dqa_indigo1
     parent:
         id: 3269
-        progress: 35 
+        progress: 68 
     children:
         - name: "Repository synchronization"
           id: 3272 
@@ -14,13 +14,13 @@ tasks:
           progress: 50 
         - name: "Unit testing coverage"
           id: 3275
-          progress: 60 
+          progress: 70 
         - name: "Functional and integration testing coverage"
           id: 3278
-          progress: 0
+          progress: 50
         - name: "Configuration management"
           id: 3281
-          progress: 0
+          progress: 90
         - name: "GitBook documentation"
           id: 3284
           progress: 0
@@ -38,7 +38,7 @@ code_style:
     comments:
         - "Task is at 50\\% of progress since the standards are defined (PEP 8, PEP 257) but the Jenkins jobs are failing."
 unit_test:
-    coverage: 64
+    coverage: 70
     jenkins_job: #accounting-unittest
     url_external: https://coveralls.io/github/apel/rest?branch=dev # links to external CIs
     comments:
