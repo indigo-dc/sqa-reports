@@ -42,7 +42,7 @@ unit_test:
 func_int_test:
     status_notcomplete: True
     jenkins_job:
-        url_external: https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/ # links to external CIs
+    url_external: https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/ # links to external CIs
     comments:
         - "WP3 needs to track the functionality checks for the specific parts of the contribution to INDIGO project. Please provide them by either pointing to already existant CI jobs, documentation, etc."
 gitbook:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.28)  7 JUL 2016 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.28)  10 JUL 2016 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 LaTeX Warning: Unused global option(s):
     [a4wide].
 
-(/srv/sqa-reports/build/pdf/dcache.aux)
+No file dcache.aux.
 \openout1 = `dcache.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -744,7 +744,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -795,4 +794,158 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 \c@section@level=\count145
 )
 LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on 
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
+\@outlinefile=\write5
+\openout5 = `dcache.out'.
+
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count146
+\scratchdimen=\dimen168
+\scratchbox=\box47
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen169
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
+\everyMPtoPDFconversion=\toks34
+) ABD: EveryShipout initializing macros
+<logo/INDIGO_logo_transparent.png, id=7, 150.5625pt x 102.8643pt>
+File: logo/INDIGO_logo_transparent.png Graphic file (type png)
+
+<use logo/INDIGO_logo_transparent.png>
+Package pdftex.def Info: logo/INDIGO_logo_transparent.png used on input line 73
+.
+(pdftex.def)             Requested size: 180.67407pt x 123.43654pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 73.
+
+
+LaTeX Warning: No \author given.
+
+
+LaTeX Warning: Hyper reference `sec:repository' on page 1 undefined on input li
+ne 86.
+
+
+LaTeX Warning: Hyper reference `sec:code_style' on page 1 undefined on input li
+ne 87.
+
+
+LaTeX Warning: Hyper reference `sec:unit_test' on page 1 undefined on input lin
+e 88.
+
+
+LaTeX Warning: Hyper reference `sec:func_int_test' on page 1 undefined on input
+ line 107.
+
+
+LaTeX Warning: Hyper reference `sec:gitbook' on page 1 undefined on input line 
+108.
+
+
+LaTeX Warning: Hyper reference `sec:configuration' on page 1 undefined on input
+ line 109.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo/INDIGO_logo_transpa
+rent.png>]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bc/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 117.
+
+
+Overfull \hbox (38.8905pt too wide) in paragraph at lines 122--185
+  [] 
+ []
+
+(./templates/title_repository.tex)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 192.
+ (./templates/title_codestyle.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] (./templates/title_unittest.tex)
+(./templates/title_functional_integration.tex) (./templates/title_gitbook.tex)
+[3] (./templates/title_configuration.tex) [4] (./templates/title_annex.texpdfTe
+X warning (ext4): destination with the same identifier (name{section.1}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.6 \section{Summary (front) page}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{section.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 \section{Task Progress}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{subsection.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.21 \subsection{Code style}
+                            
+Overfull \hbox (7.79395pt too wide) in paragraph at lines 22--28
+[] 
+ []
+
+[5]) [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+ (/srv/sqa-reports/build/pdf/dcache.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
+Package rerunfilecheck Info: File `dcache.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+ ) 
+Here is how much of TeX's memory you used:
+ 19184 strings out of 494953
+ 380186 string characters out of 6180977
+ 441363 words of memory out of 5000000
+ 22083 multiletter control sequences out of 15000+600000
+ 18731 words of font info for 48 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 61i,11n,75p,569b,810s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </root/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk>{/usr/share/tex
+live/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb>
+Output written on /srv/sqa-reports/build/pdf/dcache.pdf (6 pages, 221693 bytes)
+.
+PDF statistics:
+ 120 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 25 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+

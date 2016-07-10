@@ -103,7 +103,7 @@
     %    ]{1}{5}
     %    \ganttbar[progress=70]{}{1}{5}
     %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
+    %\hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
     \hyperref[sec:configuration]{Automated deployment} & \graybox{IN PROGRESS - WP3} \\
@@ -226,10 +226,8 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 \input{templates/title_functional_integration.tex}
 \label{sec:func_int_test}
 
-\subsection{Build status}
-Last build status on Jenkins CI
-    \href{None}{url_external}.
-    
+Tests are defined in a \href{https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/}{external CI service}.
+
 \subsection{Observations}
 \begin{itemize}
         \item WP3 needs to track the functionality checks for the specific parts of the contribution to INDIGO project. Please provide them by either pointing to already existant CI jobs, documentation, etc.
