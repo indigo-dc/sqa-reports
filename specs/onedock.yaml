@@ -3,7 +3,7 @@ status_inprogress: True   # values: status_accepted, status_notcomplete, status_
 tasks:
     parent:
         id: 3026
-        progress: 90
+        progress: 92
     children:
         - name: "Repository synchronization"
           id: 3896
@@ -16,7 +16,7 @@ tasks:
           progress: 50
         - name: "Functional and integration testing coverage"
           id: 3032
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3035
           progress: 100
@@ -43,7 +43,7 @@ func_int_test:
     url:
     comments:
         - "Integration testing recipe has been provided, requiring an OpenNebula installation. Still considering to implement this in Jenkins."
-        - "Missing a description (in the task) of functionalities being checked in the provided tests."
+        - "A description of the tests and a link to the test pipeline were provided."
 gitbook:
     url: https://indigo-dc.gitbooks.io/onedock/content/
     types:

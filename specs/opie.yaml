@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3776
-          progress: 92 
+          progress: 75
         - name: "Functional and integration testing coverage"
           id: 3779
           progress: 0
