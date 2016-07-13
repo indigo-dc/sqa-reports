@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3221
-        progress: 48
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3224 
@@ -19,10 +19,10 @@ tasks:
           progress: 60
         - name: "Configuration management"
           id: 3239
-          progress: 0
+          progress: 50
         - name: "GitBook documentation"
           id: 3242
-          progress: 0
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/Zabbix-probes.git 
