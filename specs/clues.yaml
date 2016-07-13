@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3086
-        progress: 72
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 3863
@@ -14,10 +14,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3137
-          progress: 80
+          progress: 100
         - name: "Functional and integration testing coverage"
           id: 3140
-          progress: 0
+          progress: 50
         - name: "Configuration management"
           id: 3143
           progress: 50
@@ -44,6 +44,8 @@ func_int_test:
     status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
+    comments:
+        - "Decription of tests was provided.."
 gitbook:
     url: https://indigo-dc.gitbooks.io/clues-plugins/content/
     types:
