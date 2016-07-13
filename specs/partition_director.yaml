@@ -3,14 +3,14 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3041
-        progress: 27 
+        progress: 40 
     children:
         - name: "Repository synchronization"
           id: 3044
           progress: 100
         - name: "Code style specification"
           id: 3047
-          progress: 60
+          progress: 90
         - name: "Unit testing coverage"
           id: 3050
           progress: 0
@@ -22,7 +22,7 @@ tasks:
           progress: 0
         - name: "GitBook documentation"
           id: 3062
-          progress: 0
+          progress: 50
 repository: 
     url: 
         - https://github.com/indigo-dc/dynpart
