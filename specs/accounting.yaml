@@ -4,7 +4,7 @@ tasks:
 # http://bit.ly/accounting_dqa_indigo1
     parent:
         id: 3269
-        progress: 68 
+        progress: 70 
     children:
         - name: "Repository synchronization"
           id: 3272 
@@ -20,10 +20,10 @@ tasks:
           progress: 50
         - name: "Configuration management"
           id: 3281
-          progress: 90
+          progress: 100
         - name: "GitBook documentation"
           id: 3284
-          progress: 0
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/Accounting.git
@@ -48,7 +48,7 @@ func_int_test:
     url_external: # links to external CIs
     jenkins_job:
 gitbook:
-    url:
+    url: 
     types:
 config_management:
     tool:   # e.g. ansible, ..
