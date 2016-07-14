@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3452
-        progress: 52 
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 3455 
@@ -13,10 +13,10 @@ tasks:
           progress: 50
         - name: "Unit testing coverage"
           id: 3461
-          progress: 0
+          progress: 70
         - name: "Functional and integration testing coverage"
           id: 3464
-          progress: 60
+          progress: 70
         - name: "Configuration management"
           id: 3467
           progress: 50
@@ -37,15 +37,15 @@ code_style:
     comments:
         - "Product team uses K\\&R indent style. Currently searching for an appropriate tool to check this standard."
 unit_test:
-    coverage: 0
-    jenkins_job:
+    coverage: 70
+    jenkins_job: https://jenkins.indigo-datacloud.eu:8080/job/ophidia_testing/
     comments:
-        - "Product team will make scripts available (from their local CI service)."
+        - "Product team will make scripts available (from their local CI service) and job was defined, successfuly run"
 func_int_test:
     status_notcomplete: True
-    url:
+    url: https://jenkins.indigo-datacloud.eu:8080/job/ophidia_testing/
     comments:
-        - "Product team made the scripts available (from their local CI service) and working with ."
+        - "Product team made the scripts available (from their local CI service) and job was defined, successfuly   run."
 gitbook:
     status_notcomplete: True
     url: https://sandrofiore.gitbooks.io/ophidiabigdata/content/
