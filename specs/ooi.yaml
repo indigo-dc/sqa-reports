@@ -3,7 +3,7 @@ status_inprogress: True   # values: status_accepted, status_notcomplete, status_
 tasks:
     parent:
         id: 2843 
-        progress: 97%
+        progress: 97
     children:
         - name: "Repository synchronization"
           id: 3902 
