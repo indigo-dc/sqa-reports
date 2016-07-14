@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3809
-        progress: 62
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3812
@@ -19,7 +19,7 @@ tasks:
           progress: 80
         - name: "Configuration management"
           id: 3824
-          progress: 20
+          progress: 50
         - name: "GitBook documentation"
           id: 3827
           progress: 100
