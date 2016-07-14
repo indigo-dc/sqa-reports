@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 4037
-        progress: 57 
+        progress: 68 
     children:
         - name: "Repository synchronization"
           id: 4040
@@ -19,7 +19,7 @@ tasks:
           progress: 50
         - name: "Configuration management"
           id: 4052
-          progress: 0
+          progress: 70
         - name: "GitBook documentation"
           id: 4055
           progress: 100
@@ -49,10 +49,12 @@ gitbook:
         - Readme
 config_management:
     status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/ansible-role-liferay-iam
+    level: installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
+    comments:
+        - "Ansible playbook made available. It is good enough for the moment. In the future we can consider doing the same tests through a Jenkins job."
     build:
         - version: Ubuntu 14.04 LTS
           successful:   # True, False
