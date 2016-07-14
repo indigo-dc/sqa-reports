@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3530
-        progress: 67
+        progress: 77
     children:
         - name: "Repository synchronization"
           id: 3833
@@ -17,10 +17,10 @@ tasks:
           progress: 86
         - name: "Functional and integration testing coverage"
           id: 3539
-          progress: 0
+          progress: 10
         - name: "Configuration management"
           id: 3542
-          progress: 0
+          progress: 50
         - name: "GitBook documentation"
           id: 3545
           progress: 100
@@ -46,16 +46,20 @@ func_int_test:
     status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
+    comments:
+        - "PT claims functional tests are run. We expect description and report with successful results."
 gitbook:
     url: https://indigo-dc.gitbooks.io/indigokepler/content/
     types:
         - Readme
 config_management:
     status_notcomplete: True
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/ansible-role-kepler
+    level: installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
+    comments:
+        - "The Ansible playbook made available, The Readme needs to be updated and also, eventually, implemented in a Jenkins job by WP3."
     build:
         - version: Ubuntu 14.04 LTS
           successful:   # True, False
