@@ -34,11 +34,9 @@ code_style:
     jenkins_job:
         - clues-codestyle
 unit_test:
-    wp3_in_progress: True
-    coverage:
-    jenkins_job:
+    coverage: 89
+    jenkins_job: clues-unittest
     comments:
-        - "Job has not yet been defined (WP3 duty)."
         - "The only missing tests to close this task are the ones for the HTCondor plugin for CLUES. This was agreed to be carried out by INDRA."
 func_int_test:
     status_notcomplete: True
