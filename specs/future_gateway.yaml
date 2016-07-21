@@ -1,9 +1,10 @@
-id: "FutureGateway API Server"
+id: "fgAPIServer"
+name: "FutureGateway API Server"
 status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3809
-        progress: 67
+        progress: 70
     children:
         - name: "Repository synchronization"
           id: 3812
@@ -16,7 +17,7 @@ tasks:
           progress: 0
         - name: "Functional and integration testing coverage"
           id: 3821
-          progress: 80
+          progress: 100
         - name: "Configuration management"
           id: 3824
           progress: 50
@@ -38,19 +39,20 @@ code_style:
         - fgapiserverdaemon-codestyle
         - fgtools-codestyle
     comments:
-        - "Team has proposed a code style standard and the first job (fgapiserver-codestyle) is successful."
+        - "Product \\texttt{fgapiserver} is compliant with PEP8 standard but both \\texttt{fgapiserverdaemon-codestyle} and \\texttt{fgtools-codestyle} are not still compliant with the standard selected."
 unit_test:
-    wp3_in_progress: True
-    coverage: 1
+    coverage: 0 
     jenkins_job:
     comments:
-        - "Jenkins job is still to be defined at INDIGO Jenkins CI."
+        - "Cannot define a Jenkins job to check the only test written so far \\texttt{./tests/test\\_mklogtoken.py} since this test is malformed, meaning that it tries to import modules as it were a Python package but it is not."
 func_int_test:
-    wp3_in_progress: True
     url: # links to external CIs
+    description:
+        - API functionalities being tested \\url{https://github.com/indigo-dc/FutureGateway-APIs/blob/master/apiary.apib} (fgAPIServer).
+        - Obtaining/using a token (fgAPIServer).
+        - Submit a task (APIServerDaemon).
     comments:
-        - "Team has provided reports of some integration tests."
-        - "Automated functionality testing has not been provided."
+        - "Team has provided reports of manual functional tests being performed. Automated functionality testing has not been provided."
 gitbook:
     status_notcomplete: True
     url:  https://www.gitbook.com/book/ricsxn/futuregateway/details
