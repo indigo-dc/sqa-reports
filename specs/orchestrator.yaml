@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3425
-          progress: 22
+          progress: 28
         - name: "Functional and integration testing coverage"
           id: 3428
           progress: 100
@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - orchestrator-codestyle
 unit_test:
-    coverage: 22
+    coverage: 28
     jenkins_job: orchestrator-unittest
     comments:
         - "Unit testing coverage has decreased from last report (30\\%)."

@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 3101
-        progress: 58
+        progress: 60
     children:
         - name: "Repository synchronization"
           id: 3104
@@ -13,7 +13,7 @@ tasks:
           progress: 50
         - name: "Unit testing coverage"
           id: 3107
-          progress: 30
+          progress: 50
         - name: "Functional and integration testing coverage"
           id: 3110
           progress: 10
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3116
-          progress: 100
+          progress: 90
 repository: 
     url:
         - https://github.com/indigo-dc/onedata
@@ -40,7 +40,7 @@ unit_test:
     coverage: 
     jenkins_job:
     comments:
-        - "Currently figuring out the best approach to gather reports from their external CI."
+        - "Command/s to check unit testing coverage have been provided. Work on WP3 side."
 func_int_test:
     wp3_in_progress: True
     url:
@@ -53,7 +53,7 @@ gitbook:
         - User documentation
         - Administrator documentation
     comments:
-        - "GitBook's indigo-dc organization has currently reached the limit of books for the free account. When this situation is sorted out, documentation will be made available at indigo-dc organization."
+        - "Documentation currently being ported to \\texttt{indigo-dc} organization, but not complete."
 config_management:
     wont_be_provided: True
     comments:

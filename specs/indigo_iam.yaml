@@ -1,10 +1,10 @@
 id: "INDIGO IAM"
 name: "INDIGO Identity Access Management"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3248
-        progress: 82 
+        progress: 93
     children:
         - name: "Repository synchronization"
           id: 3254 
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3266
-          progress: 50
+          progress: 90
 repository: 
     url:
         - https://github.com/indigo-dc/iam
@@ -44,7 +44,7 @@ unit_test:
 func_int_test:
     wp3_in_progress: True
     jenkins_job:
-        url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-master/lastBuild/testReport/
+    url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-master/lastBuild/testReport/
     description:
         - "Endpoints extended from \\href{https://github.com/mitreid-connect/OpenID-Connect-Java-Spring-Server}{mitreid-connect}."
         - "Endpoints added by IAM, some integration tests are provided through unit tests."

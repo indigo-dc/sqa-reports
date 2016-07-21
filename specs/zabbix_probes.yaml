@@ -10,19 +10,19 @@ tasks:
           progress: 100
         - name: "Code style specification"
           id: 3845
-          progress: 70
+          progress: 50
         - name: "Unit testing coverage"
           id: 3233
-          progress: 60
+          progress: 50
         - name: "Functional and integration testing coverage"
           id: 3236
-          progress: 60
+          progress: 50
         - name: "Configuration management"
           id: 3239
           progress: 50
         - name: "GitBook documentation"
           id: 3242
-          progress: 50
+          progress: 80
 repository: 
     url:
         - https://github.com/indigo-dc/Zabbix-probes.git 
@@ -38,13 +38,23 @@ code_style:
 unit_test:
     coverage: 0 
     jenkins_job:
+    comments:
+        - "Some tests are already there but we need from the product team the command/s in order to create the Jenkins jobs."
 func_int_test:
     status_notcomplete: True
     jenkins_job:
+    comments:
+        - "Some tests are already there but we need from the product team the command/s in order to create the Jenkins jobs."
 gitbook:
-    url:
+    url: https://www.gitbook.com/book/indigo-dc/monitoring/details
     types:
+        - Readme
+        - Deployment documentation.
+    comments:
+        - "Missing some info about the scripts created by Indra for supporting the Zabbix deployment and maintenance."
 config_management:
+    comments:
+        - "Ansible playbooks are being generated."
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

@@ -16,10 +16,10 @@ tasks:
           progress: 29
         - name: "Functional and integration testing coverage"
           id: 3077
-          progress: 50
+          progress: 90
         - name: "Configuration management"
           id: 3080
-          progress: 70
+          progress: 90
         - name: "GitBook documentation"
           id: 3083
           progress: 100
@@ -38,9 +38,13 @@ unit_test:
 func_int_test:
     wp3_in_progress: True
     url:
+    description:
+        - "Image listing."
+        - "Image deletion."
+        - "Image insertion from DockerHub."
+        - "Automatic synchronization from a list of repositories."
     comments:
-        - "Functional test provided but not currently implemented in Jenkins CI. Setting progress to 50\\%."
-        - "Missing a description (in the task) of functionalities being checked in the provided tests."
+        - "Report will be generated with the guidelines provided by the product team."
 gitbook:
     url: "https://www.gitbook.com/book/jose-sanchezm/java-syncrepos/details"
     types:
