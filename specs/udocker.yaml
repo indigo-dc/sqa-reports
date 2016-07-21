@@ -3,7 +3,7 @@ status_complete: True   # values: status_accepted, status_notcomplete, status_in
 tasks: 
     parent: 
         id: 3641
-        progress: 72
+        progress: 78
     children: 
         - name: "Repository synchronization"
           id: 3644
@@ -19,7 +19,7 @@ tasks:
           progress: 100
         - name: "Configuration management"
           id: 3656
-          progress: 50
+          progress: 90
         - name: "GitBook documentation"
           id: 3659
           progress: 100
@@ -49,9 +49,9 @@ gitbook:
         - User documentation
 config_management:
     wp3_in_progress: True
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible   # e.g. ansible, ..
+    url: https://github.com/indigo-dc/udocker/blob/master/ansible_install.yaml
+    level: installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
@@ -61,4 +61,4 @@ config_management:
           successful:   # True, False
           url:
     comments:
-        - "Ansible playbook provided by the product team. Work in progress by WP3; setting progress to 50\\%."
+        - "Ansible playbook provided by the product team. Work in progress by WP3; setting progress to 90\\%."

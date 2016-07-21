@@ -42,6 +42,7 @@ gitbook:
     url: https://indigo-dc.gitbooks.io/opie/content/
     types:
         - Readme
+        - Developer guide
 config_management:
     tool:   # e.g. ansible, ..
     url:

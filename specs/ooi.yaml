@@ -1,5 +1,6 @@
-id: "OOI (OpenStack OCCI Interface)"
-status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
+id: "ooi"
+name: "OpenStack OCCI Interface"
+status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2843 
