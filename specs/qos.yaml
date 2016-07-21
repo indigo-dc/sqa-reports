@@ -1,9 +1,10 @@
-id: "INDIGO-DataCloud CDMI Server"
+id: "CDMI"
+name: "INDIGO-DataCloud CDMI Server"
 status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2888
-        progress: 65 
+        progress: 80 
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -13,10 +14,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2891
-          progress: 0
+          progress: 35
         - name: "Functional and integration testing coverage"
           id: 2897
-          progress: 0
+          progress: 50
         - name: "Configuration management"
           id: 2900
           progress: 90
@@ -33,8 +34,9 @@ code_style:
     jenkins_job:
         - qos-codestyle
 unit_test:
-    coverage: 0 
-    jenkins_job: qos-unittest
+    coverage: 35
+    jenkins_job:
+        - qos-unittest
 func_int_test:
     status_notcomplete: True
     url:

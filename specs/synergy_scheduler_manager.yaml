@@ -1,9 +1,9 @@
 id: "Synergy Scheduler Manager"
-status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3788 
-        progress: 77 
+        progress: 85  
     children:
         - name: "Repository synchronization"
           id: 3791
@@ -16,7 +16,7 @@ tasks:
           progress: 9
         - name: "Functional and integration testing coverage"
           id: 3800
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3803
           progress: 100
@@ -38,11 +38,13 @@ unit_test:
     comments:
         - "Percentage is 9\\% because of the conditional coverage, but other methods have higher coverage rates."
 func_int_test:
-    status_notcomplete: True
     url:
+    description:
+        - "Enqueing of requests when no more resources are available (see File 01-test-queue.txt)."
+        - "Killing of VMs when the specified maximum time to live has been reached (see File 02-test-killing.txt)."
+        - "Fairshare projects with different shares specified for 2 projects (see File 03-test-fairshare.txt)."
     comments:
         - "Reports for integration tests have been provided. They have been executed locally at their own testbed."
-        - "Functional tests are on its way."
 gitbook:
     url: https://indigo-dc.gitbooks.io/synergy/content/
     types:

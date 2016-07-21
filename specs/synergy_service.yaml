@@ -1,9 +1,9 @@
 id: "Synergy Service"
-status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2996
-        progress: 68 
+        progress: 83 
     children:
         - name: "Repository synchronization"
           id: 2999 
@@ -16,13 +16,13 @@ tasks:
           progress: 10
         - name: "Functional and integration testing coverage"
           id: 3926
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3002
-          progress: 40
+          progress: 100
         - name: "GitBook documentation"
           id: 3005
-          progress: 70
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/synergy-service
@@ -36,17 +36,20 @@ unit_test:
     coverage: 13
     jenkins_job: synergy-unittest
 func_int_test:
-    wp3_in_progress: True
     url:
+    description:
+        - "Enqueing of requests when no more resources are available (see File 01-test-queue.txt)."
+        - "Killing of VMs when the specified maximum time to live has been reached (see File 02-test-killing.txt)."
+        - "Fairshare projects with different shares specified for 2 projects (see File 03-test-fairshare.txt)."
     comments:
         - "Reports for integration tests have been provided. They have been executed locally at their own testbed."
-        - "Functional tests have been also provided, but not currently checked in INDIGO Jenkins CI. A description (in the task) of functionalities being checked for the functional tests is missing (setting progress to 90\\%)."
 gitbook:
     url: https://indigo-dc.gitbooks.io/synergy/content/
     types:
         - "Readme"
         - "Deployment documentation"
         - "Administration documentation"
+        - "Developer documentation"
 config_management:
     wp3_in_progress: True
     comments:

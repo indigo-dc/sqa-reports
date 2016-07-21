@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_accepted, status_notcomplete, status
 tasks:
     parent:
         id: 2876 
-        progress: 65 
+        progress: 77
     children:
         - name: "Repository synchronization"
           id: 3950
@@ -14,10 +14,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2879
-          progress: 20
+          progress: 54
         - name: "Functional and integration testing coverage"
           id: 2894
-          progress: 20
+          progress: 50
         - name: "Configuration management"
           id: 2882
           progress: 50
@@ -34,15 +34,13 @@ code_style:
     jenkins_job:
         - idh-codestyle
 unit_test:
-    status_inprogress: True
-    coverage: 0
+    coverage: 54
     jenkins_job: idh-unittest
-    comments:
-        - "The JaCoCo plugin for Jenkins was installed - the job should be reconfigured - on WP3."
 func_int_test:
-    status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
+    comments:
+        - "Missing list of functionalities tested."
 gitbook:
     url: https://indigo-dc.gitbooks.io/identity-harmonization/content/
     types:

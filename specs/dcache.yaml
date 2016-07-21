@@ -13,10 +13,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3965
-          progress: 70
+          progress: 22
         - name: "Functional and integration testing coverage"
           id: 3968
-          progress: 70
+          progress: 90
         - name: "Configuration management"
           id: 3971
           progress: 100
@@ -35,7 +35,7 @@ code_style:
         - "Jenkins job cannot be implemented since the code-style is IDE-specific and cannot be ran through command-line."
 unit_test:
     wp3_in_progress: True
-    coverage: 70 
+    coverage: 22 
     jenkins_job:
     comments:
         - "PT provided links to the reports for the code coverage and functiona testing "
@@ -44,7 +44,7 @@ func_int_test:
     jenkins_job:
     url_external: https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/ # links to external CIs
     comments:
-        - "WP3 needs to track the functionality checks for the specific parts of the contribution to INDIGO project. Please provide them by either pointing to already existant CI jobs, documentation, etc."
+        - "Missing list of functionalities being checked."
 gitbook:
     url: https://indigo-dc.gitbooks.io/dcache/content/
     types:

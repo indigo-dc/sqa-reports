@@ -1,6 +1,6 @@
 id: "tts"
 name: "Token Translation Service"
-status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2867
@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3389
-          progress: 100
+          progress: 72
         - name: "Functional and integration testing coverage"
           id: 3392
           progress: 100
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2873
-          progress: 90
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/tts 
@@ -34,18 +34,29 @@ code_style:
     jenkins_job:
         - tts-codestyle
 unit_test:
-    coverage: 70
-    jenkins_job: tts-unittest
+    coverage: 72
+    jenkins_job: 
+        - tts-unittest
 func_int_test:
     jenkins_job: tts-functional
-    comments:
-        - "a functional test coverage of 70% is reached and all tests are passing locally and on jenkins build server"
+    description:
+        - parsing the configuration files
+        - fetching configuration from OpenId Connect Provider and parsing them
+        - returning the list of supported provider
+        - authenticating a rest user by a token (the actual verification of the token is mocked, as the TTS can't create valid tokens)
+        - returning a list of configured servcices
+        - requesting a credintial for one service, including executing the plugin and tracking its state
+        - revoking the previous created token
+        - ensuring no token is left after revocation
+        - all test steps are performed using the tts rest client, which itself is also validated
 gitbook:
     url: https://indigo-dc.gitbooks.io/token-translation-service/content/
     types:
-        - "Readme, User and Admin, Developers Guide, TTSc doc, REST API"
-    comments:
-        - "Documentation is geting almost done! Setting progress to 90\\%"
+        - Readme
+        - User documentation
+        - Admin documentation
+        - Developers Guide
+        - REST API
 config_management:
     status_complete: True
     comments:

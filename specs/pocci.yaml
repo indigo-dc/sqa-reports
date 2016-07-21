@@ -1,5 +1,5 @@
 id: "pOCCI"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2945 
@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2951
-          progress: 33
+          progress: 22
         - name: "Functional and integration testing coverage"
           id: 2954
           progress: 90
@@ -33,14 +33,13 @@ code_style:
     jenkins_job:
         - pocci-codestyle
 unit_test:
-    coverage: 33 
+    coverage: 22
     jenkins_job: pocci-unittest
 func_int_test:
     status_inprogress: True
     url:
-    comments:
-        - "Integration tests provided, currently figuring out whether it will be implemented in INDIGO Jenkins CI."
-        - "The requested description (in the task) of functionalities being checked in the provided tests was provided."
+    description:
+        - "Basic OCCI functionality over the whole chain (Cloud provider -> OCCI service -> pOCCI client)."
 gitbook:
     url: https://indigo-dc.gitbooks.io/pocci/content/
     types:
