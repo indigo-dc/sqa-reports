@@ -46,8 +46,18 @@ func_int_test:
     status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
+    description:
+        - Connection to FG
+        - Listing all appliactions
+        - Getting details about specific application
+        - Creation of a simplest task (no parameters, just run and get standard output)
+        - Creation of a task with input files
+        - Full cycle: submission of a task with input and output files, then waiting until it's finished
+        - Listing all tasks
+        - Getting details about specific task
+        - Deleting a task
     comments:
-        - "PT claims functional tests are run. We expect description and report with successful results."
+        - "Missing report with functional/integration testing results."
 gitbook:
     url: https://indigo-dc.gitbooks.io/indigokepler/content/
     types:

@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3137
-          progress: 100
+          progress: 90
         - name: "Functional and integration testing coverage"
           id: 3140
           progress: 50
@@ -36,14 +36,16 @@ code_style:
 unit_test:
     coverage: 89
     jenkins_job: clues-unittest
-    comments:
-        - "The only missing tests to close this task are the ones for the HTCondor plugin for CLUES. This was agreed to be carried out by INDRA."
 func_int_test:
     status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
+    description:
+        - "Deploy a (galaxy elastic or mesos) cluster by providing a TOSCA file to the orchestrator."
+        - "Add/delete cluster nodes."
+        - "Monitor job scheduling."
     comments:
-        - "Decription of tests was provided.."
+        - "Missing test report."
 gitbook:
     url: https://indigo-dc.gitbooks.io/clues-plugins/content/
     types:

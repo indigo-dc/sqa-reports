@@ -317,6 +317,16 @@ No functional or integration testing provided.
     \BLOCK{endif}
 \BLOCK{endif}
 
+\BLOCK{if product.func_int_test.report}
+\subsection{Reports}
+Functional report/s available:
+\begin{itemize}
+    \BLOCK{for r in product.func_int_test.report}
+    \item \url{\VAR{r}}
+    \BLOCK{endfor}
+\end{itemize}
+\BLOCK{endif}
+
 \BLOCK{if product.func_int_test.comments}
 \subsection{Observations}
 \begin{itemize}
@@ -365,7 +375,7 @@ Documentation is currently \textbf{not available} under \href{https://www.gitboo
 
 \BLOCK{if product.config_management.wp3_in_progress}
 \BLOCK{elif product.config_management.wont_be_provided}
-\BLOCK{elif product.config_management.tool}
+\BLOCK{elif product.config_management.jenkins_job}
 \subsection{Build status}
 \begin{center}
 \begin{tabular}{ll}

@@ -42,19 +42,18 @@ func_int_test:
     jenkins_job:
     url_external: # links to external CIs
 gitbook:
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
     url: https://indigo-dc.gitbooks.io/jsaga-resource-management/content/
     types:
         - "Specification, Usage"
 config_management:
     status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
-    wp3_in_progress: True
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration
     jenkins_job:
     comments:
         - "The JSAGA RM API is included into the JSAGA product which is deployed at our Maven repository http://maven.in2p3.fr."
+        - "Checking with the team if any sort of configuration is needed."
     build:
         - version: Ubuntu 14.04 LTS
           successful:   # True, False

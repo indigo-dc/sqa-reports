@@ -47,10 +47,20 @@ func_int_test:
     status_notcomplete: True
     url_external: # links to external CIs
     jenkins_job:
+    description:
+        - "Returning Accounting Summaries"
+        - "Accepting Accounting Data"
+    comments:
+        - "Missing functional test reports."
 gitbook:
     url: 
     types:
+    comments:
+        - "GitBook documentation in doc folder of IDC git repo. currently in dev branch only so not appearing in gitbook."
 config_management:
+    comments:
+        - "Kubernetes YAML configuration files provided."
+        - "Asking the team for the suitability of providing modules based on any of the project's adopted configuration management modules."
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration
