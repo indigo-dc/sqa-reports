@@ -1,5 +1,5 @@
 id: "LiferayIAM"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4037
@@ -35,7 +35,7 @@ code_style:
     comments:
         - "Setting progress to 80\\% because the team provided reports with results."
 unit_test:
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     coverage:
     jenkins_job:
     comments:

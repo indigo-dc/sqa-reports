@@ -1,6 +1,6 @@
 id: "jSAGA RM API"
 name: "jSAGA Resource Management API"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4016
@@ -25,20 +25,20 @@ tasks:
           id: 4034
           progress: 100
 repository: 
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     url:
 code_style:
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     standard:
     exceptions: 
     jenkins_job:
 unit_test:
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     coverage:
     jenkins_job:
     comments:
 func_int_test:
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     jenkins_job:
     url_external: # links to external CIs
 gitbook:
@@ -46,7 +46,7 @@ gitbook:
     types:
         - "Specification, Usage"
 config_management:
-    status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

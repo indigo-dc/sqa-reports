@@ -1,6 +1,6 @@
 id: "opie"
 name: "OpenStack Preemptible Instances Extension"
-status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3767 

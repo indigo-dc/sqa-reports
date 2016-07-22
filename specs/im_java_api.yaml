@@ -1,6 +1,6 @@
 id: "im-java-api"
 name: "Infrastructure Manager Java API"
-status_complete: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2981
