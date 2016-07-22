@@ -1,0 +1,57 @@
+id: "cloud-info-provider"
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4094
+        progress: 42
+    children:
+        - name: "Repository synchronization"
+          id: 4097
+          progress: 100
+        - name: "Code style specification"
+          id: 4100
+          progress: 100 
+        - name: "Unit testing coverage"
+          id: 4103
+          progress: 0 
+        - name: "Functional and integration testing coverage"
+          id: 4106
+          progress: 0
+        - name: "Configuration management"
+          id: 4109
+          progress: 0
+        - name: "GitBook documentation"
+          id: 4112
+          progress: 50
+repository: 
+    url:
+        - https://github.com/indigo-dc/Accounting.git
+code_style:
+    standard:
+        - hacking
+    exceptions: 0 
+    jenkins_job:
+        - cloud-info-provider-codestyle
+unit_test:
+    coverage: 0
+    jenkins_job: 
+    url_external:
+func_int_test:
+    status_notcomplete: True
+    url_external: # links to external CIs
+    jenkins_job:
+gitbook:
+    url: 
+    types:
+config_management:
+    tool:   # e.g. ansible, ..
+    url:
+    level:  # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:
