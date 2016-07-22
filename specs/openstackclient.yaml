@@ -1,9 +1,9 @@
 id: "python-openstackclient"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3599 
-        progress: 58
+        progress: 93
     children:
         - name: "Repository synchronization"
           id: 3602
@@ -19,10 +19,10 @@ tasks:
           progress: 100
         - name: "Configuration management"
           id: 3614
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 3617
-          progress: 0
+          progress: 100
 repository: 
     url: https://github.com/indigo-dc/python-openstackclient 
 code_style:
@@ -41,9 +41,12 @@ func_int_test:
     status_notcomplete: True
     url:
 gitbook:
+    comments:
+        - "The product extends the current set of operations of python-openstackclient by adding the preemptible option, needed by OPIE product. The documentation included in OPIE cover this new functionality added to the API."
     url:
     types:
 config_management:
+    wont_be_provided: True
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

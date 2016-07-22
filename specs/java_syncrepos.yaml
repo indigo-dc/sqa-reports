@@ -19,7 +19,7 @@ tasks:
           progress: 90
         - name: "Configuration management"
           id: 3080
-          progress: 90
+          progress: 70
         - name: "GitBook documentation"
           id: 3083
           progress: 100

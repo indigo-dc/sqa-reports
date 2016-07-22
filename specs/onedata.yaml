@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3101
-        progress: 60
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3104
