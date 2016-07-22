@@ -1,6 +1,6 @@
 id: "INDIGO IAM"
 name: "INDIGO Identity Access Management"
-status_accepted: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_complete: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3248

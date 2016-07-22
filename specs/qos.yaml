@@ -1,6 +1,6 @@
 id: "CDMI"
 name: "INDIGO-DataCloud CDMI Server"
-status_inprogress: True   # values: status_accepted, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_accepted, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2888
@@ -39,7 +39,9 @@ unit_test:
         - qos-unittest
 func_int_test:
     status_notcomplete: True
-    url:
+    url: qos-unittest
+    comments:
+        - "Missing list of functionalities being tested."
 gitbook:
     url: https://indigo-dc.gitbooks.io/cdmi-qos/content/
     types:

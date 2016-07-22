@@ -37,7 +37,7 @@ unit_test:
     coverage: 54
     jenkins_job: idh-unittest
 func_int_test:
-    jenkins_job:
+    jenkins_job: idh-unittest
     url_external: # links to external CIs
     comments:
         - "Missing list of functionalities tested."
