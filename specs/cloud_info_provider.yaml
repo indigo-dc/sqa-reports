@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4094
-        progress: 42
+        progress: 57
     children:
         - name: "Repository synchronization"
           id: 4097
@@ -13,7 +13,7 @@ tasks:
           progress: 100 
         - name: "Unit testing coverage"
           id: 4103
-          progress: 0 
+          progress: 94
         - name: "Functional and integration testing coverage"
           id: 4106
           progress: 0
@@ -33,9 +33,10 @@ code_style:
     jenkins_job:
         - cloud-info-provider-codestyle
 unit_test:
-    coverage: 0
-    jenkins_job: 
+    coverage: 94 
     url_external:
+    jenkins_job: 
+        - cloud-info-provider-unittest
 func_int_test:
     status_notcomplete: True
     url_external: # links to external CIs
