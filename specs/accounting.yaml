@@ -4,7 +4,7 @@ tasks:
 # http://bit.ly/accounting_dqa_indigo1
     parent:
         id: 3269
-        progress: 70 
+        progress: 78 
     children:
         - name: "Repository synchronization"
           id: 3272 
@@ -17,7 +17,7 @@ tasks:
           progress: 70 
         - name: "Functional and integration testing coverage"
           id: 3278
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3281
           progress: 100
@@ -36,7 +36,7 @@ code_style:
         - accounting-codestyle
         - accounting-codestyle-pep257
     comments:
-        - "Task is at 50\\% of progress since the standards are defined (PEP 8, PEP 257) but the Jenkins jobs are failing."
+        - "Task is at 50\\% of progress since the standards are defined (PEP 8, PEP 257) but the source code is not compliant with them."
 unit_test:
     coverage: 70
     jenkins_job: #accounting-unittest
@@ -50,13 +50,11 @@ func_int_test:
     description:
         - "Returning Accounting Summaries"
         - "Accepting Accounting Data"
-    comments:
-        - "Missing functional test reports."
 gitbook:
     url: 
     types:
     comments:
-        - "GitBook documentation in doc folder of IDC git repo. currently in dev branch only so not appearing in gitbook."
+        - "Empty book created under \\texttt{indigo-dc}. The documentation is available in dev branch, will be uploaded whenever the release is done."
 config_management:
     comments:
         - "Kubernetes YAML configuration files provided."
