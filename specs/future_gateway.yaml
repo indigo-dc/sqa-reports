@@ -51,13 +51,15 @@ func_int_test:
         - API functionalities being tested \\url{https://github.com/indigo-dc/FutureGateway-APIs/blob/master/apiary.apib} (fgAPIServer).
         - Obtaining/using a token (fgAPIServer).
         - Submit a task (APIServerDaemon).
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FFutureGateway&files=FutureGateway_functional_tests.docx
     comments:
         - "Team has provided reports of manual functional tests being performed. Automated functionality testing has not been provided."
 gitbook:
-    status_notcomplete: True
     url:  https://www.gitbook.com/book/ricsxn/futuregateway/details
     types: 
-        - "Instalaltion, Usage"
+        - "Installation"
+        - "Usage"
 config_management:
     status_notcomplete: True
     tool:   scripts and doc # e.g. ansible, ..

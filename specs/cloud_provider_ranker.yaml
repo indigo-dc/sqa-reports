@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3287
-        progress: 78
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3836 
@@ -16,7 +16,7 @@ tasks:
           progress: 65
         - name: "Functional and integration testing coverage"
           id: 3293
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3296
           progress: 100
@@ -37,13 +37,14 @@ code_style:
         - "Progress is set to 50\\%: code style is defined but the current code is not compliant with it."
 unit_test:
     coverage: 70
-    jenkins_job: cloudproviderranker-unittest
+    jenkins_job: 
+        - cloudproviderranker-unittest
 func_int_test:
-    status_notcomplete: True
-    jenkins_job: cloudproviderranker-functional
+    jenkins_job:
+        - cloudproviderranker-functional
     comments:
         - "Jenkins job creates the JAR file for testing the functionalities documented in \\href{https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html}{GitBook}."
-        - "Main functionalites test report is currently missing."
+        - "Will get the report from https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html"
     url_external: # links to external CIs
 gitbook:
     url: https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/

@@ -34,8 +34,6 @@ code_style:
     exceptions: 0
     jenkins_job:
         - partition-director-codestyle
-    comments:
-        - "Setting progress to 50\\% since the product is adhered to a standard but the code style is not actually being checked (WP3 duty)."
 unit_test:
     coverage: 0 
     jenkins_job:

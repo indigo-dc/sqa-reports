@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 2876 
-        progress: 77
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 3950
@@ -17,10 +17,10 @@ tasks:
           progress: 54
         - name: "Functional and integration testing coverage"
           id: 2894
-          progress: 50
+          progress: 90
         - name: "Configuration management"
           id: 2882
-          progress: 50
+          progress: 90
         - name: "GitBook documentation"
           id: 2885
           progress: 100
@@ -37,10 +37,12 @@ unit_test:
     coverage: 54
     jenkins_job: idh-unittest
 func_int_test:
-    jenkins_job: idh-unittest
+    status_notcomplete: True
+    jenkins_job: 
+        - idh-unittest
     url_external: # links to external CIs
     comments:
-        - "Missing list of functionalities tested."
+        - "Missing list of functionalities tested. Will be provided in time."
 gitbook:
     url: https://indigo-dc.gitbooks.io/identity-harmonization/content/
     types:
@@ -49,7 +51,10 @@ gitbook:
         - "Deployment documentation"
         - "User documentation"
 config_management:
-    tool:   # e.g. ansible, ..
+    status_notcomplete: True
+    comments:
+        - "There are already Ansible roles?/scripts? that a student here produced."
+    tool: ansible
     url: https://indigo-dc.gitbooks.io/identity-harmonization/content/doc/admin.html
     level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:

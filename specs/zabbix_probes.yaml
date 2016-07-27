@@ -3,14 +3,14 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3221
-        progress: 67
+        progress: 73
     children:
         - name: "Repository synchronization"
           id: 3224 
           progress: 100
         - name: "Code style specification"
           id: 3845
-          progress: 50
+          progress: 100
         - name: "Unit testing coverage"
           id: 3233
           progress: 50
@@ -27,7 +27,6 @@ repository:
     url:
         - https://github.com/indigo-dc/Zabbix-probes.git 
 code_style:
-    status_notcomplete: True
     standard:
         - java_google
     exceptions: 0
@@ -36,15 +35,16 @@ code_style:
     comments:
         - "Progress set to 70\\% since the product is adhered to a standard, but not currently compliant with it."
 unit_test:
+    wp3_in_progress: True
     coverage: 0 
     jenkins_job:
     comments:
-        - "Some tests are already there but we need from the product team the command/s in order to create the Jenkins jobs."
+        - "Command/s to execute the Jenkins job has been provided."
 func_int_test:
     status_notcomplete: True
     jenkins_job:
     comments:
-        - "Some tests are already there but we need from the product team the command/s in order to create the Jenkins jobs."
+        - "Command/s to execute the Jenkins job has been provided."
 gitbook:
     url: https://www.gitbook.com/book/indigo-dc/monitoring/details
     types:

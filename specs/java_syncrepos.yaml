@@ -16,13 +16,13 @@ tasks:
           progress: 29
         - name: "Functional and integration testing coverage"
           id: 3077
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3080
           progress: 70
         - name: "GitBook documentation"
           id: 3083
-          progress: 100
+          progress: 90
 repository: 
     url:
         - https://github.com/indigo-dc/java-syncrepos 
@@ -36,7 +36,6 @@ unit_test:
     coverage: 29
     jenkins_job: syncrepos-unittest
 func_int_test:
-    wp3_in_progress: True
     url:
     description:
         - "Image listing."
@@ -45,15 +44,18 @@ func_int_test:
         - "Automatic synchronization from a list of repositories."
     comments:
         - "Report will be generated with the guidelines provided by the product team."
+        -  "Work in progress on WP3 side."
 gitbook:
+    status_notcomplete: True
     url: "https://www.gitbook.com/book/jose-sanchezm/java-syncrepos/details"
     types:
         - "Readme"
         - "Deployment documentation"
     comments:
-        - "GitBook's indigo-dc organization has currently reached the limit of books for the free account. When this situation is sorted out, documentation will be made available at indigo-dc organization."
+        - "Documentation needs to be available at GitBook's indigo-dc organization."
 
 config_management:
+    status_notcomplete: True
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/java-syncrepos/tree/master/ansible
     level:  installation # values: installation, configuration, installation/configuration

@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3086
-        progress: 88
+        progress: 97
     children:
         - name: "Repository synchronization"
           id: 3863
@@ -17,10 +17,10 @@ tasks:
           progress: 90
         - name: "Functional and integration testing coverage"
           id: 3140
-          progress: 50
+          progress: 90
         - name: "Configuration management"
           id: 3143
-          progress: 90
+          progress: 100
         - name: "GitBook documentation"
           id: 3146
           progress: 100
@@ -51,7 +51,6 @@ gitbook:
     types:
         - Readme
 config_management:
-    wp3_in_progress: True
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/clues-indigo/blob/master/ansible/playbook.yml
     level: installation # values: installation, configuration, installation/configuration

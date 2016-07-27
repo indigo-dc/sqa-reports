@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3101
-        progress: 67
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 3104
@@ -16,13 +16,13 @@ tasks:
           progress: 50
         - name: "Functional and integration testing coverage"
           id: 3110
-          progress: 10
+          progress: 50
         - name: "Configuration management"
           id: 3113
           progress: 100
         - name: "GitBook documentation"
           id: 3116
-          progress: 90
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/onedata
@@ -36,24 +36,24 @@ code_style:
     exceptions: 0
     jenkins_job:
 unit_test:
-    wp3_in_progress: True
+    status_notcomplete: True
     coverage: 
     jenkins_job:
     comments:
-        - "Command/s to check unit testing coverage have been provided. Work on WP3 side."
+        - "Command/s to check unit testing coverage have been provided, but not currently working. Need support from product team."
+        - "Reports requested instead of automated solution."
 func_int_test:
-    wp3_in_progress: True
+    status_notcomplete: True
     url:
     comments:
-        - "Currently figuring out the best approach to gather reports from their external CI."
+        - "Command/s to check functional testing coverage have been provided, but not currently working. Need support from product team."
+        - "Reports requested instead of automated solution."
 gitbook:
-    url: https://groundnuty.gitbooks.io/onedata-documentation/content/
+    url: https://indigo-dc.gitbooks.io/onedata-documentation/content/
     types:
         - Readme
         - User documentation
         - Administrator documentation
-    comments:
-        - "Documentation currently being ported to \\texttt{indigo-dc} organization, but not complete."
 config_management:
     wont_be_provided: True
     comments:

@@ -38,12 +38,16 @@ unit_test:
 func_int_test:
     status_notcomplete: True
     url:
+    comments:
+        - "Working on this next week."
 gitbook:
     url: https://indigo-dc.gitbooks.io/opie/content/
     types:
         - Readme
         - Developer guide
 config_management:
+    comments:
+        - "Working on this next week."
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

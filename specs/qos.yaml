@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 2888
-        progress: 80 
+        progress: 87 
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -17,7 +17,7 @@ tasks:
           progress: 35
         - name: "Functional and integration testing coverage"
           id: 2897
-          progress: 50
+          progress: 90
         - name: "Configuration management"
           id: 2900
           progress: 90
@@ -35,13 +35,13 @@ code_style:
         - qos-codestyle
 unit_test:
     coverage: 35
-    jenkins_job:
-        - qos-unittest
+    jenkins_job: qos-unittest
 func_int_test:
     status_notcomplete: True
-    url: qos-unittest
+    url: 
+        - qos-unittest
     comments:
-        - "Missing list of functionalities being tested."
+        - "Missing list of functionalities being tested. Will provide in time."
 gitbook:
     url: https://indigo-dc.gitbooks.io/cdmi-qos/content/
     types:
@@ -50,7 +50,8 @@ gitbook:
         - "Administration documentation"
         - "User documentation"
 config_management:
-    tool:   # e.g. ansible, ..
+    status_notcomplete: True
+    tool: ansible  # e.g. ansible, ..
     url: https://indigo-dc.gitbooks.io/cdmi-qos/content/doc/installing_cdmi-qos.html
     level:  installation # values: installation, configuration, installation/configuration
     jenkins_job:
