@@ -86,24 +86,6 @@
     \hyperref[sec:repository]{GitHub repository} & \BLOCK{if product.repository.url}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:code_style]{Code style adherence} & \BLOCK{if product.code_style.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.code_style.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:unit_test]{Code coverage} & \BLOCK{if product.unit_test.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{else}\graybox{\VAR{product.unit_test.coverage}\%}\BLOCK{endif}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=\VAR{product.unit_test.coverage}]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \BLOCK{if product.func_int_test.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.func_int_test.url}\greenbox{COMPLETE}\BLOCK{elif product.func_int_test.jobs}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:func_int_test]{Functional/integration testing} & \BLOCK{if product.func_int_test.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.func_int_test.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \BLOCK{if product.gitbook.url}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:configuration]{Automated deployment} & \BLOCK{if product.config_management.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{elif product.config_management.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.config_management.tool}\greenbox{COMPLETE}\BLOCK{elif product.config_management.wont_be_provided}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
@@ -289,6 +271,7 @@ Last build status on \href{\VAR{product.unit_test.job_url}}{external CI}.
 \BLOCK{endif}
 
 
+
 \input{templates/title_functional_integration.tex}
 \label{sec:func_int_test}
 
@@ -300,6 +283,8 @@ Last build status on Jenkins CI
     \BLOCK{endfor}
 \BLOCK{elif product.func_int_test.url_external}
 Tests are defined in a \href{\VAR{product.func_int_test.url_external}}{external CI service}.
+\BLOCK{elif product.func_int_test.report}
+No automated execution, reports are being provided.
 \BLOCK{else}
     \BLOCK{if product.func_int_test.wp3_in_progress}
 Tests currently being defined at Jenkins CI service.
@@ -322,7 +307,7 @@ No functional or integration testing provided.
 Functional report/s available:
 \begin{itemize}
     \BLOCK{for r in product.func_int_test.report}
-    \item \url{\VAR{r}}
+    \item \href{\VAR{r}}{owncloud report}
     \BLOCK{endfor}
 \end{itemize}
 \BLOCK{endif}
