@@ -44,12 +44,13 @@ unit_test:
     comments:
         - "Jenkins job is currently being deployed by WP3. Meanwhile the coverage are obtained through the product's coveralls.io reports."
 func_int_test:
-    status_notcomplete: True
     url_external: # links to external CIs
     jenkins_job:
     description:
         - "Returning Accounting Summaries"
         - "Accepting Accounting Data"
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FAccounting&files=wp3-3278.pdf
 gitbook:
     url: 
     types:
@@ -58,10 +59,9 @@ gitbook:
 config_management:
     comments:
         - "Kubernetes YAML configuration files provided."
-        - "Asking the team for the suitability of providing modules based on any of the project's adopted configuration management modules."
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: ansible   # e.g. ansible, ..
+    url: https://github.com/indigo-dc/Accounting/tree/dev/yaml
+    level:  deployment # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
