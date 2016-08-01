@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2843 
-        progress: 97
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3902 
@@ -17,7 +17,7 @@ tasks:
           progress: 90
         - name: "Functional and integration testing coverage"
           id: 3911
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 2849
           progress: 100
@@ -35,10 +35,17 @@ code_style:
         - ooi-codestyle
 unit_test:
     coverage: 87 
-    jenkins_job: ooi-unittest
+    jenkins_job:
+        - ooi-unittest
 func_int_test:
-    status_notcomplete: True
-    url:
+    jenkins_job:
+        - ooi-functional
+    description:
+        - "Instance management: Creation (with and without contextualization, with and without SSH key injection), deletion, pausing, unpausing, listing, getting details of instances."
+        - "Volume management: Creation, deletion of volumes and volume links."
+        - "Network management: IP creation, removal, linking, etc."
+        - "Listing, getting details of images."
+        - "Listing, getting details of flavors."
 gitbook:
     url: https://indigo-dc.gitbooks.io/ooi/content/
     types:

@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2969
-          progress: 66
+          progress: 68
         - name: "Functional and integration testing coverage"
           id: 2972
           progress: 100
@@ -35,7 +35,7 @@ code_style:
         - im-codestyle
 unit_test:
     wp3_in_progress: True
-    coverage: 66
+    coverage: 68
     jenkins_job: im-unittest
     comments:
         - "Job execution in Jenkins is currently facing some problems with the pytest tool (WP3 duty)."

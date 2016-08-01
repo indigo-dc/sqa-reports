@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3389
-          progress: 72
+          progress: 74
         - name: "Functional and integration testing coverage"
           id: 3392
           progress: 100
@@ -34,11 +34,12 @@ code_style:
     jenkins_job:
         - tts-codestyle
 unit_test:
-    coverage: 72
+    coverage: 74
     jenkins_job: 
         - tts-unittest
 func_int_test:
-    jenkins_job: tts-functional
+    jenkins_job:
+        - tts-functional
     description:
         - parsing the configuration files
         - fetching configuration from OpenId Connect Provider and parsing them
@@ -59,8 +60,6 @@ gitbook:
         - REST API
 config_management:
     status_complete: True
-    comments:
-        - "Ansible configuration is on its way."
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/ansible-role-tts
     level:  installation/configuration # values: installation, configuration, installation/configuration
