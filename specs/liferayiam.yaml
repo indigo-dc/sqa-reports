@@ -1,9 +1,9 @@
 id: "LiferayIAM"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4037
-        progress: 82
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 4040
@@ -32,14 +32,12 @@ code_style:
     exceptions: 
     jenkins_job:
         - liferayiam-codestyle
-    comments:
-        - "Setting progress to 80\\% because the team provided reports with results."
 unit_test:
     status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     coverage:
     jenkins_job:
     comments:
-        - "Work on unit testing exists under branch \\texttt{unit-tests}."
+        - "Command/s provided. WP3 will enable the check."
 func_int_test:
     jenkins_job:
     url_external: # links to external CIs

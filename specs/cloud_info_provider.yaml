@@ -42,9 +42,13 @@ func_int_test:
     url_external: # links to external CIs
     jenkins_job:
 gitbook:
+    status_notcomplete: True
+    comments:
+        - "Missing GitBook link"
     url: 
     types:
 config_management:
+    status_notcomplete: True
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

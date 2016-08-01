@@ -3,20 +3,20 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3434
-        progress: 75
+        progress: 80
     children:
         - name: "Repository synchronization"
           id: 3830
           progress: 100
         - name: "Code style specification"
           id: 3449
-          progress: 80
+          progress: 100
         - name: "Unit testing coverage"
           id: 3437
           progress: 20
         - name: "Functional and integration testing coverage"
           id: 3440
-          progress: 80
+          progress: 90
         - name: "Configuration management"
           id: 3443
           progress: 70
@@ -27,27 +27,31 @@ repository:
     url:
         - https://github.com/indigo-dc/indigo-omt
 code_style: 
-    standard: android
+    standard:
+        - android
     exceptions: 0
     jenkins_job:
-    wp3_in_progress: True
     comments:
-        - "Progress set to 80\\% since the team has adhered to a standard, provided in the code the checkstyle configuration, but the code is not currently being checked. The product team will provide the steps to create the Jenkins job using Gradle."
+        - "WP3 will enable the check in Jenkins CI."
 unit_test:
     coverage: 14
     jenkins_job:
 func_int_test:
+    status_notcomplete: True
     url:
     description:
-        - Listing tasks
-        - Filtering tasks by name, by status
-        - Creating new tasks
-        - Getting details of chosen task
+        - "Listing tasks"
+        - "Filtering tasks by name, by status"
+        - "Creating new tasks"
+        - "Getting details of chosen task"
+    comments:
+        - "Missing report from functionality testing."
 gitbook:
     url: https://indigo-dc.gitbooks.io/omt-android/content/
     types:
         - "Developers Guide"
 config_management:
+    status_notcomplete: True
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/omt-android/blob/master/indigo-omt.android.yml
     level: installation/configuration  # values: installation, configuration, installation/configuration

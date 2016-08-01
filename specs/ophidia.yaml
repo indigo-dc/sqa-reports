@@ -1,9 +1,10 @@
-id: "Ophidia analytics workflow interfaces"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+id: "ophidia"
+name: "Ophidia analytics workflow interfaces"
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3452
-        progress: 83
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 3455 
@@ -16,13 +17,13 @@ tasks:
           progress: 70
         - name: "Functional and integration testing coverage"
           id: 3464
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3467
-          progress: 50
+          progress: 100
         - name: "GitBook documentation"
           id: 3470
-          progress: 90
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/ophidia-analytics-framework
@@ -30,7 +31,6 @@ repository:
         - https://github.com/indigo-dc/ophidia-server
         - https://github.com/indigo-dc/ophidia-terminal
 code_style: 
-    wp3_in_progress: True
     standard: c 
     exceptions: 0
     jenkins_job:
@@ -40,15 +40,14 @@ unit_test:
     jenkins_job: 
         - ophidia-server-unittest
 func_int_test:
-    status_notcomplete: True
     url: ophidia-functional
-    comments:
-        - "Missing list of functionality tests being performed in the Jenkins job."
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOphidia&files=Test.doc
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOphidia&files=Workflows.zip
 gitbook:
     comments:
         - "Missing a book under \\texttt{indigo-dc} referencing the content at https://sandrofiore.gitbooks.io/ophidiabigdata/content/"
-    status_notcomplete: True
-    url: https://sandrofiore.gitbooks.io/ophidiabigdata/content/
+    url: https://www.gitbook.com/book/indigo-dc/ophidia/details
     types:
         - "Readme"
         - "User documentation"
@@ -56,7 +55,7 @@ gitbook:
         - "Administration documentation"
 config_management:
     tool:  ansible  # e.g. ansible, ..
-    url: https://github.com/indigo-dc/ansible-role-ophidia-terminal
+    url: https://github.com/indigo-dc/ansible-role-ophidia-all
     level:  installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:

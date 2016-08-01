@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3530
-        progress: 77
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3833
@@ -17,10 +17,10 @@ tasks:
           progress: 86
         - name: "Functional and integration testing coverage"
           id: 3539
-          progress: 10
+          progress: 90
         - name: "Configuration management"
           id: 3542
-          progress: 50
+          progress: 100
         - name: "GitBook documentation"
           id: 3545
           progress: 100
@@ -35,7 +35,6 @@ code_style:
     jenkins_job:
         - indigokepler-codestyle
 unit_test:
-    wp3_in_progress: True
     coverage: 86
     jenkins_job:
         - indigoclient-unittest
@@ -63,7 +62,6 @@ gitbook:
     types:
         - Readme
 config_management:
-    status_notcomplete: True
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/ansible-role-kepler
     level: installation/configuration # values: installation, configuration, installation/configuration
