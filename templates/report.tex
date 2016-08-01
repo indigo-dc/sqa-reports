@@ -291,15 +291,15 @@ Tests currently being defined at Jenkins CI service.
     \BLOCK{else}
 No functional or integration testing provided.
     \BLOCK{endif}
+\BLOCK{endif}
 
-    \BLOCK{if product.func_int_test.description}
+\BLOCK{if product.func_int_test.description}
 \subsection{Test coverage}
-    \begin{enumerate}
-        \BLOCK{for item in product.func_int_test.description}
-        \item \VAR{item}
-        \BLOCK{endfor}
-    \end{enumerate}
-    \BLOCK{endif}
+\begin{enumerate}
+    \BLOCK{for item in product.func_int_test.description}
+    \item \VAR{item}
+    \BLOCK{endfor}
+\end{enumerate}
 \BLOCK{endif}
 
 \BLOCK{if product.func_int_test.report}
