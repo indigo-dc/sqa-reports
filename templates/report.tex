@@ -87,7 +87,7 @@
     \hyperref[sec:code_style]{Code style adherence} & \BLOCK{if product.code_style.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.code_style.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:unit_test]{Code coverage} & \BLOCK{if product.unit_test.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{else}\graybox{\VAR{product.unit_test.coverage}\%}\BLOCK{endif}\\ 
     \hyperref[sec:func_int_test]{Functional/integration testing} & \BLOCK{if product.func_int_test.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.func_int_test.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
-    \hyperref[sec:gitbook]{GitBook documentation} & \BLOCK{if product.config_management.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{elif product.gitbook.url}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
+    \hyperref[sec:gitbook]{GitBook documentation} & \BLOCK{if product.gitbook.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{elif product.gitbook.status_complete}\greenbox{COMPLETE}\BLOCK{elif product.gitbook.url}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
     \hyperref[sec:configuration]{Automated deployment} & \BLOCK{if product.config_management.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{elif product.config_management.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.config_management.tool}\greenbox{COMPLETE}\BLOCK{elif product.config_management.wont_be_provided}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
 \end{tabular}
 \end{center}
