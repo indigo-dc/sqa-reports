@@ -1,9 +1,9 @@
 id: "indigo-omt"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3434
-        progress: 80
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3830
@@ -16,10 +16,10 @@ tasks:
           progress: 20
         - name: "Functional and integration testing coverage"
           id: 3440
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3443
-          progress: 70
+          progress: 100
         - name: "GitBook documentation"
           id: 3446
           progress: 100
@@ -32,26 +32,28 @@ code_style:
     exceptions: 0
     jenkins_job:
     comments:
-        - "WP3 will enable the check in Jenkins CI."
+        - "Guidelines provided by the product team. WP3 will enable the check in Jenkins CI."
 unit_test:
     coverage: 14
     jenkins_job:
+    comments:
+        - "Guidelines provided by the product team. WP3 will enable the check in Jenkins CI."
 func_int_test:
-    status_notcomplete: True
     url:
     description:
         - "Listing tasks"
         - "Filtering tasks by name, by status"
         - "Creating new tasks"
         - "Getting details of chosen task"
-    comments:
-        - "Missing report from functionality testing."
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FINDIGO%20OMT
 gitbook:
     url: https://indigo-dc.gitbooks.io/omt-android/content/
     types:
         - "Developers Guide"
 config_management:
-    status_notcomplete: True
+    comments:
+        - "By the product team: \\textit{Ansible in context of mobile app is in my opinion not so crucial service like for other services in this project (The very similar example is Docker in conjuction with mobile app.). Ansible can only prepare the enviroment for development but the mobile app needs to be deployed on the real device using USB/Google Play or using emulator, so in the cloud env could be very tricky. Anyway, I tried to force the up-to-date jenkins instance to run latest and few older emulators, but without luck yet.}."
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/omt-android/blob/master/indigo-omt.android.yml
     level: installation/configuration  # values: installation, configuration, installation/configuration
