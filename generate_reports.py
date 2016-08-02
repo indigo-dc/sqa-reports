@@ -142,6 +142,8 @@ def main(fname, specdir, period, output=None, code_style=None):
 
         # specs - unit_test
         if specs["unit_test"]["jenkins_job"]:
+            # FIXME(orviz) Just getting the first job!
+            specs["unit_test"]["jenkins_job"] = specs["unit_test"]["jenkins_job"][0]
             specs["unit_test"]["job_url"] = jenkins.get_last_job_url(
                 specs["unit_test"]["jenkins_job"])
             specs["unit_test"]["graph"] = jenkins.save_cobertura_graph(
@@ -178,7 +180,7 @@ def main(fname, specdir, period, output=None, code_style=None):
         #FIXME(orviz) these values must be CLI arguments
         period=period
         weeks=12
-        current_week=10
+        current_week=12
         logger.info("Reports being generated for period '%s' (week %s out of %s)" % (period, current_week, weeks))
         template = latex_jinja_env.get_template(os.path.basename(fname))
         r = template.render(
