@@ -4,14 +4,14 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4016
-        progress: 38
+        progress: 60
     children:
         - name: "Repository synchronization"
           id: 4019
-          progress: 0
+          progress: 100
         - name: "Code style specification"
           id: 4022 
-          progress: 20
+          progress: 50
         - name: "Unit testing coverage"
           id: 4025
           progress: 10
@@ -25,18 +25,23 @@ tasks:
           id: 4034
           progress: 100
 repository: 
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     url:
+        - https://github.com/indigo-dc/jsaga.git
 code_style:
     status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     standard:
     exceptions: 
     jenkins_job:
+        - jsaga-rm-codestyle
+    comments:
+        - "Guidelines for deploying the Jenkins job given by the product team. Job is currently failing because of dependency issues."
 unit_test:
     status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     coverage:
     jenkins_job:
+        - jsaga-rm-unittest
     comments:
+        - "Guidelines for deploying the Jenkins job given by the product team. Job is currently failing because of dependency issues."
 func_int_test:
     status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     jenkins_job:

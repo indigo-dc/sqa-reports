@@ -1,6 +1,6 @@
 id: "indigo-kepler"
 name: "INDIGO Plug-ins for scientific workflow systems"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3530
@@ -17,7 +17,7 @@ tasks:
           progress: 86
         - name: "Functional and integration testing coverage"
           id: 3539
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3542
           progress: 100
@@ -42,7 +42,6 @@ unit_test:
         - "For indigo-dc/indigokepler, there are no unit tests. Actors are just proxies for indigoclient calls. Actors work only as part of Kepler platform."
         - "Conditional coverage is the one at 86\\%, above the 70% threshold."
 func_int_test:
-    status_notcomplete: True
     jenkins_job:
     url_external: # links to external CIs
     description:
@@ -55,8 +54,8 @@ func_int_test:
         - Listing all tasks
         - Getting details about specific task
         - Deleting a task
-    comments:
-        - "Missing report with functional/integration testing results."
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FINDIGO%20Kepler
 gitbook:
     url: https://indigo-dc.gitbooks.io/indigokepler/content/
     types:
