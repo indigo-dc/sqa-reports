@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4094
-        progress: 57
+        progress: 97 
     children:
         - name: "Repository synchronization"
           id: 4097
@@ -16,13 +16,13 @@ tasks:
           progress: 94
         - name: "Functional and integration testing coverage"
           id: 4106
-          progress: 0
+          progress: 90
         - name: "Configuration management"
           id: 4109
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 4112
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/Accounting.git
@@ -34,24 +34,26 @@ code_style:
         - cloud-info-provider-codestyle
 unit_test:
     coverage: 94 
-    url_external:
     jenkins_job: 
         - cloud-info-provider-unittest
 func_int_test:
     status_notcomplete: True
+    comments:
+        - "Missing list of functionalities being tested."
     url_external: # links to external CIs
     jenkins_job:
+        - cloud-info-provider-unittest
 gitbook:
-    status_notcomplete: True
-    comments:
-        - "Missing GitBook link"
-    url: 
+    url: https://indigo-dc.gitbooks.io/cloud-info-provider/content/
     types:
+        - Readme
+        - Deployment documentation
 config_management:
-    status_notcomplete: True
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    comments:
+        - "There is an external \\href{https://travis-ci.org/indigo-dc/ansible-role-cloud-info-provider}{Travis CI job} showcasing the deployment of the product."
+    tool: ansible  # e.g. ansible, ..
+    url: https://galaxy.ansible.com/indigo-dc/cloud-info-provider/ 
+    level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
