@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3221
-        progress: 73
+        progress: 82
     children:
         - name: "Repository synchronization"
           id: 3224 
@@ -16,7 +16,7 @@ tasks:
           progress: 50
         - name: "Functional and integration testing coverage"
           id: 3236
-          progress: 50
+          progress: 90
         - name: "Configuration management"
           id: 3239
           progress: 50
@@ -35,23 +35,28 @@ code_style:
     comments:
         - "Progress set to 70\\% since the product is adhered to a standard, but not currently compliant with it."
 unit_test:
-    wp3_in_progress: True
     coverage: 0 
     jenkins_job:
+        - zabbix-probes-unittest
     comments:
         - "Command/s to execute the Jenkins job has been provided."
 func_int_test:
-    status_notcomplete: True
     jenkins_job:
+        - zabbix-probes-unittest
     comments:
         - "Command/s to execute the Jenkins job has been provided."
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FZabbix%20Probes%20-%20Monitoring
 gitbook:
+    status_notcomplete: True
     url: https://www.gitbook.com/book/indigo-dc/monitoring/details
     types:
-        - Readme
-        - Deployment documentation.
+        - "Readme"
+        - "Deployment and Administration documentation"
+        - "Developer documentation"
+        - "User documentation"
     comments:
-        - "Missing some info about the scripts created by Indra for supporting the Zabbix deployment and maintenance."
+        - "Not all the documentation is available in GitHub. Product team is having issues with GitHub<->GitBook integration."
 config_management:
     comments:
         - "Ansible playbooks are being generated."

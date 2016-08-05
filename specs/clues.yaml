@@ -1,10 +1,10 @@
 id: "CLUES"
 name: "Cluster Energy Saving"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3086
-        progress: 97
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3863
@@ -17,7 +17,7 @@ tasks:
           progress: 90
         - name: "Functional and integration testing coverage"
           id: 3140
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3143
           progress: 100
@@ -44,13 +44,15 @@ func_int_test:
         - "Deploy a (galaxy elastic or mesos) cluster by providing a TOSCA file to the orchestrator."
         - "Add/delete cluster nodes."
         - "Monitor job scheduling."
-    comments:
-        - "Missing test report."
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FCLUES
 gitbook:
     url: https://indigo-dc.gitbooks.io/clues-plugins/content/
     types:
         - Readme
 config_management:
+    comments:
+        - "Jenkins jobs will be created at INDIGO-DataCloud CI."
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/clues-indigo/blob/master/ansible/playbook.yml
     level: installation # values: installation, configuration, installation/configuration
@@ -62,5 +64,3 @@ config_management:
         - version: CentOS7
           successful:   # True, False
           url:
-    comments:
-        - "Progress is 50\\% since the product has provided the Ansible playbooks but the job has not already been defined (WP3 duty)."

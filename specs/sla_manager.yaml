@@ -3,11 +3,11 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3194
-        progress: 0 
+        progress: 17 
     children:
         - name: "Repository synchronization"
           id: 3200
-          progress: 0
+          progress: 100
         - name: "Code style specification"
           id: 3860
           progress: 0
@@ -24,7 +24,8 @@ tasks:
           id: 3212
           progress: 0
 repository: 
-    url: 
+    url:
+        - https://github.com/indigo-dc/slam
 code_style:
     status_notcomplete: True
     standard: 

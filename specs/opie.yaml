@@ -1,10 +1,10 @@
 id: "opie"
 name: "OpenStack Preemptible Instances Extension"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3767 
-        progress: 65
+        progress: 97
     children:
         - name: "Repository synchronization"
           id: 3770
@@ -17,15 +17,16 @@ tasks:
           progress: 75
         - name: "Functional and integration testing coverage"
           id: 3779
-          progress: 0
+          progress: 100
         - name: "Configuration management"
           id: 3782
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 3785
           progress: 100
 repository: 
-    url: https://github.com/indigo-dc/opie 
+    url: 
+        - https://github.com/indigo-dc/opie 
 code_style:
     standard:
         - hacking
@@ -36,10 +37,39 @@ unit_test:
     coverage: 92
     jenkins_job: opie-unittest
 func_int_test:
-    status_notcomplete: True
-    url:
     comments:
-        - "Working on this next week."
+        - "Product team has provided the command/s to deploy the automated testing."
+    url:
+    description:
+        - add\_retry\_host
+        - hosts\_up
+        - invalid\_max\_attempts
+        - max\_attempts
+        - post\_select\_populate
+        - schedule\_chooses\_best\_host
+        - schedule\_happy\_day
+        - schedule\_host\_pool
+        - schedule\_large\_host\_pool
+        - schedule\_with\_pci\_requests
+        - select\_destinations
+        - select\_destinations\_no\_valid\_host
+        - select\_destinations\_no\_valid\_host\_not\_enough
+        - select\_destinations\_notifications
+        - detect\_not\_overcommit
+        - detect\_overcommit\_cpu
+        - detect\_overcommit\_disk
+        - detect\_overcommit\_ram
+        - detect\_preemptible
+        - detect\_preemptible\_empty
+        - detect\_preemptible\_false
+        - hosts\_up
+        - schedule\_happy\_day
+        - schedule\_happy\_day\_preemptible
+        - select\_destinations
+        - select\_destinations\_kill\_preemptible
+        - select\_destinations\_kill\_preemptible\_empty
+        - select\_destinations\_premptible
+        - terminate\_preemptible\_instances
 gitbook:
     url: https://indigo-dc.gitbooks.io/opie/content/
     types:
@@ -47,7 +77,7 @@ gitbook:
         - Developer guide
 config_management:
     comments:
-        - "Working on this next week."
+        - "From the product team: '\\textit{opie needs manual configuration of the installed nova configuration files and the patching of one file, so a manual action is needed anyway. In this case I think that documentation is a better option, as the setup is not complicated at all. If I manage those files (i.e. /etc/nova/nova.conf) and they are already managed by the configuration management (i.e. puppet or ansible) there would be conflicts (at least in puppet you cannot define a resource twice). I could modify the file using augeas, but this is an external dependency for Puppet, that is often not installed. With this in mind, the configuration management module will only install the packages, so I do not know how to proceed.}'"
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

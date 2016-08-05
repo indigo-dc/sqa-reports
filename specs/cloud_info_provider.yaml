@@ -25,10 +25,10 @@ tasks:
           progress: 100
 repository: 
     url:
-        - https://github.com/indigo-dc/Accounting.git
+        - https://github.com/indigo-dc/cloud-info-provider
 code_style:
     standard:
-        - hacking
+        - flake8
     exceptions: 0 
     jenkins_job:
         - cloud-info-provider-codestyle
@@ -39,10 +39,15 @@ unit_test:
 func_int_test:
     status_notcomplete: True
     comments:
-        - "Missing list of functionalities being tested."
+        - "Missing report for the integration tests."
     url_external: # links to external CIs
     jenkins_job:
         - cloud-info-provider-unittest
+    description:
+        - "\\texttt{cloud\\_info.tests.test\\_core.BaseBDIITest.test\\_get\\_info\\_from\\_providers}: validates getting information from the cloud middleware."
+        - "\\texttt{cloud\\_info.tests.test\\_core.BaseBDIITest.test\\_load\\_templates}: validates loading templates used for rendering the information retrieved from the cloud middleware."
+        - "\\texttt{cloud\\_info.tests.test\\_core.IndigoComputeBDIITest.test\\_render}: validates the rendering of a template."
+        - "\\texttt{cloud\\_info.tests.test\\_core.ModuleTest.test\\_main}: validates that the module correctly calls the required classes."
 gitbook:
     url: https://indigo-dc.gitbooks.io/cloud-info-provider/content/
     types:

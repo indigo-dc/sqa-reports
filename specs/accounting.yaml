@@ -1,17 +1,16 @@
 id: "Accounting"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
-# http://bit.ly/accounting_dqa_indigo1
     parent:
         id: 3269
-        progress: 78 
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3272 
           progress: 100
         - name: "Code style specification"
           id: 3842
-          progress: 50 
+          progress: 100 
         - name: "Unit testing coverage"
           id: 3275
           progress: 70 
@@ -23,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3284
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/Accounting.git
@@ -35,8 +34,6 @@ code_style:
     jenkins_job:
         - accounting-codestyle
         - accounting-codestyle-pep257
-    comments:
-        - "Task is at 50\\% of progress since the standards are defined (PEP 8, PEP 257) but the source code is not compliant with them."
 unit_test:
     coverage: 70
     jenkins_job: #accounting-unittest
@@ -52,8 +49,12 @@ func_int_test:
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FAccounting&files=wp3-3278.pdf
 gitbook:
-    url: 
+    url: https://www.gitbook.com/book/indigo-dc/accounting 
     types:
+        - "Readme"
+        - "Developer guide"
+        - "Deployment and Administration guide"
+        - "User guide"
     comments:
         - "Empty book created under \\texttt{indigo-dc}. The documentation is available in dev branch, will be uploaded whenever the release is done."
 config_management:
