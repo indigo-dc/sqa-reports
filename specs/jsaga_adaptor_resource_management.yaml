@@ -39,6 +39,9 @@ unit_test:
         - jsaga-rm-unittest
 func_int_test:
     status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+    comments:
+        - "Current unit tests contain integration checks. Will be separated and completed."
+        - "The functionnality being tested will be the middleware-independant API to manage jobs (submission and monitoring), data management (logicial and physical files) and resource management (computer/storage dynamic allocation)."
     jenkins_job:
     url_external: # links to external CIs
 gitbook:

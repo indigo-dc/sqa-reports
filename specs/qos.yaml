@@ -1,6 +1,6 @@
 id: "CDMI"
 name: "INDIGO-DataCloud CDMI Server"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2888
@@ -50,7 +50,8 @@ gitbook:
         - "Administration documentation"
         - "User documentation"
 config_management:
-    status_notcomplete: True
+    comments:
+        - "Ansible roles provided, will be uploaded to the repository."
     tool: ansible  # e.g. ansible, ..
     url: https://indigo-dc.gitbooks.io/cdmi-qos/content/doc/installing_cdmi-qos.html
     level:  installation # values: installation, configuration, installation/configuration

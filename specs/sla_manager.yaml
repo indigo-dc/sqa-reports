@@ -3,43 +3,50 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3194
-        progress: 17 
+        progress: 58
     children:
         - name: "Repository synchronization"
           id: 3200
           progress: 100
         - name: "Code style specification"
           id: 3860
-          progress: 0
+          progress: 90
         - name: "Unit testing coverage"
           id: 3203
-          progress: 0
+          progress: 10
         - name: "Functional and integration testing coverage"
           id: 3206
           progress: 0
         - name: "Configuration management"
           id: 3209
-          progress: 0
+          progress: 50 
         - name: "GitBook documentation"
           id: 3212
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/slam
 code_style:
-    status_notcomplete: True
-    standard: 
-    exceptions: 
-    jenkins_job: 
+    standard:
+        - java_google
+    exceptions: 0
+    jenkins_job:
+        - slam-codestyle
 unit_test:
+    comments:
+        - "The detailed coverage is: Packages 86%, Files 78%, Classes 74%, Methods 74%, lines 71% Conditionals 0%. Cobertura plugin sets the overall coverage to the lowest value, although the rest of coverage values are quite high."
     coverage: 0
     jenkins_job:
+        - slam-unittest
 func_int_test:
     status_notcomplete: True
     url:
 gitbook:
-    url:
+    url: https://indigo-dc.gitbooks.io/slam/content/
     types:
+        - "Readme"
+        - "Deployment documentation"
+        - "API documentation"
 config_management:
     tool:   # e.g. ansible, ..
     url:

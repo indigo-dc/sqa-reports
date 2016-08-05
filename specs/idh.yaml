@@ -1,6 +1,6 @@
 id: "idh"
 name: "INDIGO-DataCLoud Identity-Harmonization Service"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2876 
@@ -51,9 +51,8 @@ gitbook:
         - "Deployment documentation"
         - "User documentation"
 config_management:
-    status_notcomplete: True
     comments:
-        - "There are already Ansible roles?/scripts? that a student here produced."
+        - "Ansible roles provided, will be uploaded to the repository."
     tool: ansible
     url: https://indigo-dc.gitbooks.io/identity-harmonization/content/doc/admin.html
     level:  installation/configuration # values: installation, configuration, installation/configuration

@@ -42,7 +42,7 @@ func_int_test:
     jenkins_job: orchestrator-integration
     description:
         - "\\underline{Functional tests}: WF tasks related to the external Services, using mocks (CloudProviderRanker, CMDB, SLAM, Monitoring, Notification callbacks) - 40\\%."
-        - "\\underline{Integration tests}: (without mock) for external services (CloudProviderRanker, CMDB, SLAM – we had some problems with the last couple, but we will fix them soon)."
+        - "\\underline{Integration tests}: (without mock) for external services (CloudProviderRanker, CMDB, SLAM - we had some problems with the last couple, but we will fix them soon)."
 gitbook:
     url: https://indigo-dc.gitbooks.io/orchestrator/content/
     types:
