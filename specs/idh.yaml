@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2876 
-        progress: 90
+        progress: 92
     children:
         - name: "Repository synchronization"
           id: 3950
@@ -20,7 +20,7 @@ tasks:
           progress: 90
         - name: "Configuration management"
           id: 2882
-          progress: 90
+          progress: 100
         - name: "GitBook documentation"
           id: 2885
           progress: 100
@@ -51,10 +51,8 @@ gitbook:
         - "Deployment documentation"
         - "User documentation"
 config_management:
-    comments:
-        - "Ansible roles provided, will be uploaded to the repository."
     tool: ansible
-    url: https://indigo-dc.gitbooks.io/identity-harmonization/content/doc/admin.html
+    url: https://github.com/indigo-dc/ansible-role-idh-master
     level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:

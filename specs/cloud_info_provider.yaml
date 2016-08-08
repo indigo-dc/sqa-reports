@@ -1,9 +1,9 @@
 id: "cloud-info-provider"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4094
-        progress: 97 
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 4097
@@ -16,7 +16,7 @@ tasks:
           progress: 94
         - name: "Functional and integration testing coverage"
           id: 4106
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 4109
           progress: 100
@@ -37,9 +37,6 @@ unit_test:
     jenkins_job: 
         - cloud-info-provider-unittest
 func_int_test:
-    status_notcomplete: True
-    comments:
-        - "Missing report for the integration tests."
     url_external: # links to external CIs
     jenkins_job:
         - cloud-info-provider-unittest
@@ -48,6 +45,8 @@ func_int_test:
         - "\\texttt{cloud\\_info.tests.test\\_core.BaseBDIITest.test\\_load\\_templates}: validates loading templates used for rendering the information retrieved from the cloud middleware."
         - "\\texttt{cloud\\_info.tests.test\\_core.IndigoComputeBDIITest.test\\_render}: validates the rendering of a template."
         - "\\texttt{cloud\\_info.tests.test\\_core.ModuleTest.test\\_main}: validates that the module correctly calls the required classes."
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files?dir=/INDIGO-DC%20testing%20reports/integration/indigo_1/CloudInfoProvider
 gitbook:
     url: https://indigo-dc.gitbooks.io/cloud-info-provider/content/
     types:

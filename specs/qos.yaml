@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2888
-        progress: 87 
+        progress: 88 
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -20,7 +20,7 @@ tasks:
           progress: 90
         - name: "Configuration management"
           id: 2900
-          progress: 90
+          progress: 100
         - name: "GitBook documentation"
           id: 2903
           progress: 100
@@ -50,10 +50,8 @@ gitbook:
         - "Administration documentation"
         - "User documentation"
 config_management:
-    comments:
-        - "Ansible roles provided, will be uploaded to the repository."
     tool: ansible  # e.g. ansible, ..
-    url: https://indigo-dc.gitbooks.io/cdmi-qos/content/doc/installing_cdmi-qos.html
+    url: https://github.com/indigo-dc/ansible-role-cdmi-master 
     level:  installation # values: installation, configuration, installation/configuration
     jenkins_job:
     build:

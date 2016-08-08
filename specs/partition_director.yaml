@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3041
-        progress: 42 
+        progress: 58 
     children:
         - name: "Repository synchronization"
           id: 3044
@@ -16,7 +16,7 @@ tasks:
           progress: 0
         - name: "Functional and integration testing coverage"
           id: 3056
-          progress: 0
+          progress: 50
         - name: "Configuration management"
           id: 3059
           progress: 0
@@ -40,6 +40,12 @@ unit_test:
 func_int_test:
     status_notcomplete: True
     url:
+    description:
+        - "Switch role of selected physical machines from the LSF cluster to the Openstack one."
+        - "Switch role of selected physical machines from the Openstack cluster to the LSF one."
+        - "Manage intermediate transition statuses, ensure consistency."
+    report:
+        - https://github.com/indigo-dc/dynpart/blob/ffreeze/doc/dynpart_test.txt
 gitbook:
     url:
     types:

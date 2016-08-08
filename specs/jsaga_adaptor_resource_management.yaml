@@ -1,10 +1,10 @@
 id: "jSAGA RM API"
 name: "jSAGA Resource Management API"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4016
-        progress: 75
+        progress: 92
     children:
         - name: "Repository synchronization"
           id: 4019
@@ -17,7 +17,7 @@ tasks:
           progress: 46
         - name: "Functional and integration testing coverage"
           id: 4028
-          progress: 0
+          progress: 100
         - name: "Configuration management"
           id: 4031
           progress: 100
@@ -38,12 +38,11 @@ unit_test:
     jenkins_job:
         - jsaga-rm-unittest
 func_int_test:
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     comments:
         - "Current unit tests contain integration checks. Will be separated and completed."
         - "The functionnality being tested will be the middleware-independant API to manage jobs (submission and monitoring), data management (logicial and physical files) and resource management (computer/storage dynamic allocation)."
     jenkins_job:
-    url_external: # links to external CIs
+        - jsaga-rm-functional
 gitbook:
     url: https://indigo-dc.gitbooks.io/jsaga-resource-management/content/
     types:
@@ -51,7 +50,7 @@ gitbook:
         - "User documentation"
         - "API documentation"
 config_management:
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+    wont_be_provided: True   # values: status_complete, status_notcomplete, status_inprogress
     tool:   # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration

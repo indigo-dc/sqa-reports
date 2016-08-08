@@ -34,12 +34,14 @@ code_style:
         - orchestrator-codestyle
 unit_test:
     coverage: 28
-    jenkins_job: orchestrator-unittest
+    jenkins_job:
+        - orchestrator-unittest
     comments:
         - "Unit testing coverage has decreased from last report (30\\%)."
 func_int_test:
     url:
-    jenkins_job: orchestrator-integration
+    jenkins_job:
+        - orchestrator-integration
     description:
         - "\\underline{Functional tests}: WF tasks related to the external Services, using mocks (CloudProviderRanker, CMDB, SLAM, Monitoring, Notification callbacks) - 40\\%."
         - "\\underline{Integration tests}: (without mock) for external services (CloudProviderRanker, CMDB, SLAM - we had some problems with the last couple, but we will fix them soon)."
