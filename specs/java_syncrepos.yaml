@@ -1,5 +1,5 @@
 id: "java-syncrepos"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3065 
@@ -22,7 +22,7 @@ tasks:
           progress: 70
         - name: "GitBook documentation"
           id: 3083
-          progress: 90
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/java-syncrepos 
@@ -46,16 +46,14 @@ func_int_test:
         - "Report will be generated with the guidelines provided by the product team."
         -  "Work in progress on WP3 side."
 gitbook:
-    status_notcomplete: True
-    url: "https://www.gitbook.com/book/jose-sanchezm/java-syncrepos/details"
+    url: https://indigo-dc.gitbooks.io/java-syncrepos/content/
     types:
         - "Readme"
         - "Deployment documentation"
-    comments:
-        - "Documentation needs to be available at GitBook's indigo-dc organization."
 
 config_management:
-    status_notcomplete: True
+    comments:
+        - "Pending OpenNebula configuration"
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/java-syncrepos/tree/master/ansible
     level:  installation # values: installation, configuration, installation/configuration

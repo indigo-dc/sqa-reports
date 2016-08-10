@@ -1,5 +1,5 @@
 id: "dCache"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2852 
@@ -34,17 +34,18 @@ code_style:
     comments:
         - "Jenkins job cannot be implemented since the code-style is IDE-specific and cannot be ran through command-line."
 unit_test:
-    wp3_in_progress: True
     coverage: 22 
     jenkins_job:
     comments:
-        - "PT provided links to the reports for the code coverage and functiona testing "
+        - "PT provided links to the reports for the code coverage and functional testing "
 func_int_test:
-    status_notcomplete: True
     jenkins_job:
     url_external: https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/ # links to external CIs
+    description:
+        - " gplazma (authentication)"
+        - "webdav (file transfer and REST interface handler)"
     comments:
-        - "Missing list of functionalities being checked."
+        - "Quoting PT: \\textit{'We are in the process of switching to a different testing system (Robot framework), overarching tests of Indigo-specific functionality are still missing at the moment.'}"
 gitbook:
     url: https://indigo-dc.gitbooks.io/dcache/content/
     types:
