@@ -115,16 +115,25 @@ def main(fname, specdir, period, output=None, code_style=None):
         specs = load_yaml(f)
         logger.info("Parsing spec file '%s'" % f)
 
+        report_openstack = False
+        try:
+            if specs["report_type"] == "openstack":
+                report_openstack = True
+                logger.debug("OpenStack report type")
+        except:
+            report_openstack = False
+
         # specs - code_style
-        if specs["code_style"]["jenkins_job"]:
-            logger.debug("Jenkins job/s for code style found.")
-            specs["code_style"]["jobs"] = {}
-            for j in specs["code_style"]["jenkins_job"]:
-                specs["code_style"]["jobs"][j] = {}
-                specs["code_style"]["jobs"][j]["job_url"] = jenkins.get_last_job_url(j)
-                specs["code_style"]["jobs"][j]["job_name"] = j
-        else:
-            logger.debug("No Jenkins job found for code style.")
+        if not report_openstack:
+            if specs["code_style"]["jenkins_job"]:
+                logger.debug("Jenkins job/s for code style found.")
+                specs["code_style"]["jobs"] = {}
+                for j in specs["code_style"]["jenkins_job"]:
+                    specs["code_style"]["jobs"][j] = {}
+                    specs["code_style"]["jobs"][j]["job_url"] = jenkins.get_last_job_url(j)
+                    specs["code_style"]["jobs"][j]["job_name"] = j
+            else:
+                logger.debug("No Jenkins job found for code style.")
         if specs["code_style"]["standard"]:
             logger.debug("Code style standard/s adhered: %s"
                          % ','.join(specs["code_style"]["standard"]))
@@ -141,40 +150,43 @@ def main(fname, specdir, period, output=None, code_style=None):
             logger.debug("No code_style standard/s defined.")
 
         # specs - unit_test
-        if specs["unit_test"]["jenkins_job"]:
-            # FIXME(orviz) Just getting the first job!
-            specs["unit_test"]["jenkins_job"] = specs["unit_test"]["jenkins_job"][0]
-            specs["unit_test"]["job_url"] = jenkins.get_last_job_url(
-                specs["unit_test"]["jenkins_job"])
-            specs["unit_test"]["graph"] = jenkins.save_cobertura_graph(
-                specs["unit_test"]["jenkins_job"],
-                dest_dir=os.path.join(output, "figs"))
-            specs["unit_test"]["data"] = jenkins.get_cobertura_data(
-                specs["unit_test"]["jenkins_job"])
-            logger.debug("Jenkins job for unit testing found: %s"
-                         % specs["unit_test"]["job_url"])
-        elif "url_external" in specs["unit_test"].keys():
-            specs["unit_test"]["job_url"] = specs["unit_test"]["url_external"]
-            logger.debug("External URL for unit testing found: %s"
-                         % specs["unit_test"]["job_url"])
-        else:
-            logger.debug("No jenkins job defined in configuration.")
+        if not report_openstack:
+            if specs["unit_test"]["jenkins_job"]:
+                # FIXME(orviz) Just getting the first job!
+                specs["unit_test"]["jenkins_job"] = specs["unit_test"]["jenkins_job"][0]
+                specs["unit_test"]["job_url"] = jenkins.get_last_job_url(
+                    specs["unit_test"]["jenkins_job"])
+                specs["unit_test"]["graph"] = jenkins.save_cobertura_graph(
+                    specs["unit_test"]["jenkins_job"],
+                    dest_dir=os.path.join(output, "figs"))
+                specs["unit_test"]["data"] = jenkins.get_cobertura_data(
+                    specs["unit_test"]["jenkins_job"])
+                logger.debug("Jenkins job for unit testing found: %s"
+                             % specs["unit_test"]["job_url"])
+            elif "url_external" in specs["unit_test"].keys():
+                specs["unit_test"]["job_url"] = specs["unit_test"]["url_external"]
+                logger.debug("External URL for unit testing found: %s"
+                             % specs["unit_test"]["job_url"])
+            else:
+                logger.debug("No jenkins job defined in configuration.")
 
         # specs - func_int_test
-        add_jenkins_job(specs, "func_int_test")
-        if specs["func_int_test"]:
-            logger.debug("Functional/integration tests defined.")
-        else:
-            logger.debug("No functional/integration definition found.")
+        if not report_openstack:
+            add_jenkins_job(specs, "func_int_test")
+            if specs["func_int_test"]:
+                logger.debug("Functional/integration tests defined.")
+            else:
+                logger.debug("No functional/integration definition found.")
 
         # specs - config_management
-        specs["config_management"]["job_url"] = jenkins.get_last_job_url(
-            specs["config_management"]["jenkins_job"])
-        if specs["config_management"]["job_url"]:
-            logger.debug("Configuration management job found: %s"
-                         % specs["config_management"]["jenkins_job"])
-        else:
-            logger.debug("No Jenkins job for configuration management found.")
+        if not report_openstack:
+            specs["config_management"]["job_url"] = jenkins.get_last_job_url(
+                specs["config_management"]["jenkins_job"])
+            if specs["config_management"]["job_url"]:
+                logger.debug("Configuration management job found: %s"
+                             % specs["config_management"]["jenkins_job"])
+            else:
+                logger.debug("No Jenkins job for configuration management found.")
 
         # latex
         #FIXME(orviz) these values must be CLI arguments

@@ -1,0 +1,34 @@
+id: "tosca-parser"
+report_type: openstack
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+repository:
+    url:
+        - https://github.com/indigo-dc/tosca-parser
+code_style:
+    standard:
+        - hacking 
+    exceptions: 0
+unit_test:
+    coverage: 90
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Funit%2Findigo_1%2Ftosca-parser&files=Coverage%20report.pdf
+func_int_test:
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2Ftosca-parser&files=Unit%20Test%20Report.pdf
+documentation:
+    wiki: https://wiki.openstack.org/wiki/TOSCA-Parser
+    developer: http://docs.openstack.org/developer/tosca-parser/
+config_management:
+    wont_be_provided: True
+gerrit: 
+    url: https://review.openstack.org/#/q/project:openstack/tosca-parser
+    jobs: 
+        - gate-tosca-parser-docs-ubuntu-xenial
+        - gate-tosca-parser-pep8-ubuntu-xenial
+        - gate-tosca-parser-python27-ubuntu-xenial
+        - gate-tosca-parser-python34
+        - gate-tosca-parser-python35
+stackalytics:
+    partner:
+        - UPV
+    commits: http://stackalytics.com/?release=all&metric=commits&module=tosca-parser

@@ -1,0 +1,168 @@
+\documentclass[a4wide,11pt]{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{xcolor}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33}
+\definecolor{statusred}{RGB}{204,0,0}
+\definecolor{statusgreen}{RGB}{0,153,0}
+\definecolor{statusorange}{RGB}{245,184,0}
+\definecolor{statusyellow}{RGB}{255,255,61}
+\newcommand{\greenbox}[1]{\colorbox{statusgreen!90}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\graybox}[1]{\colorbox{gray!90}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\lightgraybox}[1]{\colorbox{gray!40}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\redbox}[1]{\colorbox{statusred}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+\newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
+
+\begin{document}
+
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{\VAR{period}}\\[1.5em] 
+       \huge{\texttt{\VAR{product.id}\BLOCK{if product.name} (\VAR{product.name})\BLOCK{endif}}}\\
+}
+
+\date{} 
+\maketitle
+
+\Large
+\vspace{-3em}
+\begin{center}
+    \graybox{\strut SQA Progress Status}\BLOCK{if product.status_complete}\greenbox{\strut COMPLETE}\BLOCK{elif product.status_notcomplete}\redbox{\strut NOT COMPLETE}\BLOCK{elif product.status_inprogress}\graybox{\strut IN PROGRESS}\BLOCK{endif} 
+\end{center}
+
+\vspace{4em}
+
+\large
+\begin{center}
+\begin{tabular}{ll}
+    \hyperref[sec:repository]{GitHub repository} & \BLOCK{if product.repository.url}\greenbox{COMPLETE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
+    \hyperref[sec:code_style]{Code style adherence} & \BLOCK{if product.code_style.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
+    \hyperref[sec:unit_test]{Code coverage} & \BLOCK{if product.unit_test.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{else}\graybox{\VAR{product.unit_test.coverage}\%}\BLOCK{endif}\\ 
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \BLOCK{if product.func_int_test.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
+    \hyperref[sec:documentation]{Documentation} & \BLOCK{if product.documentation.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{else}\greenbox{COMPLETE}\BLOCK{endif} \\
+    \hyperref[sec:configuration]{Automated deployment} & \BLOCK{if product.config_management.status_notcomplete}\redbox{NOT COMPLETE}\BLOCK{elif product.config_management.wp3_in_progress}\graybox{IN PROGRESS - WP3}\BLOCK{elif product.config_management.tool}\greenbox{COMPLETE}\BLOCK{elif product.config_management.wont_be_provided}\graybox{NOT APPLICABLE}\BLOCK{else}\redbox{NOT COMPLETE}\BLOCK{endif} \\
+\end{tabular}
+\end{center}
+
+
+\normalsize 
+\newpage
+
+
+\part{Task Progress for the 1st Release}
+
+
+\section{Repository synchronization}
+\label{sec:repository}
+\BLOCK{if product.repository.url}
+\begin{itemize}
+    \BLOCK{for repo in product.repository.url}
+    \item \url{\VAR{repo}}\
+    \BLOCK{endfor}
+\end{itemize}
+\BLOCK{else}
+Repository is currently \textbf{not available}.
+\BLOCK{endif}
+
+
+\section{Code Style}
+\label{sec:code_style}
+\BLOCK{if product.code_style.data}
+\BLOCK{for standard_name, standard_data in product.code_style.data.iteritems()}
+\begin{tabular}{ll}
+    Code style definition &
+        \href{\VAR{standard_data.url}}{\VAR{standard_data.name}} \\
+    Community/de-facto standard &
+        \graybox{\VAR{standard_data.defacto}} \\ 
+    Exceptions & 
+        \graybox{\VAR{product.code_style.exceptions}} \\
+    Richness & \graybox{\strut \VAR{standard_data.richness.number}} \hspace{0.3em} \graybox{\strut Errors \VAR{standard_data.richness.no_errors}} \graybox{\strut Warnings \VAR{standard_data.richness.no_warnings}} \href{\VAR{standard_data.richness.url}}{link}
+\end{tabular}
+\BLOCK{if loop.index < product.code_style.data|length} \\[1.5em]\BLOCK{endif}
+\BLOCK{endfor}
+\BLOCK{endif}
+
+
+\section{Unit Testing}
+\label{sec:unit_test}
+Code coverage is \VAR{product.unit_test.coverage}\%.
+\BLOCK{if product.unit_test.report}
+\subsection{Reports}
+Unit testing report/s available:
+\begin{itemize}
+    \BLOCK{for r in product.unit_test.report}
+    \item \href{\VAR{r}}{owncloud report}
+    \BLOCK{endfor}
+\end{itemize}
+\BLOCK{endif}
+
+
+\section{Functional/Integration Testing}
+\label{sec:func_int_test}
+\BLOCK{if product.unit_test.report}
+\subsection{Reports}
+Functional/integration report/s available:
+\begin{itemize}
+    \BLOCK{for r in product.func_int_test.report}
+    \item \href{\VAR{r}}{owncloud report}
+    \BLOCK{endfor}
+\end{itemize}
+\BLOCK{endif}
+
+
+\section{Documentation}
+\label{sec:documentation}
+\begin{itemize}
+    \item Product card: \url{\VAR{product.documentation.wiki}}
+    \item Developer documentation: \url{\VAR{product.documentation.developer}}
+\end{itemize}
+
+
+
+\part{OpenStack CI infrastructure}
+
+\section{Source Code Review}
+\begin{itemize}
+    \item Product's source code changes summary available at \href{\VAR{product.gerrit.url}}{Gerrit} interface. \\
+    \BLOCK{if product.gerrit.jobs}
+    \item Jobs being executed for each change submission:
+    \begin{itemize}
+        \BLOCK{for j in product.gerrit.jobs}
+            \item \texttt{\VAR{j}}
+        \BLOCK{endfor}
+    \end{itemize}
+    \BLOCK{endif}
+\end{itemize}
+
+
+\section{Contribution}
+\begin{itemize}
+    \item INDIGO-DataCloud partners involved:
+    \begin{itemize}
+        \BLOCK{for p in product.stackalytics.partner}
+            \item \texttt{\VAR{p}}
+        \BLOCK{endfor}
+    \end{itemize}
+    \item Report from stackalytics: \url{\VAR{product.stackalytics.commits}}
+\end{itemize}
+
+
+\newpage
+\input{templates/title_annex.tex}
+
+
+\end{document}

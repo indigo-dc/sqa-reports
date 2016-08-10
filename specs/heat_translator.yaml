@@ -1,0 +1,37 @@
+id: "heat-translator"
+report_type: openstack
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+repository:
+    url:
+        - https://github.com/openstack/heat-translator
+code_style:
+    standard:
+        - hacking 
+    exceptions: 0
+unit_test:
+    coverage: 84
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Funit%2Findigo_1%2Fheat-translator&files=cover.pdf 
+func_int_test:
+    report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2Fheat-translator&files=Unit%20Test%20Report.pdf
+documentation:
+    wiki: https://wiki.openstack.org/wiki/Heat-Translator
+    developer: http://docs.openstack.org/developer/heat-translator/
+config_management:
+    wont_be_provided: True
+gerrit: 
+    url: https://review.openstack.org/#/q/project:openstack/heat-translator
+    jobs:
+        - gate-heat-translator-docs
+        - gate-heat-translator-pep8
+        - gate-heat-translator-python27
+        - gate-heat-translator-python34
+        - gate-heat-translator-python35
+        - gate-heat-translator-requirements
+        - gate-heat-translator-tox-py27-tosca-parser-master
+stackalytics:
+    partner:
+        - CERN
+        - CSIC
+    commits: http://stackalytics.com/?release=all&metric=commits&module=heat-translator
