@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3089
-        progress: 88 
+        progress: 80
     children:
         - name: "Repository synchronization"
           id: 3854
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3098
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/orchestrator.git
@@ -51,6 +51,8 @@ gitbook:
         - "Readme"
         - "API documentation"
         - "Deployment documentation"
+    comments:
+        - "Points to improve in the documentation:\\begin{itemize} \\item README \\begin{itemize} \\item Explain what CMF stands for \\item Elaborate on the role of the orchestrator within INDIGO infrastructure, from where are this high-level requests received, .. \\item Describe briefly the role of the dependant services (slam, cmdb, zabbix wrapper, cloudproviderranker), are all needed? \\item Explain what interfaces does the product support \\item Provide examples if needed \\end{itemize} \\item Deployment guide \\begin{itemize} \\item Add a note about deploying the container using indigodatacloud/orchestrator repository. \\item Explain why Chronos is needed, same for Onedata; what is their role, are they essential, etc. \\item How to get a Onezone token and the rest of values for onedata variables (examples or links could help here) \\end{itemize} \\item Create a new section with the REST APIs pointing to http://indigo-dc.github.io/orchestrator/restdocs/) \\end{itemize}"
 config_management:
     wont_be_provided: True
     tool:   # e.g. ansible, ..

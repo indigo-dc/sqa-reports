@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 4016
-        progress: 92
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 4019
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 4034
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/jsaga.git
@@ -49,6 +49,8 @@ gitbook:
         - "Readme"
         - "User documentation"
         - "API documentation"
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item README: describe the role of the component within INDIGO infrastructure, other components interacting with it, etc. \\item Deployment guide: describe the guidelines to deploy the component, mainly how to build it from INDIGO repository (tarball) \\end{itemize}"
 config_management:
     wont_be_provided: True   # values: status_complete, status_notcomplete, status_inprogress
     tool:   # e.g. ansible, ..

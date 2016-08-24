@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3767 
-        progress: 97
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 3770
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3785
-          progress: 100
+          progress: 50
 repository: 
     url: 
         - https://github.com/indigo-dc/opie 
@@ -75,6 +75,8 @@ gitbook:
     types:
         - Readme
         - Developer guide
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Describe the installation steps using the INDIGO repository. \\item Explain what are preemptible instances, benefits, etc. \\item Also required a description of the features/workflow (VMs are killed or suspended, how to enable/disable preemptible extension, could it be enabled for a certain tenant?, etc.) \\end{itemize}"
 config_management:
     comments:
         - "From the product team: '\\textit{opie needs manual configuration of the installed nova configuration files and the patching of one file, so a manual action is needed anyway. In this case I think that documentation is a better option, as the setup is not complicated at all. If I manage those files (i.e. /etc/nova/nova.conf) and they are already managed by the configuration management (i.e. puppet or ansible) there would be conflicts (at least in puppet you cannot define a resource twice). I could modify the file using augeas, but this is an external dependency for Puppet, that is often not installed. With this in mind, the configuration management module will only install the packages, so I do not know how to proceed.}'"

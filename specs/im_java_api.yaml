@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2981
-        progress: 98
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 3929
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2990
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/im-java-api
@@ -46,6 +46,8 @@ gitbook:
         - "Readme"
         - "Deployment documentation"
         - "User documentation"
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Deployment guide \\begin{itemize} \\item Explain installation from INDIGO repo (tarballs and/or packages if available) \\item Link to the Auth file is broken \\end{itemize} \\end{itemize}"
 config_management:
     wont_be_provided: True
     tool:   # e.g. ansible, ..

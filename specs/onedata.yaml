@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3101
-        progress: 75
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3104
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3116
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/onedata
@@ -54,6 +54,8 @@ gitbook:
         - Readme
         - User documentation
         - Administrator documentation
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Could not find the way to install the component. For example trying to install \\texttt{onezone} I followed: \\texttt{Onedata for administrators > Onezone > Onezone Setup > download section}, linked to https://onedata.org/download\\#/home where I could not find any hint for installing the packages. Clicking in \\texttt{get started} takes me back to GitBook. \\end{itemize}"
 config_management:
     wont_be_provided: True
     comments:

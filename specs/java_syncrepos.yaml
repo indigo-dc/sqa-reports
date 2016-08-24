@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3065 
-        progress: 83
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 3068
@@ -22,7 +22,7 @@ tasks:
           progress: 70
         - name: "GitBook documentation"
           id: 3083
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/java-syncrepos 
@@ -43,8 +43,7 @@ func_int_test:
         - "Image insertion from DockerHub."
         - "Automatic synchronization from a list of repositories."
     comments:
-        - "Report will be generated with the guidelines provided by the product team."
-        -  "Work in progress on WP3 side."
+        - "Points to improve in the documentation: \\begin{itemize} \\item Please remove the sentence \\textit{This project is a continuation of the discontinued https://github.com/indigo-dc/python-syncrepos} \\item State where this component should be deployed (site) \\item Describe the role within INDIGO architecture: what other components rely on it, etc. \\item Describe how to install using packages from INDIGO repository and Docker deployment through indigodatacloud/reposync repository \\item Separate the development guidelines in a specific section ? Development guide \\item Document the API in a separate section \\end{itemize}"
 gitbook:
     url: https://indigo-dc.gitbooks.io/java-syncrepos/content/
     types:
