@@ -16,7 +16,7 @@ tasks:
           progress: 0
         - name: "Functional and integration testing coverage"
           id: 3056
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3059
           progress: 0
@@ -38,14 +38,13 @@ unit_test:
     coverage: 0 
     jenkins_job:
 func_int_test:
-    status_notcomplete: True
     url:
     description:
         - "Switch role of selected physical machines from the LSF cluster to the Openstack one."
         - "Switch role of selected physical machines from the Openstack cluster to the LSF one."
         - "Manage intermediate transition statuses, ensure consistency."
     report:
-        - https://github.com/indigo-dc/dynpart/blob/ffreeze/doc/dynpart_test.txt
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FPartition%20Director&files=Partition_director_Functional_and_integration_testing_report_.pdf 
 gitbook:
     url:
     types:
