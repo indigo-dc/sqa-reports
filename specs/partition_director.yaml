@@ -46,8 +46,12 @@ func_int_test:
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FPartition%20Director&files=Partition_director_Functional_and_integration_testing_report_.pdf 
 gitbook:
-    url:
+    url: https://indigo-dc.gitbooks.io/dynpart/content/
     types:
+        - Readme
+        - Deployment guide
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Question NOT RELATED to the doc: LSF is a proprietary batch system and INDIGO develops open source solutions, will this product support open source schedulers (eg SLURM, Torque, SoGE, etc) ? \\item Deployment guide: \\begin{itemize} \\item Installation using packages: address the installation using the INDIGO-1 repository. \\item Builiding from source should be added as well. The configuration described involves compiling code ? \\item In \\textit{cloud deployment} section: table \\textit{Section[batch\\_submitter]} has no description \\item How are the physical machines (CN, WN) configured and installed? What services must be running? \\end{itemize} \\item Developer guide: add a note on how to contribute. \\end{itemize}"
 config_management:
     tool:   # e.g. ansible, ..
     url:

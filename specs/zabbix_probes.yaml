@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3221
-        progress: 82
+        progress: 73
     children:
         - name: "Repository synchronization"
           id: 3224 
@@ -22,7 +22,7 @@ tasks:
           progress: 50
         - name: "GitBook documentation"
           id: 3242
-          progress: 80
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/Zabbix-probes.git 
@@ -56,7 +56,7 @@ gitbook:
         - "Developer documentation"
         - "User documentation"
     comments:
-        - "Not all the documentation is available in GitHub. Product team is having issues with GitHub<->GitBook integration."
+        - "Points to improve in the documentation: \\begin{itemize} \\item Section \\texttt{Zabbix scripts} is empty. \\item Installation subsection in \\texttt{Zabbix probes} is empty. \\item Describe the installation steps using packages from INDIGO repository. \\item Describe the deployment of Docker container using dockerhub's indigodatacloud/monitoring repository. \\item Elaborate more on the role within INDIGO architecture, what services are monitored, etc. \\item The configuration in \\texttt{Zabbix probes} is hard to follow, provide table with parameters and examples. \\begin{itemize} \\item Provide examples of valid configurations. \\end{itemize} \\end{itemize}"
 config_management:
     comments:
         - "Ansible playbooks are being generated."

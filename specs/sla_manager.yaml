@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3194
-        progress: 72
+        progress: 63
     children:
         - name: "Repository synchronization"
           id: 3200
@@ -22,7 +22,7 @@ tasks:
           progress: 50 
         - name: "GitBook documentation"
           id: 3212
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/slam
@@ -45,6 +45,8 @@ gitbook:
         - "Readme"
         - "Deployment documentation"
         - "API documentation"
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item README \\begin{itemize} \\item Elaborate more on the capabilities and usefulness of the product \\item Highlight the role of the product within INDIGO architecture, with whom it interacts, etc. \\end{itemize} \\item In the deployment section, we miss how to configure the product \\end{itemize}"
 config_management:
     tool:   # e.g. ansible, ..
     url:

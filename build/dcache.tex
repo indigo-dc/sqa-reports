@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{11 - 15 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{22-26 Aug 2016}\\[1.5em] 
        \huge{\texttt{dCache}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\graybox{\strut IN PROGRESS}\\[0.5em]\graybox{\strut \begin{huge}82\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\greenbox{\strut COMPLETE}\\[0.5em]\greenbox{\strut \begin{huge}82\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -85,26 +85,8 @@
 \begin{tabular}{ll}
     \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
     \hyperref[sec:code_style]{Code style adherence} & \greenbox{COMPLETE} \\
-    \hyperref[sec:unit_test]{Code coverage} & \graybox{IN PROGRESS - WP3}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=70]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
-    \hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:unit_test]{Code coverage} & \graybox{22\%}\\ 
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
     \hyperref[sec:configuration]{Automated deployment} & \graybox{IN PROGRESS - WP3} \\
 \end{tabular}
@@ -124,7 +106,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=10,
+    today=12,
     today rule/.style={
     draw=black!64,
     dash pattern=on 3.5pt off 4.5pt,
@@ -165,11 +147,11 @@
             name=WBS1A
         ]{\textbf{\#3962} Code style specification}{1}{12} \\
             \ganttbar[
-            progress=70,
+            progress=22,
             name=WBS1A
         ]{\textbf{\#3965} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=70,
+            progress=90,
             name=WBS1A
         ]{\textbf{\#3968} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
@@ -177,7 +159,7 @@
             name=WBS1A
         ]{\textbf{\#3971} Configuration management}{1}{12} \\
             \ganttbar[
-            progress=100,
+            progress=80,
             name=WBS1A
         ]{\textbf{\#2858} GitBook documentation}{1}{12} \\
      [grid]
@@ -219,8 +201,9 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 
 \subsection{Observations}
 \begin{itemize}
-        \item PT provided links to the reports for the code coverage and functiona testing 
+        \item PT provided links to the reports for the code coverage and functional testing 
     \end{itemize}
+
 
 
 \input{templates/title_functional_integration.tex}
@@ -228,9 +211,16 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 
 Tests are defined in a \href{https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/}{external CI service}.
 
+\subsection{Test coverage}
+\begin{enumerate}
+        \item  gplazma (authentication)
+        \item webdav (file transfer and REST interface handler)
+    \end{enumerate}
+
+
 \subsection{Observations}
 \begin{itemize}
-        \item WP3 needs to track the functionality checks for the specific parts of the contribution to INDIGO project. Please provide them by either pointing to already existant CI jobs, documentation, etc.
+        \item Quoting PT: \textit{'We are in the process of switching to a different testing system (Robot framework), overarching tests of Indigo-specific functionality are still missing at the moment.'}
     \end{itemize}
 
 
@@ -243,7 +233,7 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 \end{center}
 \subsection{Observations}
 \begin{itemize}
-        \item Documentation does not reflect the contributions of dCache to INDIGO project. Setting progress to 50\%.
+        \item Points to improve in the documentation: \begin{itemize} \item How to install this product using INDIGO repository (both for CentOS7 and Ubuntu 14.04 systems).\end{itemize}
     \end{itemize}
 
 

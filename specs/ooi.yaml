@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2843 
-        progress: 98
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 3902 
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2846
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/ooi.git 
@@ -50,6 +50,8 @@ gitbook:
     url: https://indigo-dc.gitbooks.io/ooi/content/
     types:
         - Readme
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Include a few lines on how to install the product using INDIGO repository \\item Include a few lines explaining the role of the product withing INDIGO architecture, where is/can be useful, highlighting the specific functionalities developed for INDIGO. \\end{itemize}"
 config_management:
     tool:   puppet # e.g. ansible, ..
     url: https://github.com/indigo-dc/puppet-ooi

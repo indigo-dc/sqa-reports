@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3530
-        progress: 98
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 3833
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3545
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/indigoclient

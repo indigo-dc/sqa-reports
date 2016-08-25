@@ -65,8 +65,8 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{11 - 15 July 2016}\\[1.5em] 
-       \huge{\texttt{FutureGateway API Server}}\\
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{22-26 Aug 2016}\\[1.5em] 
+       \huge{\texttt{fgAPIServer (FutureGateway API Server)}}\\
 }
 
 \date{} 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}67\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}62\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -84,28 +84,10 @@
 \begin{center}
 \begin{tabular}{ll}
     \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
-    \hyperref[sec:code_style]{Code style adherence} & \greenbox{COMPLETE} \\
-    \hyperref[sec:unit_test]{Code coverage} & \graybox{IN PROGRESS - WP3}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=1]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \graybox{IN PROGRESS - WP3} \\
-    \hyperref[sec:func_int_test]{Functional/integration testing} & \graybox{IN PROGRESS - WP3} \\
-    \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
+    \hyperref[sec:code_style]{Code style adherence} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:unit_test]{Code coverage} & \graybox{0\%}\\ 
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
+    \hyperref[sec:gitbook]{GitBook documentation} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:configuration]{Automated deployment} & \redbox{NOT COMPLETE} \\
 \end{tabular}
 \end{center}
@@ -124,7 +106,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=10,
+    today=12,
     today rule/.style={
     draw=black!64,
     dash pattern=on 3.5pt off 4.5pt,
@@ -155,7 +137,7 @@
         title label node/.append style={below left=7pt and -3pt}
     ]{WEEKS:\quad1}{1}
     \gantttitlelist{2,...,12}{1} \\
-    \ganttgroup[progress=67]{\textbf{\#3809} FutureGateway API Server SQA FOR 1ST RELEASE}{1}{12} \\
+    \ganttgroup[progress=62]{\textbf{\#3809} fgAPIServer SQA FOR 1ST RELEASE}{1}{12} \\
             \ganttbar[
             progress=100,
             name=WBS1A
@@ -169,7 +151,7 @@
             name=WBS1A
         ]{\textbf{\#3818} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=80,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#3821} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
@@ -177,7 +159,7 @@
             name=WBS1A
         ]{\textbf{\#3824} Configuration management}{1}{12} \\
             \ganttbar[
-            progress=100,
+            progress=50,
             name=WBS1A
         ]{\textbf{\#3827} GitBook documentation}{1}{12} \\
      [grid]
@@ -190,7 +172,6 @@
 Repository exists under \texttt{indigo-dc} GitHub organization:
     \begin{itemize}
         \item \url{https://github.com/indigo-dc/fgAPIServer}\
-        \item \url{https://github.com/indigo-dc/fgTools}\
         \item \url{https://github.com/indigo-dc/APIServerDaemon}\
         \end{itemize}
 
@@ -218,13 +199,12 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 
 \subsection{Build status}
 Last build status on Jenkins CI
-\href{https://jenkins.indigo-datacloud.eu:8080//job/fgapiserverdaemon-codestyle/1}{fgapiserverdaemon-codestyle}.
-\href{https://jenkins.indigo-datacloud.eu:8080//job/fgtools-codestyle/1}{fgtools-codestyle}.
-\href{https://jenkins.indigo-datacloud.eu:8080//job/fgapiserver-codestyle/3}{fgapiserver-codestyle}.
+\href{https://jenkins.indigo-datacloud.eu:8080//job/fgapiserverdaemon-codestyle/8}{fgapiserverdaemon-codestyle}.
+\href{https://jenkins.indigo-datacloud.eu:8080//job/fgapiserver-codestyle/15}{fgapiserver-codestyle}.
 
 \subsection{Observations}
 \begin{itemize}
-        \item Team has proposed a code style standard and the first job (fgapiserver-codestyle) is successful.
+        \item Product \texttt{APIServerDaemon} \textit{is not} compliant with Java Sun Style guide.
     \end{itemize}
 
  
@@ -235,20 +215,32 @@ Last build status on Jenkins CI
 
 \subsection{Observations}
 \begin{itemize}
-        \item Jenkins job is still to be defined at INDIGO Jenkins CI.
+        \item Cannot define a Jenkins job to check the only test written so far \texttt{./tests/test\_mklogtoken.py} since this test is malformed, meaning that it tries to import modules as it were a Python package but it is not.
     \end{itemize}
+
 
 
 \input{templates/title_functional_integration.tex}
 \label{sec:func_int_test}
 
-    Tests currently being defined at Jenkins CI service.
-    
-    
+No automated execution, reports are being provided.
+
+\subsection{Test coverage}
+\begin{enumerate}
+        \item API functionalities being tested \\url{https://github.com/indigo-dc/FutureGateway-APIs/blob/master/apiary.apib} (fgAPIServer).
+        \item Obtaining/using a token (fgAPIServer).
+        \item Submit a task (APIServerDaemon).
+    \end{enumerate}
+
+\subsection{Reports}
+Functional report/s available:
+\begin{itemize}
+        \item \href{https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FFutureGateway&files=FutureGateway_functional_tests.docx}{owncloud report}
+    \end{itemize}
+
 \subsection{Observations}
 \begin{itemize}
-        \item Team has provided reports of some integration tests.
-        \item Automated functionality testing has not been provided.
+        \item Team has provided reports of manual functional tests being performed. Automated functionality testing has not been provided.
     \end{itemize}
 
 
@@ -257,8 +249,13 @@ Last build status on Jenkins CI
 Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0.1em} \begin{center}\url{https://www.gitbook.com/book/ricsxn/futuregateway/details}\end{center} 
 \subsection{Types of documentation currently provided}
 \begin{center}
-\graybox{\strut Instalaltion, Usage}
+\graybox{\strut Installation}
+\graybox{\strut Usage}
 \end{center}
+\subsection{Observations}
+\begin{itemize}
+        \item Points to improve in the documentation: \begin{itemize} \item Documentation is still not available at indigo-dc \item Align documentation sections to the ones defined in [1], in case you need to add different sections, do it at the end. \item README (or somewhere else) \begin{itemize} \item How does this interface with the INDIGO PaaS ? \item Provide example of authentication with the INDIGO IAM \end{itemize} \item Deployment guide \begin{itemize} \item Only covers Ubuntu 14.04, Centos7 must be documented as well \item Installation from source is the only form of deployment documented. This must be completed to cover installation using INDIGO repository. \item There is a typo in the URL pointed at wget https://github.com/FutureGateway/PortalSetup/raw/master/Ubuntui\_14.04/fgSetup.sh \item what is the usefulness of the fgTools to the user communities and/or site admins ? how and when to use them ? \item TCP ports that need to be exposed and to which services \end{itemize} \item User guide \begin{itemize} \item How to register and manage users ? \item How to define the universe of resources available to execute the tasks and their properties \item What does it mean GridEngine? is the SGE batch system or is an engine to submit to grid sites ? \item Where is the documentation about the adaptors? add pointers to the docs. \end{itemize} \item Regarding PortalSetup \begin{itemize} \item Not clear if it works with CentOS7 (\textit{EL6/7 Tested with CentOS6}) and directory CentOS7 is not there (\textit{Please notice that OS specific intallation scripts are collected inside dedicated directories.}) \item Rephrase \textit{Debian Tested with Ubuntu} statement. \end{itemize} \end{itemize}
+    \end{itemize}
 
 
 \input{templates/title_configuration.tex}
@@ -266,20 +263,19 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 
 \begin{center}
 \begin{tabular}{ll}
-    Tool & \graybox{scripts and doc} \\
+    Tool & \graybox{bash script} \\
     Deployment coverage & \graybox{installation/configuration} \\
     Manifest link & \url{None} \\
 \end{tabular}
 \end{center}
 
-\subsection{Build status}
-\begin{center}
-\begin{tabular}{ll}
-        \href{None}{Ubuntu 14.04 LTS} & \redbox{failed}\\
-        \href{None}{CentOS7} & \redbox{failed}\\
-    \end{tabular}
-\end{center}
+Product does not currently have an automated deployment at INDIGO-DataCloud's Jenkins CI.
 
+\subsection{Observations}
+\begin{itemize}
+        \item Product does not provide an automated deployment solution based on Ansible or Puppet tools. For the time being, manual deployment is available following the documentation at GitBook.
+        \item Deployment guidelines only cover Ubuntu14.04, not for CentOS7 distributions, which is also required by the project.
+    \end{itemize}
 
 
 \newpage

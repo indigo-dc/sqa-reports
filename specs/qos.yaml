@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2888
-        progress: 88 
+        progress: 80
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2903
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/CDMI
@@ -49,6 +49,8 @@ gitbook:
         - "Deployment documentation"
         - "Administration documentation"
         - "User documentation"
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Deployment guide \\begin{itemize} \\item Installation using packages \\item Make use of INDIGO repository and apt-get/yum commands instead \\item Deployment using Docker \\begin{itemize} \\item Link does not point to indigodatacloud CDMI-QoS \\end{itemize} \\item Other suggestions: \\begin{itemize} \\item Configuration does not cover specific guidelines for the storage backends supported (dCache, Ceph, GPFS, ..) \\end{itemize} \\end{itemize} \\item User guide \\begin{itemize} \\item API Walkthrough is not complete \\end{itemize} \\item Developer guide \\begin{itemize} \\item Not complete, not clear how to contribute \\end{itemize} \\end{itemize}"
 config_management:
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/ansible-role-cdmi-master 

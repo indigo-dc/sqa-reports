@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{11 - 15 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{22-26 Aug 2016}\\[1.5em] 
        \huge{\texttt{CloudProviderRanker}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\graybox{\strut IN PROGRESS}\\[0.5em]\graybox{\strut \begin{huge}78\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}78\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -86,25 +86,7 @@
     \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
     \hyperref[sec:code_style]{Code style adherence} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:unit_test]{Code coverage} & \graybox{70\%}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=70]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
-    \hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
     \hyperref[sec:configuration]{Automated deployment} & \greenbox{COMPLETE} \\
 \end{tabular}
@@ -124,7 +106,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=10,
+    today=12,
     today rule/.style={
     draw=black!64,
     dash pattern=on 3.5pt off 4.5pt,
@@ -169,7 +151,7 @@
             name=WBS1A
         ]{\textbf{\#3290} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=50,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#3293} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
@@ -177,7 +159,7 @@
             name=WBS1A
         ]{\textbf{\#3296} Configuration management}{1}{12} \\
             \ganttbar[
-            progress=100,
+            progress=50,
             name=WBS1A
         ]{\textbf{\#3299} GitBook documentation}{1}{12} \\
      [grid]
@@ -207,11 +189,11 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 
 \subsection{Build status}
 Last build status on Jenkins CI
-\href{https://jenkins.indigo-datacloud.eu:8080//job/cloudproviderranker-codestyle/12}{cloudproviderranker-codestyle}.
+\href{https://jenkins.indigo-datacloud.eu:8080//job/cloudproviderranker-codestyle/13}{cloudproviderranker-codestyle}.
 
 \subsection{Observations}
 \begin{itemize}
-        \item Progress is set to 50\%: code style is defined but the current code is not compliant with it. For further information please check last build at Jenkins CI.
+        \item Progress is set to 50\%: code style is defined but the current code is not compliant with it.
     \end{itemize}
 
  
@@ -258,15 +240,16 @@ Last build status on Jenkins CI
             \ganttbar[progress=93.333336]{Files (14.0/15.0)}{1}{3} \\
             \ganttbar[progress=93.333336]{Classes (14.0/15.0)}{1}{3} \\
             \ganttbar[progress=89.79592]{Methods (44.0/49.0)}{1}{3} \\
-            \ganttbar[progress=65.08314]{Lines (274.0/421.0)}{1}{3} \\
-            \ganttbar[progress=65.32258]{Conditionals (81.0/124.0)}{1}{3} \\
+            \ganttbar[progress=63.533836]{Lines (338.0/532.0)}{1}{3} \\
+            \ganttbar[progress=57.575756]{Conditionals (114.0/198.0)}{1}{3} \\
      [grid]
 \end{ganttchart}
 \end{center}
 
 \subsection{Build status}
-    Last build status on Jenkins CI \href{https://jenkins.indigo-datacloud.eu:8080//job/cloudproviderranker-unittest/14}{cloudproviderranker-unittest}.
+    Last build status on Jenkins CI \href{https://jenkins.indigo-datacloud.eu:8080//job/cloudproviderranker-unittest/15}{cloudproviderranker-unittest}.
     
+
 
 
 \input{templates/title_functional_integration.tex}
@@ -274,28 +257,14 @@ Last build status on Jenkins CI
 
 \subsection{Build status}
 Last build status on Jenkins CI
-    \href{None}{a}.
-    \href{None}{c}.
-    \href{None}{e}.
-    \href{None}{d}.
-    \href{None}{f}.
-    \href{None}{i}.
-    \href{None}{k}.
-    \href{None}{-}.
-    \href{None}{l}.
-    \href{None}{o}.
-    \href{None}{n}.
-    \href{None}{p}.
-    \href{None}{r}.
-    \href{None}{u}.
-    \href{None}{t}.
-    \href{None}{v}.
+    \href{https://jenkins.indigo-datacloud.eu:8080//job/cloudproviderranker-functional/7}{cloudproviderranker-functional}.
     
+
+
 \subsection{Observations}
 \begin{itemize}
-        \item Guidelines for testing the server are documented in \href{https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html}{GitBook}.
-        \item Jenkins job is failing with 'Cannot run program "rpm": error=2, No such file or directory'.
-        \item Missing functionalities being tested in the Jenkins job.
+        \item Jenkins job creates the JAR file for testing the functionalities documented in \href{https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html}{GitBook}.
+        \item Will get the report from https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html
     \end{itemize}
 
 
@@ -307,6 +276,10 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 \graybox{\strut Readme}
 \graybox{\strut Deployment/user documentation}
 \end{center}
+\subsection{Observations}
+\begin{itemize}
+        \item Points to improve in the documentation\begin{itemize}\item Align documentation sections to the ones defined in https://project.indigo-datacloud.eu/projects/wp3/wiki/Extensions\_to\_SQA\#User-Documentation; in case you need to add different sections, do it at the end. \item README \begin{itemize} \item Explain the interactions with other INDIGO components, whether this is a microservice to be deployed together with the orchestrator? \item Describe where to deploy it (site service, central infrastructure service serving multiple communities, or a service to be maintained by each individual user community) \end{itemize} \item Deployment guide \begin{itemize} \item Building from source: add command/s to build the JAR \item Installing from packages: add command/s to install the JAR from INDIGO repositories to INDIGO, both for CentOS7 and Ubuntu 14.04 \item Deployment using Docker: add a reference to dockerhub's indigodatacloud/cloudproviderranker repository \item Other considerations: \begin{itemize} \item Identify the TCP ports that need to be exposed and to which services \item Provide information on how to configure the ranking, this should be simple to understand examples, the information in the ranking algorithm section is too dense and difficult to follow for this purpose. \item Not clear how to implement a monitoring metric, how to obtain the monitoring information ? from where ? \item Reference to https://goo.gl/GZnl8 in ranking algorithm, please put this information inside the help (other subsection, annex) and not as external document \end{itemize} \end{itemize} \end{itemize}
+    \end{itemize}
 
 
 \input{templates/title_configuration.tex}

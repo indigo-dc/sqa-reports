@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{11 - 15 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{22-26 Aug 2016}\\[1.5em] 
        \huge{\texttt{jSAGA RM API (jSAGA Resource Management API)}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}38\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\greenbox{\strut COMPLETE}\\[0.5em]\greenbox{\strut \begin{huge}83\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -83,30 +83,12 @@
 \large
 \begin{center}
 \begin{tabular}{ll}
-    \hyperref[sec:repository]{GitHub repository} & \redbox{NOT COMPLETE} \\
-    \hyperref[sec:code_style]{Code style adherence} & \redbox{NOT COMPLETE} \\
-    \hyperref[sec:unit_test]{Code coverage} & \graybox{None\%}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=None]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
-    \hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
+    \hyperref[sec:code_style]{Code style adherence} & \greenbox{COMPLETE} \\
+    \hyperref[sec:unit_test]{Code coverage} & \graybox{46\%}\\ 
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
-    \hyperref[sec:configuration]{Automated deployment} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:configuration]{Automated deployment} & \greenbox{COMPLETE} \\
 \end{tabular}
 \end{center}
 
@@ -124,7 +106,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=10,
+    today=12,
     today rule/.style={
     draw=black!64,
     dash pattern=on 3.5pt off 4.5pt,
@@ -155,21 +137,21 @@
         title label node/.append style={below left=7pt and -3pt}
     ]{WEEKS:\quad1}{1}
     \gantttitlelist{2,...,12}{1} \\
-    \ganttgroup[progress=38]{\textbf{\#4016} jSAGA RM API SQA FOR 1ST RELEASE}{1}{12} \\
+    \ganttgroup[progress=83]{\textbf{\#4016} jSAGA RM API SQA FOR 1ST RELEASE}{1}{12} \\
             \ganttbar[
-            progress=0,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#4019} Repository synchronization}{1}{12} \\
             \ganttbar[
-            progress=20,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#4022} Code style specification}{1}{12} \\
             \ganttbar[
-            progress=10,
+            progress=46,
             name=WBS1A
         ]{\textbf{\#4025} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=0,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#4028} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
@@ -177,7 +159,7 @@
             name=WBS1A
         ]{\textbf{\#4031} Configuration management}{1}{12} \\
             \ganttbar[
-            progress=100,
+            progress=50,
             name=WBS1A
         ]{\textbf{\#4034} GitBook documentation}{1}{12} \\
      [grid]
@@ -187,12 +169,27 @@
 
 \input{templates/title_repository.tex}
 \label{sec:repository}
-Repository is currently \textbf{not available} under \href{https://github.com/indigo-dc/}{\texttt{indigo-dc}} GitHub organization.
+Repository exists under \texttt{indigo-dc} GitHub organization:
+    \begin{itemize}
+        \item \url{https://github.com/indigo-dc/jsaga.git}\
+        \end{itemize}
 
 
 \input{templates/title_codestyle.tex}
 \label{sec:code_style}
+\begin{tabular}{ll}
+    Code style definition &
+        \href{https://google.github.io/styleguide/javaguide.html}{Google Java Style} \\
+    Community/de-facto standard &
+        \graybox{Yes} \\ 
+    Exceptions & 
+        \graybox{0} \\
+    Richness & \graybox{\strut 54} \hspace{0.3em} \graybox{\strut Errors 54} \graybox{\strut Warnings 0} \href{https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml}{link}
+\end{tabular}
 
+\subsection{Build status}
+Last build status on Jenkins CI
+\href{https://jenkins.indigo-datacloud.eu:8080//job/jsaga-rm-codestyle/32}{jsaga-rm-codestyle}.
 
 
  
@@ -200,15 +197,71 @@ Repository is currently \textbf{not available} under \href{https://github.com/in
 \input{templates/title_unittest.tex}
 \label{sec:unit_test}
 
+\begin{center}
+% Trend graph (jenkins)
+\textbf{Trend graph}\par\medskip
+\includegraphics[scale=0.5]{/srv/sqa-reports/build/figs/graph_jsaga-rm-unittest.png}
+\\
+%\vspace{0.5em}
+% Cobertura report (gantt chart)
+%\textbf{Cobertura report}\par\medskip
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    title/.style={draw=none, fill=none},
+    %title label font=\bfseries\footnotesize,
+    title label font=\normalsize,
+    title label node/.append style={below=7pt},
+    include title in canvas=false,
+    bar label font=\mdseries\small\color{black!70},
+    bar label node/.append style={left=2cm},
+    bar/.append style={draw=none, fill=black!63},
+    bar incomplete/.append style={fill=barblue},
+    bar progress label font=\mdseries\footnotesize\color{black!70},
+    group incomplete/.append style={fill=groupblue},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={left=.6cm},
+    group progress label font=\bfseries\small,
+    link/.style={-latex, line width=1.5pt, linkred},
+    link label font=\scriptsize\bfseries,
+    link label node/.append style={below left=-2pt and 0pt}
+    ]{1}{5}
+    \gantttitle{Cobertura Report}{-3} \\
+    %\ganttgroup[progress=45]{Group 1}{1}{12} \\
+            \ganttbar[progress=84.78261]{Packages (39.0/46.0)}{1}{3} \\
+            \ganttbar[progress=76.37131]{Files (181.0/237.0)}{1}{3} \\
+            \ganttbar[progress=43.844494]{Classes (203.0/463.0)}{1}{3} \\
+            \ganttbar[progress=33.26717]{Methods (838.0/2519.0)}{1}{3} \\
+            \ganttbar[progress=33.826168]{Lines (3203.0/9469.0)}{1}{3} \\
+            \ganttbar[progress=31.094452]{Conditionals (1037.0/3335.0)}{1}{3} \\
+     [grid]
+\end{ganttchart}
+\end{center}
+
+\subsection{Build status}
+    Last build status on Jenkins CI \href{https://jenkins.indigo-datacloud.eu:8080//job/jsaga-rm-unittest/32}{jsaga-rm-unittest}.
+    
 
 
 
 \input{templates/title_functional_integration.tex}
 \label{sec:func_int_test}
 
-    No functional or integration testing provided.
+\subsection{Build status}
+Last build status on Jenkins CI
+    \href{https://jenkins.indigo-datacloud.eu:8080//job/jsaga-rm-functional/19}{jsaga-rm-functional}.
     
-    
+
+
+\subsection{Observations}
+\begin{itemize}
+        \item Current unit tests contain integration checks. Will be separated and completed.
+        \item The functionnality being tested will be the middleware-independant API to manage jobs (submission and monitoring), data management (logicial and physical files) and resource management (computer/storage dynamic allocation).
+    \end{itemize}
 
 
 \input{templates/title_gitbook.tex}
@@ -216,8 +269,14 @@ Repository is currently \textbf{not available} under \href{https://github.com/in
 Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0.1em} \begin{center}\url{https://indigo-dc.gitbooks.io/jsaga-resource-management/content/}\end{center} 
 \subsection{Types of documentation currently provided}
 \begin{center}
-\graybox{\strut Specification, Usage}
+\graybox{\strut Readme}
+\graybox{\strut User documentation}
+\graybox{\strut API documentation}
 \end{center}
+\subsection{Observations}
+\begin{itemize}
+        \item Points to improve in the documentation: \begin{itemize} \item README: describe the role of the component within INDIGO infrastructure, other components interacting with it, etc. \item Deployment guide: describe the guidelines to deploy the component, mainly how to build it from INDIGO repository (tarball) \end{itemize}
+    \end{itemize}
 
 
 \input{templates/title_configuration.tex}

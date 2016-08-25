@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{11 - 15 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{22-26 Aug 2016}\\[1.5em] 
        \huge{\texttt{Synergy Service}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\graybox{\strut IN PROGRESS}\\[0.5em]\graybox{\strut \begin{huge}68\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\greenbox{\strut COMPLETE}\\[0.5em]\greenbox{\strut \begin{huge}75\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -86,25 +86,7 @@
     \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
     \hyperref[sec:code_style]{Code style adherence} & \greenbox{COMPLETE} \\
     \hyperref[sec:unit_test]{Code coverage} & \graybox{13\%}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=13]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \graybox{IN PROGRESS - WP3} \\
-    \hyperref[sec:func_int_test]{Functional/integration testing} & \graybox{IN PROGRESS - WP3} \\
+    \hyperref[sec:func_int_test]{Functional/integration testing} & \greenbox{COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
     \hyperref[sec:configuration]{Automated deployment} & \graybox{IN PROGRESS - WP3} \\
 \end{tabular}
@@ -124,7 +106,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=10,
+    today=12,
     today rule/.style={
     draw=black!64,
     dash pattern=on 3.5pt off 4.5pt,
@@ -155,7 +137,7 @@
         title label node/.append style={below left=7pt and -3pt}
     ]{WEEKS:\quad1}{1}
     \gantttitlelist{2,...,12}{1} \\
-    \ganttgroup[progress=68]{\textbf{\#2996} Synergy Service SQA FOR 1ST RELEASE}{1}{12} \\
+    \ganttgroup[progress=75]{\textbf{\#2996} Synergy Service SQA FOR 1ST RELEASE}{1}{12} \\
             \ganttbar[
             progress=100,
             name=WBS1A
@@ -169,15 +151,15 @@
             name=WBS1A
         ]{\textbf{\#3923} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=90,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#3926} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
-            progress=40,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#3002} Configuration management}{1}{12} \\
             \ganttbar[
-            progress=70,
+            progress=50,
             name=WBS1A
         ]{\textbf{\#3005} GitBook documentation}{1}{12} \\
      [grid]
@@ -207,7 +189,7 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 
 \subsection{Build status}
 Last build status on Jenkins CI
-\href{https://jenkins.indigo-datacloud.eu:8080//job/synergy-codestyle/6}{synergy-codestyle}.
+\href{https://jenkins.indigo-datacloud.eu:8080//job/synergy-codestyle/10}{synergy-codestyle}.
 
 
  
@@ -215,65 +197,26 @@ Last build status on Jenkins CI
 \input{templates/title_unittest.tex}
 \label{sec:unit_test}
 
-\begin{center}
-% Trend graph (jenkins)
-\textbf{Trend graph}\par\medskip
-\includegraphics[scale=0.5]{/srv/sqa-reports/build/figs/graph_synergy-unittest.png}
-\\
-%\vspace{0.5em}
-% Cobertura report (gantt chart)
-%\textbf{Cobertura report}\par\medskip
-\begin{ganttchart}[
-    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
-    hgrid style/.style={draw=black!5, line width=.75pt},
-    vgrid={*1{draw=black!5, line width=.75pt}},
-    title/.style={draw=none, fill=none},
-    %title label font=\bfseries\footnotesize,
-    title label font=\normalsize,
-    title label node/.append style={below=7pt},
-    include title in canvas=false,
-    bar label font=\mdseries\small\color{black!70},
-    bar label node/.append style={left=2cm},
-    bar/.append style={draw=none, fill=black!63},
-    bar incomplete/.append style={fill=barblue},
-    bar progress label font=\mdseries\footnotesize\color{black!70},
-    group incomplete/.append style={fill=groupblue},
-    group left shift=0,
-    group right shift=0,
-    group height=.5,
-    group peaks tip position=0,
-    group label node/.append style={left=.6cm},
-    group progress label font=\bfseries\small,
-    link/.style={-latex, line width=1.5pt, linkred},
-    link label font=\scriptsize\bfseries,
-    link label node/.append style={below left=-2pt and 0pt}
-    ]{1}{5}
-    \gantttitle{Cobertura Report}{-3} \\
-    %\ganttgroup[progress=45]{Group 1}{1}{12} \\
-            \ganttbar[progress=83.333336]{Packages (5.0/6.0)}{1}{3} \\
-            \ganttbar[progress=58.82353]{Files (10.0/17.0)}{1}{3} \\
-            \ganttbar[progress=58.82353]{Classes (10.0/17.0)}{1}{3} \\
-            \ganttbar[progress=29.427608]{Lines (437.0/1485.0)}{1}{3} \\
-            \ganttbar[progress=12.777778]{Conditionals (46.0/360.0)}{1}{3} \\
-     [grid]
-\end{ganttchart}
-\end{center}
 
-\subsection{Build status}
-    Last build status on Jenkins CI \href{https://jenkins.indigo-datacloud.eu:8080//job/synergy-unittest/5}{synergy-unittest}.
-    
+
 
 
 \input{templates/title_functional_integration.tex}
 \label{sec:func_int_test}
 
-    Tests currently being defined at Jenkins CI service.
+    No functional or integration testing provided.
     
-    
+\subsection{Test coverage}
+\begin{enumerate}
+        \item Enqueing of requests when no more resources are available (see File 01-test-queue.txt).
+        \item Killing of VMs when the specified maximum time to live has been reached (see File 02-test-killing.txt).
+        \item Fairshare projects with different shares specified for 2 projects (see File 03-test-fairshare.txt).
+    \end{enumerate}
+
+
 \subsection{Observations}
 \begin{itemize}
         \item Reports for integration tests have been provided. They have been executed locally at their own testbed.
-        \item Functional tests have been also provided, but not currently checked in INDIGO Jenkins CI. A description (in the task) of functionalities being checked for the functional tests is missing (setting progress to 90\%).
     \end{itemize}
 
 
@@ -285,7 +228,12 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 \graybox{\strut Readme}
 \graybox{\strut Deployment documentation}
 \graybox{\strut Administration documentation}
+\graybox{\strut Developer documentation}
 \end{center}
+\subsection{Observations}
+\begin{itemize}
+        \item Points to improve in the documentation: \begin{itemize} \item Provide a more high-level (simpler, more understandable) description, its very hard to understand what synergy is, and what it actually does provide from the 	exttt{About Synergy} section. \item Highlight more clearly what are the capabilities and benefits that the product provides. \end{itemize}
+    \end{itemize}
 
 
 \input{templates/title_configuration.tex}

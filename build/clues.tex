@@ -65,7 +65,7 @@
 \newcommand{\orangebox}[1]{\colorbox{statusorange}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 \newcommand{\yellowbox}[1]{\colorbox{statusyellow}{\textcolor{white!90}{\textsf{\textbf{#1}}}}}
 
-\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{11 - 15 July 2016}\\[1.5em] 
+\title{Software Quality Assurance (SQA) Report \\[0.7em] \large{22-26 Aug 2016}\\[1.5em] 
        \huge{\texttt{CLUES (Cluster Energy Saving)}}\\
 }
 
@@ -75,7 +75,7 @@
 \Large
 \vspace{-3em}
 \begin{center}
-    \graybox{\strut SQA Progress Status}\redbox{\strut NOT COMPLETE}\\[0.5em]\redbox{\strut \begin{huge}83\% done\end{huge}} 
+    \graybox{\strut SQA Progress Status}\greenbox{\strut COMPLETE}\\[0.5em]\greenbox{\strut \begin{huge}90\% done\end{huge}} 
 \end{center}
 
 \vspace{4em}
@@ -85,28 +85,10 @@
 \begin{tabular}{ll}
     \hyperref[sec:repository]{GitHub repository} & \greenbox{COMPLETE} \\
     \hyperref[sec:code_style]{Code style adherence} & \greenbox{COMPLETE} \\
-    \hyperref[sec:unit_test]{Code coverage} & \graybox{IN PROGRESS - WP3}\\ 
-    %\hyperref[sec:unit_test]{Code coverage} & \begin{ganttchart}[
-    %    canvas/.append style={fill=none, draw=none},
-    %    hgrid style/.style={draw=none, fill=none},
-    %    vgrid={*1{draw=none, fill=none}},
-    %    title/.style={draw=none, fill=none},
-    %    title label font=\bfseries\footnotesize,
-    %    title label node/.append style={below=7pt},
-    %    include title in canvas=false,
-    %    bar label font=\mdseries\small\color{black!70},
-    %    bar label node/.append style={left=2cm},
-    %    bar/.append style={draw=none, fill=black!63},
-    %    bar incomplete/.append style={fill=barblue},
-    %    bar progress label font=\mdseries\footnotesize\color{black!70},
-    %    bar top shift=1, bar height=0.8
-    %    ]{1}{5}
-    %    \ganttbar[progress=None]{}{1}{5}
-    %\end{ganttchart} \vspace{0.6em}\\
-    %\hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
+    \hyperref[sec:unit_test]{Code coverage} & \graybox{89\%}\\ 
     \hyperref[sec:func_int_test]{Functional/integration testing} & \redbox{NOT COMPLETE} \\
     \hyperref[sec:gitbook]{GitBook documentation} & \greenbox{COMPLETE} \\
-    \hyperref[sec:configuration]{Automated deployment} & \graybox{IN PROGRESS - WP3} \\
+    \hyperref[sec:configuration]{Automated deployment} & \greenbox{COMPLETE} \\
 \end{tabular}
 \end{center}
 
@@ -124,7 +106,7 @@
     canvas/.append style={fill=none, draw=black!5, line width=.75pt},
     hgrid style/.style={draw=black!5, line width=.75pt},
     vgrid={*1{draw=black!5, line width=.75pt}},
-    today=10,
+    today=12,
     today rule/.style={
     draw=black!64,
     dash pattern=on 3.5pt off 4.5pt,
@@ -155,7 +137,7 @@
         title label node/.append style={below left=7pt and -3pt}
     ]{WEEKS:\quad1}{1}
     \gantttitlelist{2,...,12}{1} \\
-    \ganttgroup[progress=83]{\textbf{\#3086} CLUES SQA FOR 1ST RELEASE}{1}{12} \\
+    \ganttgroup[progress=90]{\textbf{\#3086} CLUES SQA FOR 1ST RELEASE}{1}{12} \\
             \ganttbar[
             progress=100,
             name=WBS1A
@@ -165,19 +147,19 @@
             name=WBS1A
         ]{\textbf{\#3866} Code style specification}{1}{12} \\
             \ganttbar[
-            progress=100,
+            progress=90,
             name=WBS1A
         ]{\textbf{\#3137} Unit testing coverage}{1}{12} \\
             \ganttbar[
-            progress=50,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#3140} Functional and integration testing coverage}{1}{12} \\
             \ganttbar[
-            progress=50,
+            progress=100,
             name=WBS1A
         ]{\textbf{\#3143} Configuration management}{1}{12} \\
             \ganttbar[
-            progress=100,
+            progress=50,
             name=WBS1A
         ]{\textbf{\#3146} GitBook documentation}{1}{12} \\
      [grid]
@@ -207,7 +189,7 @@ Repository exists under \texttt{indigo-dc} GitHub organization:
 
 \subsection{Build status}
 Last build status on Jenkins CI
-\href{https://jenkins.indigo-datacloud.eu:8080//job/clues-codestyle/4}{clues-codestyle}.
+\href{https://jenkins.indigo-datacloud.eu:8080//job/clues-codestyle/8}{clues-codestyle}.
 
 
  
@@ -216,23 +198,27 @@ Last build status on Jenkins CI
 \label{sec:unit_test}
 
 
-\subsection{Observations}
-\begin{itemize}
-        \item Job has not yet been defined (WP3 duty).
-        \item The only missing tests to close this task are the ones for the HTCondor plugin for CLUES. This was agreed to be carried out by INDRA.
-    \end{itemize}
+
 
 
 \input{templates/title_functional_integration.tex}
 \label{sec:func_int_test}
 
-    No functional or integration testing provided.
-    
-    
-\subsection{Observations}
+No automated execution, reports are being provided.
+
+\subsection{Test coverage}
+\begin{enumerate}
+        \item Deploy a (galaxy elastic or mesos) cluster by providing a TOSCA file to the orchestrator.
+        \item Add/delete cluster nodes.
+        \item Monitor job scheduling.
+    \end{enumerate}
+
+\subsection{Reports}
+Functional report/s available:
 \begin{itemize}
-        \item Decription of tests was provided..
+        \item \href{https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FCLUES}{owncloud report}
     \end{itemize}
+
 
 
 \input{templates/title_gitbook.tex}
@@ -242,6 +228,10 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 \begin{center}
 \graybox{\strut Readme}
 \end{center}
+\subsection{Observations}
+\begin{itemize}
+        \item Points to improve in the documentation: \begin{itemize} \item Align documentation sections to the ones defined in [1], in case you need to add different sections, do it at the end. \item README: is incomplete (see [2]); please indicate: \begin{itemize} \item what is the role of CLUES within INDIGO \item component/s with which it interacts \item where it should be deployed (site level, infrastructure centrally) \item ... \end{itemize} \item Deployment/User/Developer guide: make them available (links to external sources could be added) \begin{itemize} \item Product will be available as a tarball at INDIGO repository, please address the deployment using this tarball. \end{itemize} \end{itemize}
+    \end{itemize}
 
 
 \input{templates/title_configuration.tex}
@@ -255,10 +245,11 @@ Documentation available under \texttt{indigo-dc} GitBook organization: \vspace{0
 \end{tabular}
 \end{center}
 
+Product does not currently have an automated deployment at INDIGO-DataCloud's Jenkins CI.
 
 \subsection{Observations}
 \begin{itemize}
-        \item Progress is 50\% since the product has provided the Ansible playbooks but the job has not already been defined (WP3 duty).
+        \item Jenkins jobs will be created at INDIGO-DataCloud CI.
     \end{itemize}
 
 

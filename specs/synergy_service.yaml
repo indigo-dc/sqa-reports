@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2996
-        progress: 83 
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 2999 
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3005
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/synergy-service
@@ -50,6 +50,8 @@ gitbook:
         - "Deployment documentation"
         - "Administration documentation"
         - "Developer documentation"
+    comments:
+        - "Points to improve in the documentation: \\begin{itemize} \\item Provide a more high-level (simpler, more understandable) description, its very hard to understand what synergy is, and what it actually does provide from the \texttt{About Synergy} section. \\item Highlight more clearly what are the capabilities and benefits that the product provides. \\end{itemize}"
 config_management:
     wp3_in_progress: True
     comments:
