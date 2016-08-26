@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2996
-        progress: 75
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 2999 
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3005
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/synergy-service

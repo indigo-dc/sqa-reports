@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2852 
-        progress: 82 
+        progress: 85 
     children:
         - name: "Repository synchronization"
           id: 2855
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2858
-          progress: 80
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/dcache
@@ -50,8 +50,6 @@ gitbook:
     url: https://indigo-dc.gitbooks.io/dcache/content/
     types:
         - Readme
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item How to install this product using INDIGO repository (both for CentOS7 and Ubuntu 14.04 systems).\\end{itemize}"
 config_management:
     wp3_in_progress: True
     tool: puppet   # e.g. ansible, ..
