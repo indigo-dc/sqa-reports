@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 4094
-        progress: 90
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 4097
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 4112
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/cloud-info-provider
@@ -52,8 +52,6 @@ gitbook:
     types:
         - Readme
         - Deployment documentation
-    comments:
-        - "Points to improve in the documentation\\begin{itemize}\\item Explain what INDIGO CMDB is/stands for \\item Explain where this service should be deployed (site level or infrastructure centrally) \\item Developer documentation \\item Add a note on how to contribute.\\end{itemize}"
 config_management:
     comments:
         - "There is an external \\href{https://travis-ci.org/indigo-dc/ansible-role-cloud-info-provider}{Travis CI job} showcasing the deployment of the product."

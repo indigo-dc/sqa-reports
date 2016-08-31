@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 4037
-        progress: 77
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 4040
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 4055
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/LiferayIAM
@@ -47,11 +47,12 @@ func_int_test:
         - LifeRay portal Integration with IAM.
         - Token retrieval from the remote web service.
 gitbook:
-    url: https://indigo-dc.gitbooks.io/clues-plugins/content/
+    url: https://indigo-dc.gitbooks.io/liferay-iam-connector/content/ 
     types:
         - Readme
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item What IAM stands for? Note that the audience could not know that (a link to indigo-dc IAM's gitbook can help) \\item Explain why Liferay is needed for INDIGO, and how it fits within its infrastructure \\end{itemize}"
+        - Developer guide
+        - Administration guide
+        - User guide
 config_management:
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/ansible-role-liferay-iam
