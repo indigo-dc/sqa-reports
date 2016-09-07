@@ -52,6 +52,7 @@ gitbook:
         - "User documentation"
     comments:
         - "Points to improve in the documentation: \\begin{itemize} \\item README, describe: \\begin{itemize} \\item The purpose of the component, what it does, why is it valuable for, etc. \\item How does it interact with other services, does it have dependencies on other services? does it use other services or components? where should it be deployed ? and for what ? \\end{itemize} \\item Deployment guide: \\begin{itemize} \\item Installation using packages: make use of INDIGO repository and apt-get/yum commands instead \\item How is this service configured and used ? Explain configuration parameters at \\texttt{/var/lib/identity-harmonization/config/application.yml} \\item If applicable, indicate the TCP ports that need to be exposed and to which services \\end{itemize} \\item Developer guide: not complete \\item API walkthrough not complete \\end{itemize}"
+        - "UPDATE: Description of the product improved in the Readme but the rest of missing points have not been covered."
 config_management:
     tool: ansible
     url: https://github.com/indigo-dc/ansible-role-idh-master

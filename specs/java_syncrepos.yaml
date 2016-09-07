@@ -44,6 +44,7 @@ func_int_test:
         - "Automatic synchronization from a list of repositories."
     comments:
         - "Points to improve in the documentation: \\begin{itemize} \\item Please remove the sentence \\textit{This project is a continuation of the discontinued https://github.com/indigo-dc/python-syncrepos} \\item State where this component should be deployed (site) \\item Describe the role within INDIGO architecture: what other components rely on it, etc. \\item Describe how to install using packages from INDIGO repository and Docker deployment through indigodatacloud/reposync repository \\item Separate the development guidelines in a specific section ? Development guide \\item Document the API in a separate section \\end{itemize}"
+        - "\\textbf{UPDATE}: Documentation now addresses all the missing points, but a better layout is needed, splitting it into multiple sections."
 gitbook:
     url: https://indigo-dc.gitbooks.io/java-syncrepos/content/
     types:

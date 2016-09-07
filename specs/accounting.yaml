@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3284
-          progress: 100
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/Accounting.git
@@ -57,6 +57,7 @@ gitbook:
         - "User guide"
     comments:
         - "Points to improve in the documentation\\begin{itemize}\\item Provide a high level description of the component (what it is, what it does), currently the README does not provide a clear description \\item Explain how the product works and how it fits within INDIGO architecture (services and/or components with which it interacts, etc.) \\item Deployment guide: \\begin{itemize} \\item Missing Ubuntu 14.04 guidelines \\item Point to INDIGO repository for the installation of packages \\item Docker: Deployment must cover as well Dockerhub's indigodatacloud/accounting:indigo\\_1 \\item Build from source: \\begin{itemize} \\item step 3: add command/s \\item step 4: add command/s \\item step 6: is self signed cerfificate good for production? \\item step 7/8/9: either use absolute paths or add clear refenence that relative paths start from /var/www/html \\end{itemize} \\item Consider moving the setup steps from README to the 'Deployment guide' \\item Identify TCP/UDP ports that need to be exposed and to which services \\end{itemize} \\item User guide \\item Collector packages (deb, rpm) both for OpenStack and OpenNebula are available through INDIGO repository, see INDIGO-1 release notes [1]. A note stating this fact should be included here. \\end{itemize}"
+        - "\\textbf{UPDATE}: all the points have been addressed in \\url{https://github.com/gregcorbett/rest} but still not merged into \\texttt{indigo-dc} repository, so not available in GitBook."
 config_management:
     comments:
         - "Kubernetes YAML configuration files provided."

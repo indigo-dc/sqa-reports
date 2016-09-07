@@ -52,6 +52,7 @@ gitbook:
         - Readme
     comments:
         - "Points to improve in the documentation: \\begin{itemize} \\item Align documentation sections to the ones defined in [1], in case you need to add different sections, do it at the end. \\item README: is incomplete (see [2]); please indicate: \\begin{itemize} \\item what is the role of CLUES within INDIGO \\item component/s with which it interacts \\item where it should be deployed (site level, infrastructure centrally) \\item ... \\end{itemize} \\item Deployment/User/Developer guide: make them available (links to external sources could be added) \\begin{itemize} \\item Product will be available as a tarball at INDIGO repository, please address the deployment using this tarball. \\end{itemize} \\end{itemize}"
+        - "\\textbf{UPDATE}: Documentation has been improved addressing these points but still not available in GitBook, only at \\url{https://github.com/indigo-dc/clues-indigo}."
 config_management:
     comments:
         - "Jenkins jobs will be created at INDIGO-DataCloud CI."

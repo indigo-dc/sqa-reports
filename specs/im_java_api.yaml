@@ -48,6 +48,7 @@ gitbook:
         - "User documentation"
     comments:
         - "Points to improve in the documentation: \\begin{itemize} \\item Deployment guide \\begin{itemize} \\item Explain installation from INDIGO repo (tarballs and/or packages if available) \\item Link to the Auth file is broken \\end{itemize} \\end{itemize}"
+        - "\\textbf{UPDATE}: documentation has been improved but a few notes on deployment via tarball, using the Orchestrator as an example has been requested."
 config_management:
     wont_be_provided: True
     tool:   # e.g. ansible, ..

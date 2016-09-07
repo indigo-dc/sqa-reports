@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3530
-        progress: 90
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3833
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3545
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/indigoclient
@@ -60,8 +60,6 @@ gitbook:
     url: https://indigo-dc.gitbooks.io/indigokepler/content/
     types:
         - Readme
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item Please provide a description of each of the indigo actors \\item does any user documentation fit here? Anything that the user of this component should know in order to use indigo actors? If not, please provide links to relevant kepler project docs. \\item Please provide developer documentation, mainly how to contribute, etc. \\end{itemize}"
 config_management:
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/ansible-role-kepler

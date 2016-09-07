@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2963
-        progress: 87
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 3872
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2978
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/im.git 
@@ -58,8 +58,6 @@ gitbook:
         - "Readme"
         - "Deployment documentation"
         - "API documentation"
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item README: summarize/elaborate on: \\begin{itemize} \\item How/where IM fits within the INDIGO architecture? What other components/services are needed/used? \\item IAM integration? \\item TCP ports need to be open? \\end{itemize} \\item Deployment guide \\begin{itemize} \\item Use INDIGO repository for installing the (rpm, deb) packages (instead of downloading from GitHub) \\end{itemize} \\end{itemize}"
 config_management:
     tool: ansible  # e.g. ansible, ..
     url: https://raw.githubusercontent.com/indigo-dc/im/master/ansible_install.yaml
