@@ -27,10 +27,6 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate INDIGO-DataCloud SQA reports")
-    parser.add_argument('template',
-			metavar="LATEX_TEMPLATE",
-			type=str,
-			help="LaTeX template location.")
     parser.add_argument('specdir',
 			metavar="YAML_SPECS_DIR",
 			type=str,
@@ -90,26 +86,24 @@ def add_jenkins_job(specs, job_type):
                         % (job_type, specs[job_type]["jobs"]))
 
 
-
-def main(fname, specdir, period, output=None, code_style=None):
+def main(specdir, period, output=None, code_style=None):
     if os.path.isdir(specdir):
         spec_yaml_files = glob.glob(os.path.join(specdir, "*.yaml"))
     elif os.path.isfile(specdir):
         spec_yaml_files = [specdir]
-
-    if not os.path.exists(output):
-        os.makedirs(output)
-
     texfiles = []
-    latex_jinja_env = load_jinja(fname)
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    if not code_style:
-        code_style = load_yaml(os.path.join(current_dir,
-                               "data/code_style.yaml"))
     if output:
         output = os.path.abspath(output)
     else:
         output = current_dir
+
+    if not os.path.exists(output):
+        os.makedirs(output)
+
+    if not code_style:
+        code_style = load_yaml(os.path.join(current_dir,
+                               "data/code_style.yaml"))
 
     for f in spec_yaml_files:
         specs = load_yaml(f)
@@ -118,10 +112,16 @@ def main(fname, specdir, period, output=None, code_style=None):
         report_openstack = False
         try:
             if specs["report_type"] == "openstack":
+                template_tex = os.path.join(current_dir,
+                                     "templates/report_openstack.tex")
                 report_openstack = True
                 logger.debug("OpenStack report type")
         except:
+            template_tex = os.path.join(current_dir,
+                                 "templates/report.tex")
             report_openstack = False
+
+        latex_jinja_env = load_jinja(template_tex)
 
         # specs - code_style
         if not report_openstack:
@@ -194,7 +194,7 @@ def main(fname, specdir, period, output=None, code_style=None):
         weeks=12
         current_week=12
         logger.info("Reports being generated for period '%s' (week %s out of %s)" % (period, current_week, weeks))
-        template = latex_jinja_env.get_template(os.path.basename(fname))
+        template = latex_jinja_env.get_template(os.path.basename(template_tex))
         r = template.render(
             product=specs,
             period=period,
@@ -213,7 +213,7 @@ def main(fname, specdir, period, output=None, code_style=None):
         pdfdir = os.path.join(output, "pdf")
         if not os.path.exists(pdfdir):
             os.makedirs(pdfdir)
-        for f in glob.glob(os.path.join(os.path.dirname(fname), "title_*.tex")):
+        for f in glob.glob(os.path.join(os.path.dirname(template_tex), "title_*.tex")):
             shutil.copy(f, output)
         for texfile in texfiles:
             f = os.path.join(output, texfile)
@@ -233,8 +233,7 @@ def main(fname, specdir, period, output=None, code_style=None):
 
 if __name__ == "__main__":
     args = parse_args()
-    main(args.template,
-         args.specdir,
+    main(args.specdir,
          args.period,
          code_style=args.code_style,
          output=args.output_dir)
