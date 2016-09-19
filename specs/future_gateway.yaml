@@ -1,17 +1,17 @@
 id: "fgAPIServer"
 name: "FutureGateway API Server"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3809
-        progress: 62
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 3812
           progress: 100
         - name: "Code style specification"
           id: 3815
-          progress: 70
+          progress: 100
         - name: "Unit testing coverage"
           id: 3818
           progress: 0
@@ -23,13 +23,12 @@ tasks:
           progress: 50
         - name: "GitBook documentation"
           id: 3827
-          progress: 50
+          progress: 100
 repository: 
     url: 
         - https://github.com/indigo-dc/fgAPIServer 
         - https://github.com/indigo-dc/APIServerDaemon
 code_style:
-    status_notcomplete: True
     standard:
         - pep8
         - java_sun
@@ -55,15 +54,10 @@ func_int_test:
     comments:
         - "Team has provided reports of manual functional tests being performed. Automated functionality testing has not been provided."
 gitbook:
-    status_notcomplete: True
-    comments:
-        - "The documentation is not yet available in \\href{https://www.gitbook.com/@indigo-dc/dashboard}{indigo-dc} organization."
-    url:  https://www.gitbook.com/book/ricsxn/futuregateway/details
+    url: https://indigo-dc.gitbooks.io/futuregateway/content
     types: 
         - "Installation"
         - "Usage"
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item Documentation is still not available at indigo-dc \\item Align documentation sections to the ones defined in [1], in case you need to add different sections, do it at the end. \\item README (or somewhere else) \\begin{itemize} \\item How does this interface with the INDIGO PaaS ? \\item Provide example of authentication with the INDIGO IAM \\end{itemize} \\item Deployment guide \\begin{itemize} \\item Only covers Ubuntu 14.04, Centos7 must be documented as well \\item Installation from source is the only form of deployment documented. This must be completed to cover installation using INDIGO repository. \\item There is a typo in the URL pointed at wget https://github.com/FutureGateway/PortalSetup/raw/master/Ubuntui\\_14.04/fgSetup.sh \\item what is the usefulness of the fgTools to the user communities and/or site admins ? how and when to use them ? \\item TCP ports that need to be exposed and to which services \\end{itemize} \\item User guide \\begin{itemize} \\item How to register and manage users ? \\item How to define the universe of resources available to execute the tasks and their properties \\item What does it mean GridEngine? is the SGE batch system or is an engine to submit to grid sites ? \\item Where is the documentation about the adaptors? add pointers to the docs. \\end{itemize} \\item Regarding PortalSetup \\begin{itemize} \\item Not clear if it works with CentOS7 (\\textit{EL6/7 Tested with CentOS6}) and directory CentOS7 is not there (\\textit{Please notice that OS specific intallation scripts are collected inside dedicated directories.}) \\item Rephrase \\textit{Debian Tested with Ubuntu} statement. \\end{itemize} \\end{itemize}"
 config_management:
     status_notcomplete: True
     comments:
