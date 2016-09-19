@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3434
-        progress: 78
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3830
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3446
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/indigo-omt
@@ -51,8 +51,6 @@ gitbook:
     url: https://indigo-dc.gitbooks.io/omt-android/content/
     types:
         - "Developers Guide"
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item README, please explain: \\begin{itemize} \\item where does it fit in the architecture \\item it provides an interface through the FutureGateway, does it also interface other components? \\item is there an app to using this API ? or planned ? \\end{itemize} \\end{itemize}"
 config_management:
     comments:
         - "By the product team: \\textit{Ansible in context of mobile app is in my opinion not so crucial service like for other services in this project (The very similar example is Docker in conjuction with mobile app.). Ansible can only prepare the enviroment for development but the mobile app needs to be deployed on the real device using USB/Google Play or using emulator, so in the cloud env could be very tricky. Anyway, I tried to force the up-to-date jenkins instance to run latest and few older emulators, but without luck yet.}."

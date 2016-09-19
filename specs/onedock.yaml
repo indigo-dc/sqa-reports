@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3026
-        progress: 83
+        progress: 92
     children:
         - name: "Repository synchronization"
           id: 3896
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3038
-          progress: 50
+          progress: 100
 repository: 
     url: 
         - https://github.com/indigo-dc/onedock
@@ -49,8 +49,6 @@ gitbook:
     types:
         - Readme
         - Deployment documentation
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item Please make the documentation in the wiki available in gitbook. \\item Deployment guide: describe the installation using the packages from INDIGO repository. \\end{itemize}"
 config_management:
     tool: ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/onedock/tree/master/ansible

@@ -4,26 +4,26 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3452
-        progress: 87
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 3455 
           progress: 100
         - name: "Code style specification"
-          id: 3458
+          id: 3470
           progress: 100
         - name: "Unit testing coverage"
-          id: 3461
+          id: 3458
           progress: 70
         - name: "Functional and integration testing coverage"
-          id: 3464
+          id: 3461
           progress: 100
         - name: "Configuration management"
-          id: 3467
+          id: 3464
           progress: 100
         - name: "GitBook documentation"
-          id: 3470
-          progress: 50
+          id: 3467
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/ophidia-analytics-framework
@@ -53,9 +53,6 @@ gitbook:
         - "User documentation"
         - "Developer documentation"
         - "Administration documentation"
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item Remove \\textit{First chapter} section \\item README should contain a brief explanation of the product itself, to whom it is addressed, where it is meant to be deployed (user side, site, centrally), how does it integrate in the INDIGO infrastructure, interactions with other INDIGO components (links if needed to other INDIGO product books) \\item Describe the installation steps using INDIGO repositories \\end{itemize}"
-        - "\\textbf{UPDATE}: documentation has been improved and now covers all the missing points. Need to fix a few links which are broken, namely the ones pointing to http://ophidia.cmcc.it/"
 config_management:
     tool:  ansible  # e.g. ansible, ..
     url: https://github.com/indigo-dc/ansible-role-ophidia-all
