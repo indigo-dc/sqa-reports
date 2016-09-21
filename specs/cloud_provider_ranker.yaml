@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3287
-        progress: 78
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3836 
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 3299
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/CloudProviderRanker.git 
@@ -51,8 +51,6 @@ gitbook:
     types:
         - Readme
         - Deployment/user documentation
-    comments:
-        - "Points to improve in the documentation\\begin{itemize}\\item Align documentation sections to the ones defined in https://project.indigo-datacloud.eu/projects/wp3/wiki/Extensions\\_to\\_SQA\\#User-Documentation; in case you need to add different sections, do it at the end. \\item README \\begin{itemize} \\item Explain the interactions with other INDIGO components, whether this is a microservice to be deployed together with the orchestrator? \\item Describe where to deploy it (site service, central infrastructure service serving multiple communities, or a service to be maintained by each individual user community) \\end{itemize} \\item Deployment guide \\begin{itemize} \\item Building from source: add command/s to build the JAR \\item Installing from packages: add command/s to install the JAR from INDIGO repositories to INDIGO, both for CentOS7 and Ubuntu 14.04 \\item Deployment using Docker: add a reference to dockerhub's indigodatacloud/cloudproviderranker repository \\item Other considerations: \\begin{itemize} \\item Identify the TCP ports that need to be exposed and to which services \\item Provide information on how to configure the ranking, this should be simple to understand examples, the information in the ranking algorithm section is too dense and difficult to follow for this purpose. \\item Not clear how to implement a monitoring metric, how to obtain the monitoring information ? from where ? \\item Reference to https://goo.gl/GZnl8 in ranking algorithm, please put this information inside the help (other subsection, annex) and not as external document \\end{itemize} \\end{itemize} \\end{itemize}"
 config_management:
     wont_be_provided: True
     comments:

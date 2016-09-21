@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2888
-        progress: 80
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2903
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/CDMI

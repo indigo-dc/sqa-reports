@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2906
-        progress: 90
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3938
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2921
-          progress: 50
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/rOCCI-server.git 
@@ -48,8 +48,6 @@ gitbook:
     url: https://indigo-dc.gitbooks.io/rocci/content/
     types:
         - Readme
-    comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item Remove the section \\texttt{First chapter} has nothing \\item Explain what rOCCI is and where does it fit in the INDIGO architecture, for what is it useful, who needs to deploy this and for what \\item Describe the package installation using INDIGO repositories (both for Ubuntu 14.04 and CentOS7) \\end{itemize}"
 config_management:
     wp3_in_progress: True
     comments:
