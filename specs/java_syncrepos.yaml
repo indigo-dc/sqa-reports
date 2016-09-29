@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3065 
-        progress: 80
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 3068
@@ -22,7 +22,7 @@ tasks:
           progress: 70
         - name: "GitBook documentation"
           id: 3083
-          progress: 80
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/java-syncrepos 
