@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2945 
-        progress: 78
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 3935 
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2960
-          progress: 50
+          progress: 80
 repository: 
     url:
         - https://github.com/indigo-dc/pOCCI
@@ -48,7 +48,7 @@ gitbook:
         - Developer documentation
         - User documentation
     comments:
-        - "Points to improve in the documentation: \\begin{itemize} \\item README \\begin{itemize} \\item (purpose) Elaborate on what is the role of pOCCI in the INDIGO architecture \\item (audience) whether is meant to be used for users and/or infrastructure managers \\item (interactions) what other (INDIGO) components are required for this to work, examples, etc. \\end{itemize} \\item Deployment guide \\begin{itemize} \\item Document the installation using INDIGO repository \\end{itemize} \\end{itemize}"
+        - "All the changes in documentation have been addressed but not yet available in Gitbook. Setting progress to 80%."
 config_management:
     wont_be_provided: True
     tool:   # e.g. ansible, ..
