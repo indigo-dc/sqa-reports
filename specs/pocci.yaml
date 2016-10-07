@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2945 
-        progress: 83
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3935 
@@ -22,7 +22,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 2960
-          progress: 80
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/pOCCI
@@ -47,8 +47,6 @@ gitbook:
         - API documentation
         - Developer documentation
         - User documentation
-    comments:
-        - "All the changes in documentation have been addressed but not yet available in Gitbook. Setting progress to 80%."
 config_management:
     wont_be_provided: True
     tool:   # e.g. ansible, ..
