@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 2945 
-        progress: 87
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 3935 
@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2951
-          progress: 22
+          progress: 20
         - name: "Functional and integration testing coverage"
           id: 2954
           progress: 90
@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - pocci-codestyle
 unit_test:
-    coverage: 22
+    coverage: 19
     jenkins_job: pocci-unittest
 func_int_test:
     status_inprogress: True

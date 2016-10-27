@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3074
-          progress: 29
+          progress: 30
         - name: "Functional and integration testing coverage"
           id: 3077
           progress: 100
@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - syncrepos-codestyle
 unit_test:
-    coverage: 29
+    coverage: 31
     jenkins_job: syncrepos-unittest
 func_int_test:
     url:

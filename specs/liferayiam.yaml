@@ -34,10 +34,9 @@ code_style:
         - liferayiam-codestyle
 unit_test:
     status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
-    coverage:
+    coverage: 9
     jenkins_job:
-    comments:
-        - "Command/s provided. WP3 will enable the check."
+        - liferayiam-unittest
 func_int_test:
     jenkins_job:
     url_external: # links to external CIs

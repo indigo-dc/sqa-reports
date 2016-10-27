@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - orchestrator-codestyle
 unit_test:
-    coverage: 28
+    coverage: 25
     jenkins_job:
         - orchestrator-unittest
     comments:

@@ -36,13 +36,14 @@ code_style:
 unit_test:
     coverage: 14
     jenkins_job:
+    url_external: https://ci.dcache.org/view/dCache%202.16/job/dCache-v2.16/lastBuild/jacoco
     comments:
         - "PT provided links to the reports for the code coverage and functional testing "
 func_int_test:
     jenkins_job:
     url_external: https://ci.dcache.org/view/dCache%202.16/job/2.16%20post%20testing/lastBuild/jacoco/ # links to external CIs
     description:
-        - " gplazma (authentication)"
+        - "gplazma (authentication)"
         - "webdav (file transfer and REST interface handler)"
     comments:
         - "Quoting PT: \\textit{'We are in the process of switching to a different testing system (Robot framework), overarching tests of Indigo-specific functionality are still missing at the moment.'}"

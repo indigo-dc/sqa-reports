@@ -3,17 +3,17 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3221
-        progress: 82
+        progress: 65
     children:
         - name: "Repository synchronization"
           id: 3224 
           progress: 100
         - name: "Code style specification"
           id: 3845
-          progress: 100
+          progress: 50
         - name: "Unit testing coverage"
           id: 3233
-          progress: 50
+          progress: 0
         - name: "Functional and integration testing coverage"
           id: 3236
           progress: 90
@@ -33,13 +33,11 @@ code_style:
     jenkins_job:
         - zabbix-probes-codestyle
     comments:
-        - "Progress set to 70\\% since the product is adhered to a standard, but not currently compliant with it."
+        - "Progress set to 50\\% since the product is adhered to a standard, but not currently compliant with it."
 unit_test:
     coverage: 0 
     jenkins_job:
         - zabbix-probes-unittest
-    comments:
-        - "Command/s to execute the Jenkins job has been provided."
 func_int_test:
     jenkins_job:
         - zabbix-probes-unittest
