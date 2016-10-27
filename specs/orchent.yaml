@@ -1,0 +1,71 @@
+id: "orchent"
+name: "Orchestrator Command Line Client"
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4565
+        progress: 75
+    children:
+        - name: "Repository synchronization"
+          id: 4568
+          progress: 100
+        - name: "Code style specification"
+          id: 4571
+          progress: 100
+        - name: "Unit testing coverage"
+          id: 4574
+          progress: 0
+        - name: "Functional and integration testing coverage"
+          id: 4577
+          progress: 50
+        - name: "Configuration management"
+          id: 4580
+          progress: 100
+        - name: "GitBook documentation"
+          id: 4583
+          progress: 100
+repository: 
+    url:
+        - https://github.com/indigo-dc/orchent
+code_style:
+    standard:
+        - gofmt
+    exceptions: 0 
+    jenkins_job:
+        - orchent-codestyle
+unit_test:
+    coverage: 0
+    jenkins_job: 
+func_int_test:
+    jenkins_job:
+    description:
+        - listing all deployments
+        - showing a specific deployments
+        - receive the template of a given deployment
+        - list all the resources of a given deployments
+        - show a specific resource of a given deployments
+        - create a deployments
+        - update a given deployments
+        - delete a given deployments
+    comments:
+        - Missing a report with the output of the manual tests performed or an automated solution
+gitbook:
+    url: https://indigo-dc.gitbooks.io/token-translation-service/content/
+    types:
+        - Readme
+        - User documentation
+        - Administration documentation
+        - Deployment documentation
+config_management:
+    wont_be_provided: True
+    tool: # e.g. ansible, ..
+    url: 
+    level: # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:
