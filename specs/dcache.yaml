@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3965
-          progress: 22
+          progress: 20
         - name: "Functional and integration testing coverage"
           id: 3968
           progress: 90
@@ -34,7 +34,7 @@ code_style:
     comments:
         - "Jenkins job cannot be implemented since the code-style is IDE-specific and cannot be ran through command-line."
 unit_test:
-    coverage: 22 
+    coverage: 14
     jenkins_job:
     comments:
         - "PT provided links to the reports for the code coverage and functional testing "

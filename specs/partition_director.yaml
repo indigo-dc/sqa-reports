@@ -30,7 +30,8 @@ repository:
         - "Currently in branch \\texttt{ffreze}, to be merged into \\texttt{master}."
 code_style:
     wp3_in_progress: True
-    standard: pep8
+    standard:
+        - pep8
     exceptions: 0
     jenkins_job:
         - partition-director-codestyle

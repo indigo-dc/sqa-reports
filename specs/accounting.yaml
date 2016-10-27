@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3269
-        progress: 95
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3272 
@@ -13,7 +13,7 @@ tasks:
           progress: 100 
         - name: "Unit testing coverage"
           id: 3275
-          progress: 70 
+          progress: 90 
         - name: "Functional and integration testing coverage"
           id: 3278
           progress: 100
@@ -35,7 +35,7 @@ code_style:
         - accounting-codestyle
         - accounting-codestyle-pep257
 unit_test:
-    coverage: 70
+    coverage: 87
     jenkins_job: #accounting-unittest
     url_external: https://coveralls.io/github/apel/rest?branch=dev # links to external CIs
     comments:

@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3536
-          progress: 86
+          progress: 90
         - name: "Functional and integration testing coverage"
           id: 3539
           progress: 100
@@ -35,7 +35,7 @@ code_style:
     jenkins_job:
         - indigokepler-codestyle
 unit_test:
-    coverage: 86
+    coverage: 91
     jenkins_job:
         - indigoclient-unittest
     comments:

@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2891
-          progress: 35
+          progress: 40
         - name: "Functional and integration testing coverage"
           id: 2897
           progress: 90
@@ -34,7 +34,7 @@ code_style:
     jenkins_job:
         - qos-codestyle
 unit_test:
-    coverage: 35
+    coverage: 38
     jenkins_job: qos-unittest
 func_int_test:
     status_notcomplete: True

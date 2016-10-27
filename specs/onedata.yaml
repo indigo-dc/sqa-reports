@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3101
-        progress: 75
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3104
@@ -13,7 +13,7 @@ tasks:
           progress: 50
         - name: "Unit testing coverage"
           id: 3107
-          progress: 50
+          progress: 0
         - name: "Functional and integration testing coverage"
           id: 3110
           progress: 90
@@ -41,7 +41,7 @@ unit_test:
     coverage: 
     jenkins_job:
     comments:
-        - "Command/s to check unit testing coverage have been provided, but not currently working. Need support from product team."
+        - "Command/s to check unit testing coverage have been provided, but not currently working. Need a report or link to external CI where the coverage value is computed."
 func_int_test:
     url:
     comments:
