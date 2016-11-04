@@ -1,0 +1,56 @@
+id: "CDMI-S3-QoS"
+name: "CDMI Java SPI storage back-end implementaion for radosgw"
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4649
+        progress: 33 
+    children:
+        - name: "Repository synchronization"
+          id: 4652 
+          progress: 100
+        - name: "Code style specification"
+          id: 4655
+          progress: 100
+        - name: "Unit testing coverage"
+          id: 4658
+          progress: 0
+        - name: "Functional and integration testing coverage"
+          id: 4661
+          progress: 0
+        - name: "Configuration management"
+          id: 4664
+          progress: 0
+        - name: "GitBook documentation"
+          id: 4667
+          progress: 0
+repository: 
+    url:
+        - https://github.com/indigo-dc/cdmi-s3-qos
+code_style:
+    standard:
+        - java_google 
+    exceptions: 0
+    jenkins_job:
+        - cdmi-s3-qos-codestyle
+unit_test:
+    coverage: 0
+    jenkins_job: 
+func_int_test:
+    status_notcomplete: True
+gitbook:
+    url: 
+    types:
+    comments:
+config_management:
+    tool: # e.g. ansible, ..
+    url: 
+    level:  installation # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:

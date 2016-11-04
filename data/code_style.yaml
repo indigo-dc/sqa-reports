@@ -108,6 +108,16 @@ c:
         no_warnings: 
         url: 
 
+gofmt:
+    name: "Go formatter"
+    url: https://golang.org/cmd/gofmt/
+    defacto: "Yes"
+    richness: 
+        number: 3
+        no_errors: 
+        no_warnings: 
+        url: https://golang.org/doc/effective_go.html#formatting
+
 dcache:
     name: "Custom Java dCache Style Guide"
     url: https://goo.gl/4Ra3Na
