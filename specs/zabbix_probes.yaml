@@ -1,16 +1,16 @@
 id: "Zabbix Probes"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3221
-        progress: 72
+        progress: 80
     children:
         - name: "Repository synchronization"
           id: 3224 
           progress: 100
         - name: "Code style specification"
           id: 3845
-          progress: 50
+          progress: 100
         - name: "Unit testing coverage"
           id: 3233
           progress: 40
@@ -32,8 +32,6 @@ code_style:
     exceptions: 0
     jenkins_job:
         - zabbix-probes-codestyle
-    comments:
-        - "Progress set to 50\\% since the product is adhered to a standard, but not currently compliant with it."
 unit_test:
     coverage: 35 
     jenkins_job:
