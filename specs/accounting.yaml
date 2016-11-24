@@ -46,6 +46,7 @@ func_int_test:
     description:
         - "Returning Accounting Summaries"
         - "Accepting Accounting Data"
+        - "End-to-end testing"
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FAccounting&files=wp3-3278.pdf
 gitbook:
