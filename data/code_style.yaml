@@ -63,10 +63,10 @@ ruby:
     url: https://github.com/bbatsov/ruby-style-guide 
     defacto: "Yes"
     richness: 
-        number: "<to check>"
+        number: 62
         no_errors: 
         no_warnings: 
-        url:
+        url: http://www.rubydoc.info/gems/rubocop/index
 
 erlang:
     name: "Erlang Programming Rules and Conventions"
