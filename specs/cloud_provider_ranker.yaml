@@ -45,6 +45,8 @@ func_int_test:
     comments:
         - "Jenkins job creates the JAR file for testing the functionalities documented in \\href{https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html}{GitBook}."
         - "Will get the report from https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/chapter1.html"
+    description:
+        - Rank cloud providers
     url_external: # links to external CIs
 gitbook:
     url: https://indigo-dc.gitbooks.io/cloud-provider-ranker/content/

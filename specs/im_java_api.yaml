@@ -40,6 +40,16 @@ func_int_test:
     url_external:  # links to external CIs
     jenkins_job:
         - im-java-api-functional
+    description:
+        - es.upv.i3m.grycap.file
+        - es.upv.i3m.grycap.im
+        - es.upv.i3m.grycap.im.auth.credentials
+        - es.upv.i3m.grycap.im.lang
+        - es.upv.i3m.grycap.im.pojo
+        - es.upv.i3m.grycap.im.rest.client
+        - es.upv.i3m.grycap.im.rest.client.parameters
+        - es.upv.i3m.grycap.im.rest.client.ssl
+        - es.upv.i3m.grycap.logger
 gitbook:
     url: https://indigo-dc.gitbooks.io/im-java-api/content/ 
     types:

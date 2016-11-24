@@ -15,6 +15,33 @@ unit_test:
 func_int_test:
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2Ftosca-parser&files=Unit%20Test%20Report.pdf
+    description:
+        - oscaparser.extensions.nfv.tests.test_tosca_nfv_tpl.ToscaNFVTemplateTest
+        - toscaparser.tests.test_constraints.ConstraintTest
+        - toscaparser.tests.test_custom_relationships.CustomRelationshipTypesTest	
+        - toscaparser.tests.test_datatypes.DataTypeTest
+        - toscaparser.tests.test_exception.ExceptionTest
+        - toscaparser.tests.test_functions.ConcatTest
+        - toscaparser.tests.test_functions.GetAttributeTest
+        - toscaparser.tests.test_functions.IntrinsicFunctionsTest
+        - toscaparser.tests.test_functions.TokenTest
+        - toscaparser.tests.test_prereq.CSARPrereqTest
+        - toscaparser.tests.test_properties.PropertyTest
+        - toscaparser.tests.test_scalarunit.GetNumFromScalarUnitFrequencyNegative
+        - toscaparser.tests.test_scalarunit.GetNumFromScalarUnitFrequencyPositive
+        - toscaparser.tests.test_scalarunit.GetNumFromScalarUnitSizeNegative
+        - toscaparser.tests.test_scalarunit.GetNumFromScalarUnitSizePositive
+        - toscaparser.tests.test_scalarunit.GetNumFromScalarUnitTimeNegative
+        - toscaparser.tests.test_scalarunit.GetNumFromScalarUnitTimePositive
+        - toscaparser.tests.test_scalarunit.ScalarUnitNegativeTest
+        - toscaparser.tests.test_scalarunit.ScalarUnitPositiveTest
+        - toscaparser.tests.test_shell.ShellTest
+        - toscaparser.tests.test_topology_template.TopologyTemplateTest
+        - toscaparser.tests.test_toscadef.ToscaDefTest
+        - toscaparser.tests.test_toscatpl.ToscaTemplateTest
+        - toscaparser.tests.test_toscatplvalidation.ToscaTemplateValidationTest
+        - toscaparser.tests.test_utils.UrlUtilsTest
+        - toscaparser.tests.test_validate_tosca_version.TOSCAVersionPropertyTest
 documentation:
     wiki: https://wiki.openstack.org/wiki/TOSCA-Parser
     developer: http://docs.openstack.org/developer/tosca-parser/

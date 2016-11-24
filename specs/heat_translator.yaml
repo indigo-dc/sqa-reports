@@ -15,6 +15,21 @@ unit_test:
 func_int_test:
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2Fheat-translator&files=Unit%20Test%20Report.pdf
+    description:
+        - translator.hot.tests.test_hot_parameter.HotParameterTest
+        - translator.hot.tests.test_translate_inputs.ToscaTemplateInputValidationTest
+        - translator.hot.tests.test_translate_outputs.ToscaTemplateOutputTest
+        - translator.hot.tosca.tests.test_tosca_autoscaling.AutoscalingTest
+        - translator.hot.tosca.tests.test_tosca_blockstorage.ToscaBlockStoreTest
+        - translator.hot.tosca.tests.test_tosca_compute.ToscaComputeTest
+        - translator.hot.tosca.tests.test_tosca_objectstore.ToscaObjectStoreTest
+        - translator.hot.tosca.tests.test_tosca_policies.ToscaPoicyTest
+        - translator.osc.v1.tests.test_translate.TestTranslateTemplate
+        - translator.tests.test_conf.ConfTest
+        - translator.tests.test_shell.ShellTest
+        - translator.tests.test_template.ToscaMongoNodejsTest
+        - translator.tests.test_tosca_hot_translation.ToscaHotTranslationTest
+        - translator.tests.test_utils.CommonUtilsTest
 documentation:
     wiki: https://wiki.openstack.org/wiki/Heat-Translator
     developer: http://docs.openstack.org/developer/heat-translator/

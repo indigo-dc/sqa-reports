@@ -43,6 +43,14 @@ func_int_test:
         - "Command/s to execute the Jenkins job has been provided."
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Fintegration%2Findigo_1%2FZabbix%20Probes%20-%20Monitoring
+    description:
+        - OCCI create VM
+        - OCCI inspect VM
+        - OCCI delete VM
+        - OCCI list VMs
+        - OCCI list networks
+        - Heapster invocation
+        - Zabbix agent calls
 gitbook:
     status_notcomplete: True
     url: https://www.gitbook.com/book/indigo-dc/monitoring/details

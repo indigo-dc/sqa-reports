@@ -44,9 +44,11 @@ func_int_test:
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOphidia&files=Test.doc
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOphidia&files=Workflows.zip
+    description:
+        - massive import operation
+        - massive data operation
+        - workflows with iterative, parallel and selection statements
 gitbook:
-    comments:
-        - "Missing a book under \\texttt{indigo-dc} referencing the content at https://sandrofiore.gitbooks.io/ophidiabigdata/content/"
     url: https://www.gitbook.com/book/indigo-dc/ophidia/details
     types:
         - "Readme"

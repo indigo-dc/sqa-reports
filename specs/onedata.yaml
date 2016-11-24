@@ -48,6 +48,16 @@ func_int_test:
         - "Command/s to check functional testing coverage have been provided, but not currently working. Need support from product team."
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOnedata&files=acceptence_test_scenarios.txt
+    description:
+        - Authorization
+        - Directory_CRUD
+        - LUMA provider test
+        - Multi_directory_stat
+        - Multi_regular_file_stat
+        - Multiprovider_replication
+        - Regular_file_stat
+        - Space management with single provider
+
 gitbook:
     url: https://indigo-dc.gitbooks.io/onedata-documentation/content/
     types:

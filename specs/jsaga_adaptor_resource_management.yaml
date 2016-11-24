@@ -43,6 +43,48 @@ func_int_test:
         - "The functionnality being tested will be the middleware-independant API to manage jobs (submission and monitoring), data management (logicial and physical files) and resource management (computer/storage dynamic allocation)."
     jenkins_job:
         - jsaga-rm-functional
+    description:
+        - fr.in2p3.jsaga.impl.permissions.DataPermissionsImplTest
+        - fr.in2p3.jsaga.impl.job.streaming.mgr.StreamingManagerTest
+        - fr.in2p3.jsaga.impl.job.streaming.GenericStreamableJobAdaptorTest
+        - fr.in2p3.jsaga.impl.job.staging.mgr.DataStagingManagerThroughStreamTest
+        - fr.in2p3.jsaga.impl.job.staging.mgr.DataStagingManagerFactoryTest
+        - fr.in2p3.jsaga.impl.job.staging.DataStagingTest
+        - fr.in2p3.jsaga.impl.job.instance.stream.GetterInputStreamTest
+        - fr.in2p3.jsaga.impl.job.instance.stream.JobInputOutputStreamTest
+        - fr.in2p3.jsaga.impl.job.instance.stream.PipedStdoutStderrTest
+        - fr.in2p3.jsaga.impl.job.instance.stream.PreconnectedInputOutputStreamTest
+        - fr.in2p3.jsaga.impl.job.instance.JobImplTest
+        - fr.in2p3.jsaga.impl.logicalfile.LogicalFileImplTest
+        - fr.in2p3.jsaga.impl.file.copy.FileCopyTest
+        - fr.in2p3.jsaga.impl.file.copy.FileCopyFromTest
+        - fr.in2p3.jsaga.impl.file.FileImplTest
+        - fr.in2p3.jsaga.impl.session.SessionImplTest
+        - fr.in2p3.jsaga.impl.attributes.AbstractAttributesImplTest
+        - fr.in2p3.jsaga.impl.task.TaskContainerTest
+        - fr.in2p3.jsaga.impl.task.GenericThreadedTaskTest
+        - fr.in2p3.jsaga.impl.task.TaskTest
+        - fr.in2p3.jsaga.impl.buffer.BufferTest
+        - fr.in2p3.jsaga.impl.namespace.FlagsHelperTest
+        - fr.in2p3.jsaga.impl.url.UniversalFileTest
+        - fr.in2p3.jsaga.impl.url.URLImplFileTest
+        - fr.in2p3.jsaga.impl.url.URLImplTest
+        - fr.in2p3.jsaga.impl.url.URLImplWinTest
+        - fr.in2p3.jsaga.impl.resource.manager.ResourceManagerImplTest
+        - fr.in2p3.jsaga.impl.resource.task.ResourceStatusPollerTaskTest
+        - fr.in2p3.jsaga.impl.resource.description.DescriptionImplTest
+        - fr.in2p3.jsaga.impl.resource.instance.ResourceImplTest
+        - fr.in2p3.jsaga.engine.session.BaseUrlPatternTest
+        - fr.in2p3.jsaga.engine.session.ServiceConfigAttributeTest
+        - fr.in2p3.jsaga.engine.session.BaseUrlParserTest
+        - fr.in2p3.jsaga.adaptor.base.usage.UsageTest
+        - fr.in2p3.jsaga.helpers.EntryPathTest
+        - fr.in2p3.jsaga.helpers.ASCIITableFormatterTest
+        - fr.in2p3.jsaga.helpers.SAGAPatternTest
+        - fr.in2p3.jsaga.helpers.cloner.AttributeClonerTest
+        - fr.in2p3.jsaga.helpers.cloner.SagaObjectClonerTest
+        - fr.in2p3.jsaga.helpers.cloner.ObjectClonerTest
+ 
 gitbook:
     url: https://indigo-dc.gitbooks.io/jsaga-resource-management/content/
     types:

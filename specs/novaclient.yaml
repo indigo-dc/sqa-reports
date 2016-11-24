@@ -37,8 +37,8 @@ unit_test:
     jenkins_job: novaclient-unittest
 func_int_test:
     url:
-    comments:
-        - "In this case functional testing does not have much sense, as this is only passing a parameter to the underlying API calls. Moreover, the upstream functional testing actually refers to integration testing, as it needs to run the tests against a working OpenStack environment."
+    description:
+        - Preemptible VM creation
 gitbook:
     status_complete: True
     comments:

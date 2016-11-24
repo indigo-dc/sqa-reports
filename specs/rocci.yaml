@@ -37,13 +37,15 @@ unit_test:
     coverage: 49
     jenkins_job: 
     url_external: https://travis-ci.org/EGI-FCTF/rOCCI-server/
-    comments:
-        - "rOCCI is an external component, third-party. We'll not perform unit-testing"
 func_int_test:
     wp3_in_progress: True
     url:
     comments:
         - "Pending job definition: The set of functional tests is documented here: https://github.com/arax/kitchen-occi"
+    description:
+        - create compute
+        - ssh compute
+        - destroy compute
 gitbook:
     url: https://indigo-dc.gitbooks.io/rocci/content/
     types:

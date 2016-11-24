@@ -37,12 +37,18 @@ unit_test:
     coverage: 54
     jenkins_job: idh-unittest
 func_int_test:
-    status_notcomplete: True
+    status_complete: True
     jenkins_job: 
         - idh-unittest
     url_external: # links to external CIs
-    comments:
-        - "Missing list of functionalities tested. Will be provided in time."
+    description:
+        - CreatePosixUserTest
+        - LdapClientTest
+        - RedisClientTest
+        - HttpClientTest
+        - AuthorizationTest
+        - RestServiceTest
+        - ScimModelTest
 gitbook:
     url: https://indigo-dc.gitbooks.io/identity-harmonization/content/
     types:

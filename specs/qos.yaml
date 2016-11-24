@@ -40,8 +40,24 @@ func_int_test:
     status_notcomplete: True
     url: 
         - qos-unittest
-    comments:
-        - "Missing list of functionalities being tested. Will provide in time."
+    description:
+        - CapabilityFilesystemTest
+        - CdmiObjectFilesystemTest
+        - ContainerFilesystemTest
+        - DataObjectFilesystemTest
+        - AuthorizationTest
+        - CapabilitiesTest
+        - CdmiObjectTest
+        - ContainerTest
+        - DataObjectTest
+        - DomainTest
+        - FilterJsonTest
+        - HttpClientTest
+        - UtilsTest
+        - CapabilityRedisTest
+        - CdmiObjectRedisTest
+        - ContainerRedisTest
+        - DataObjectRedisTest
 gitbook:
     url: https://indigo-dc.gitbooks.io/cdmi-qos/content/
     types:
