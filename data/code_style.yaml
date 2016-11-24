@@ -93,17 +93,17 @@ android:
     url: https://source.android.com/source/code-style.html 
     defacto: "Yes"
     richness: 
-        number: 
+        number: 82 
         no_errors: 
         no_warnings: 
         url: 
 
 c:
     name: "K\\&R indent style"
-    url:
+    url: https://www.gnu.org/software/indent/manual/indent.html
     defacto: "Yes"
     richness: 
-        number: 
+        number: 32
         no_errors: 
         no_warnings: 
         url: 
