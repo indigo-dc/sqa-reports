@@ -1,0 +1,59 @@
+id: "one-fass"
+name: "OpenNebula Fair Share Scheduler"
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4748
+        progress: 17
+    children:
+        - name: "Repository synchronization"
+          id: 4760
+          progress: 100
+        - name: "Code style specification"
+          id: 4751
+          progress: 0 
+        - name: "Unit testing coverage"
+          id: 4754
+          progress: 0 
+        - name: "Functional and integration testing coverage"
+          id: 4757
+          progress: 0
+        - name: "Configuration management"
+          id: 4763
+          progress: 0
+        - name: "GitBook documentation"
+          id: 4766
+          progress: 0
+repository: 
+    url:
+        - https://github.com/indigo-dc/one-fass.git
+code_style:
+    standard:
+    exceptions:
+    jenkins_job:
+unit_test:
+    coverage:
+    jenkins_job: #accounting-unittest
+    url_external: # links to external CIs
+    comments:
+func_int_test:
+    url_external: # links to external CIs
+    jenkins_job:
+    description:
+    report:
+gitbook:
+    url: 
+    types:
+config_management:
+    comments:
+    tool:  # e.g. ansible, ..
+    url: 
+    level: # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:
