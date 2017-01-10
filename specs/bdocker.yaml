@@ -1,0 +1,62 @@
+id: "bdocker"
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4769
+        progress: 68 
+    children:
+        - name: "Repository synchronization"
+          id: 4781
+          progress: 100
+        - name: "Code style specification"
+          id: 4772 
+          progress: 100 
+        - name: "Unit testing coverage"
+          id: 4775
+          progress: 10 
+        - name: "Functional and integration testing coverage"
+          id: 4778
+          progress: 100
+        - name: "Configuration management"
+          id: 4784
+          progress: 0 
+        - name: "GitBook documentation"
+          id: 4787
+          progress: 100 
+repository: 
+    url:
+        - https://github.com/indigo-dc/bdocker.git 
+code_style:
+    standard:
+        - flake8
+    exceptions: 0
+    jenkins_job:
+        - bdocker-codestyle
+unit_test:
+    coverage: 7 
+    jenkins_job:
+        - bdocker-unittest
+func_int_test:
+    jenkins_job:
+        - bdocker-functional
+    description:
+gitbook:
+    url: https://indigo-dc.gitbooks.io/bdocker/content/
+    types:
+        - Readme
+        - Deployment documentation
+        - Development documentation
+        - User guide
+    comments:
+config_management:
+    tool:   puppet # e.g. ansible, ..
+    url: https://github.com/indigo-dc/puppet-ooi
+    level:  installation/configuration # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:
