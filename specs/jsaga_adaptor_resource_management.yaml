@@ -99,7 +99,6 @@ config_management:
     jenkins_job:
     comments:
         - "The JSAGA RM API is included into the JSAGA product which is deployed at our Maven repository http://maven.in2p3.fr."
-        - "Checking with the team if any sort of configuration is needed."
     build:
         - version: Ubuntu 14.04 LTS
           successful:   # True, False
