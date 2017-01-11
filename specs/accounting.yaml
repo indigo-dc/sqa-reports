@@ -36,10 +36,8 @@ code_style:
         - accounting-codestyle-pep257
 unit_test:
     coverage: 87
-    jenkins_job: #accounting-unittest
-    url_external: https://coveralls.io/github/apel/rest?branch=dev # links to external CIs
-    comments:
-        - "Jenkins job is currently being deployed by WP3. Meanwhile the coverage are obtained through the product's coveralls.io reports."
+    jenkins_job: 
+        - accounting-unittest
 func_int_test:
     url_external: # links to external CIs
     jenkins_job:
