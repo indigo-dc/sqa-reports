@@ -34,11 +34,9 @@ code_style:
     jenkins_job:
         - im-codestyle
 unit_test:
-    wp3_in_progress: True
     coverage: 67
-    jenkins_job: im-unittest
-    comments:
-        - "Job execution in Jenkins is currently facing some problems with the pytest tool (WP3 duty)."
+    jenkins_job: 
+        - im-unittest
 func_int_test:
     wp3_in_progress: True
     jenkins_job:
