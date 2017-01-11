@@ -52,7 +52,6 @@ func_int_test:
         - Heapster invocation
         - Zabbix agent calls
 gitbook:
-    status_notcomplete: True
     url: https://www.gitbook.com/book/indigo-dc/monitoring/details
     types:
         - "Readme"
