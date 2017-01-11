@@ -16,7 +16,7 @@ func_int_test:
     report:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2Ftosca-parser&files=Unit%20Test%20Report.pdf
     description:
-        - oscaparser.extensions.nfv.tests.test_tosca_nfv_tpl.ToscaNFVTemplateTest
+        - toscaparser.extensions.nfv.tests.test_tosca_nfv_tpl.ToscaNFVTemplateTest
         - toscaparser.tests.test_constraints.ConstraintTest
         - toscaparser.tests.test_custom_relationships.CustomRelationshipTypesTest	
         - toscaparser.tests.test_datatypes.DataTypeTest
