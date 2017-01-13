@@ -50,12 +50,12 @@ func_int_test:
         - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOnedata&files=acceptence_test_scenarios.txt
     description:
         - Authorization
-        - Directory_CRUD
+        - Directory CRUD
         - LUMA provider test
-        - Multi_directory_stat
-        - Multi_regular_file_stat
-        - Multiprovider_replication
-        - Regular_file_stat
+        - Multi directory stat
+        - Multi regular file stat
+        - Multiprovider replication
+        - Regular file stat
         - Space management with single provider
 
 gitbook:

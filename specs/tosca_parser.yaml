@@ -18,7 +18,7 @@ func_int_test:
     description:
         - toscaparser.extensions.nfv.tests.test_tosca_nfv_tpl.ToscaNFVTemplateTest
         - toscaparser.tests.test_constraints.ConstraintTest
-        - toscaparser.tests.test_custom_relationships.CustomRelationshipTypesTest	
+        - toscaparser.tests.test_custom_relationships.CustomRelationshipTypesTest
         - toscaparser.tests.test_datatypes.DataTypeTest
         - toscaparser.tests.test_exception.ExceptionTest
         - toscaparser.tests.test_functions.ConcatTest
