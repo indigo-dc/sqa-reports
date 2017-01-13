@@ -10,7 +10,7 @@ tasks:
           progress: 100
         - name: "Code style specification"
           id: 4043 
-          progress: 80
+          progress: 100
         - name: "Unit testing coverage"
           id: 4046
           progress: 10

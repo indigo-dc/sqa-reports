@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 2993
-          progress: 86
+          progress: 90
         - name: "Functional and integration testing coverage"
           id: 2984
           progress: 100
@@ -34,7 +34,7 @@ code_style:
     jenkins_job:
         - im-java-api-codestyle
 unit_test:
-    coverage: 76 
+    coverage: 86 
     jenkins_job: im-java-api-unittest
 func_int_test:
     url_external:  # links to external CIs

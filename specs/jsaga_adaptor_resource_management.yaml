@@ -34,7 +34,7 @@ code_style:
     jenkins_job:
         - jsaga-rm-codestyle
 unit_test:
-    coverage: 31
+    coverage: 33
     jenkins_job:
         - jsaga-rm-unittest
 func_int_test:

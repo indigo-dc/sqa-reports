@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - zabbix-probes-codestyle
 unit_test:
-    coverage: 35 
+    coverage: 38
     jenkins_job:
         - zabbix-probes-unittest
 func_int_test:

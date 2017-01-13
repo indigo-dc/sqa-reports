@@ -34,7 +34,7 @@ code_style:
     jenkins_job:
         - im-codestyle
 unit_test:
-    coverage: 67
+    coverage: 69
     jenkins_job: 
         - im-unittest
 func_int_test:

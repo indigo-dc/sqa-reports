@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - syncrepos-codestyle
 unit_test:
-    coverage: 31
+    coverage: 29
     jenkins_job: syncrepos-unittest
 func_int_test:
     url:

@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4649
-        progress: 43 
+        progress: 60 
     children:
         - name: "Repository synchronization"
           id: 4652 
@@ -23,7 +23,7 @@ tasks:
           progress: 0
         - name: "GitBook documentation"
           id: 4667
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/cdmi-s3-qos
@@ -40,8 +40,12 @@ unit_test:
 func_int_test:
     status_notcomplete: True
 gitbook:
-    url: 
+    url: https://indigo-dc.gitbooks.io/cdmi-s3-qos/content/
     types:
+        - Readme
+        - Deployment documentation
+        - Adminisitration documentation
+        - User documentation
     comments:
 config_management:
     tool: # e.g. ansible, ..
