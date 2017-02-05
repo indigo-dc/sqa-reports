@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3452
-        progress: 93
+        progress: 97
     children:
         - name: "Repository synchronization"
           id: 3455 
@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3458
-          progress: 60
+          progress: 80
         - name: "Functional and integration testing coverage"
           id: 3461
           progress: 100
@@ -36,7 +36,7 @@ code_style:
     jenkins_job:
         - ophidia-server-codestyle
 unit_test:
-    coverage: 70
+    coverage: 79
     jenkins_job: 
         - ophidia-server-unittest
 func_int_test:
