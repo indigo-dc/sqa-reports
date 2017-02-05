@@ -3,14 +3,14 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3287
-        progress: 85
+        progress: 93
     children:
         - name: "Repository synchronization"
           id: 3836 
           progress: 100
         - name: "Code style specification"
           id: 3839
-          progress: 50
+          progress: 100
         - name: "Unit testing coverage"
           id: 3290
           progress: 60
@@ -27,14 +27,11 @@ repository:
     url:
         - https://github.com/indigo-dc/CloudProviderRanker.git 
 code_style:
-    status_notcomplete: True
     standard:
         - java_google
     exceptions: 0
     jenkins_job:
         - cloudproviderranker-codestyle
-    comments:
-        - "Progress is set to 50\\%: code style is defined but the current code is not compliant with it."
 unit_test:
     coverage: 58
     jenkins_job: 

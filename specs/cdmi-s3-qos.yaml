@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4649
-        progress: 60 
+        progress: 93
     children:
         - name: "Repository synchronization"
           id: 4652 
@@ -17,10 +17,10 @@ tasks:
           progress: 60
         - name: "Functional and integration testing coverage"
           id: 4661
-          progress: 0
+          progress: 100
         - name: "Configuration management"
           id: 4664
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 4667
           progress: 100
@@ -38,7 +38,8 @@ unit_test:
     jenkins_job:
         - cdmi-s3-qos-unittest
 func_int_test:
-    status_notcomplete: True
+    report:
+        - https://github.com/indigo-dc/cdmi-s3-qos/blob/master/README-IT.md
 gitbook:
     url: https://indigo-dc.gitbooks.io/cdmi-s3-qos/content/
     types:
@@ -48,9 +49,9 @@ gitbook:
         - User documentation
     comments:
 config_management:
-    tool: # e.g. ansible, ..
-    url: 
-    level:  installation # values: installation, configuration, installation/configuration
+    tool: ansible # e.g. ansible, ..
+    url: https://github.com/indigo-dc/ansible-role-cdmi-s3-qos 
+    level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
