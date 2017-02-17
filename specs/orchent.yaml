@@ -34,8 +34,11 @@ code_style:
     jenkins_job:
         - orchent-codestyle
 unit_test:
+    status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
     coverage: 0
-    jenkins_job: 
+    jenkins_job:
+    comments:
+        - The product is a client tool, not providing UT
 func_int_test:
     jenkins_job:
     description:

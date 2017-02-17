@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - synergy-codestyle
 unit_test:
-    coverage: 13
+    coverage: 19
     jenkins_job: synergy-unittest
 func_int_test:
     url:
