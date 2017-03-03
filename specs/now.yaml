@@ -36,6 +36,7 @@ code_style:
 unit_test:
     coverage: 84
     jenkins_job:
+        - now-unittest
     url_external: # links to external CIs
 func_int_test:
     comments:
