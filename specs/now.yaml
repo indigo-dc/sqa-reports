@@ -4,50 +4,58 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4847
-        progress: 0
+        progress: 82
     children:
         - name: "Repository synchronization"
           id: 4859
-          progress: 0
+          progress: 100
         - name: "Code style specification"
           id: 4850
-          progress: 0 
+          progress: 100 
         - name: "Unit testing coverage"
           id: 4853
-          progress: 0 
+          progress: 90 
         - name: "Functional and integration testing coverage"
           id: 4856
           progress: 0
         - name: "Configuration management"
           id: 4862
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 4865
-          progress: 0
+          progress: 100
 repository: 
-    url:
+    url: 
+        - https://github.com/indigo-dc/NOW
 code_style:
     standard:
-    exceptions:
+        - ruby
+    exceptions: 0
     jenkins_job:
+        - now-codestyle
 unit_test:
-    coverage:
-    jenkins_job: #accounting-unittest
+    coverage: 84
+    jenkins_job:
     url_external: # links to external CIs
-    comments:
 func_int_test:
+    comments:
+        - Missing reports
     url_external: # links to external CIs
     jenkins_job:
     description:
     report:
 gitbook:
-    url: 
+    url: https://indigo-dc.gitbooks.io/network-orchestrator-wrapper/content/
     types:
+        - Readme
+        - Developer documentation
+        - Administration documentation
+        - User documentation
 config_management:
     comments:
-    tool:  # e.g. ansible, ..
-    url: 
-    level: # values: installation, configuration, installation/configuration
+    tool: puppet # e.g. ansible, ..
+    url: https://github.com/indigo-dc/NOW/blob/master/examples/puppet/site.pp
+    level: installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS

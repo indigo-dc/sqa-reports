@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3041
-        progress: 67 
+        progress: 83 
     children:
         - name: "Repository synchronization"
           id: 3044
@@ -13,31 +13,29 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3050
-          progress: 0
+          progress: 50
         - name: "Functional and integration testing coverage"
           id: 3056
           progress: 100
         - name: "Configuration management"
           id: 3059
-          progress: 0
+          progress: 50
         - name: "GitBook documentation"
           id: 3062
           progress: 100
 repository: 
     url: 
         - https://github.com/indigo-dc/dynpart
-    comments:
-        - "Currently in branch \\texttt{ffreze}, to be merged into \\texttt{master}."
 code_style:
-    wp3_in_progress: True
     standard:
         - pep8
     exceptions: 0
     jenkins_job:
         - partition-director-codestyle
 unit_test:
-    coverage: 0 
+    coverage: 49 
     jenkins_job:
+        - partition-director-unittest
 func_int_test:
     url:
     description:
@@ -52,9 +50,11 @@ gitbook:
         - Readme
         - Deployment guide
 config_management:
-    tool:   # e.g. ansible, ..
-    url:
-    level:  # values: installation, configuration, installation/configuration
+    tool: puppet  # e.g. ansible, ..
+    url: https://github.com/indigo-dc/dynpart/tree/master/conf_mng/puppet/farm_dynpart
+    level:  installation/configuration # values: installation, configuration, installation/configuration
+    comments:
+        - Missing part is automating the configuration file i.e dynp.conf
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS
