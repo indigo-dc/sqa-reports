@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3041
-        progress: 83 
+        progress: 85 
     children:
         - name: "Repository synchronization"
           id: 3044
@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3050
-          progress: 50
+          progress: 60
         - name: "Functional and integration testing coverage"
           id: 3056
           progress: 100
@@ -33,7 +33,7 @@ code_style:
     jenkins_job:
         - partition-director-codestyle
 unit_test:
-    coverage: 49 
+    coverage: 56
     jenkins_job:
         - partition-director-unittest
 func_int_test:

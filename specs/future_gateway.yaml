@@ -4,7 +4,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks:
     parent:
         id: 3809
-        progress: 75
+        progress: 82
     children:
         - name: "Repository synchronization"
           id: 3812
@@ -20,7 +20,7 @@ tasks:
           progress: 100
         - name: "Configuration management"
           id: 3824
-          progress: 50
+          progress: 90
         - name: "GitBook documentation"
           id: 3827
           progress: 100
@@ -59,12 +59,9 @@ gitbook:
         - "Installation"
         - "Usage"
 config_management:
-    status_notcomplete: True
-    comments:
-        - "Product does not provide an automated deployment solution based on Ansible or Puppet tools. For the time being, manual deployment is available following the documentation at GitBook."
-        - "Deployment guidelines only cover Ubuntu14.04, not for CentOS7 distributions, which is also required by the project."
+    status_complete: True
     tool: bash script # e.g. ansible, ..
-    url: 
+    url: https://github.com/indigo-dc/fgSetup/tree/master/ansible 
     level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:

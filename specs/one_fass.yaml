@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4748
-        progress: 42
+        progress: 50
     children:
         - name: "Repository synchronization"
           id: 4760
@@ -23,7 +23,7 @@ tasks:
           progress: 100
         - name: "GitBook documentation"
           id: 4766
-          progress: 0
+          progress: 50
 repository: 
     url:
         - https://github.com/indigo-dc/one-fass.git
@@ -44,8 +44,14 @@ func_int_test:
     description:
     report:
 gitbook:
-    url: 
+    url: https://indigo-dc.gitbooks.io/one-fass/content/
     types:
+        - Readme
+        - Deployment documentation
+        - User documentation
+    comments:
+        - Documentation only available for CentOS7.
+        - The deployment using packages should rely on INDIGO-DataCloud official repository.
 config_management:
     wont_be_provided: True
     comments:
