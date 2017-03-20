@@ -38,6 +38,16 @@ flake8:
         no_warnings: 
         url: https://flake8.readthedocs.io/en/latest/warnings.html 
 
+cpp_google:
+    name: "Google C++ Style"
+    url: https://google.github.io/styleguide/cppguide.html
+    defacto: "Yes"
+    richness: 
+        number: 94
+        no_errors: 94 
+        no_warnings: 0
+        url: https://github.com/google/styleguide/tree/gh-pages/cpplint
+
 java_google:
     name: "Google Java Style"
     url: https://google.github.io/styleguide/javaguide.html 

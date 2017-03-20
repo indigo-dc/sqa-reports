@@ -1,10 +1,10 @@
 id: "NOW"
 name: "Network Orchestrator Wrapper"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4847
-        progress: 82
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 4859
@@ -17,7 +17,7 @@ tasks:
           progress: 90 
         - name: "Functional and integration testing coverage"
           id: 4856
-          progress: 0
+          progress: 50
         - name: "Configuration management"
           id: 4862
           progress: 100
@@ -40,11 +40,12 @@ unit_test:
     url_external: # links to external CIs
 func_int_test:
     comments:
-        - Missing reports
     url_external: # links to external CIs
     jenkins_job:
     description:
+        - Create an OCCI Network Resource
     report:
+        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=/INDIGO-DC%20testing%20reports/functional/indigo_2/NOW&fileid=25538
 gitbook:
     url: https://indigo-dc.gitbooks.io/network-orchestrator-wrapper/content/
     types:

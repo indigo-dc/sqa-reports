@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4748
-        progress: 17
+        progress: 42
     children:
         - name: "Repository synchronization"
           id: 4760
@@ -20,7 +20,7 @@ tasks:
           progress: 0
         - name: "Configuration management"
           id: 4763
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 4766
           progress: 0
@@ -29,8 +29,10 @@ repository:
         - https://github.com/indigo-dc/one-fass.git
 code_style:
     standard:
-    exceptions:
+        - cpp_google
+    exceptions: 0
     jenkins_job:
+        - one-fass-codesytle
 unit_test:
     coverage:
     jenkins_job: #accounting-unittest
@@ -45,7 +47,9 @@ gitbook:
     url: 
     types:
 config_management:
+    wont_be_provided: True
     comments:
+        - "In the configuration file, one has to substitute the \\texttt{one\\_endpoint} with \\texttt{fass\\_endpoint}. But this will be specified in the GitBook."
     tool:  # e.g. ansible, ..
     url: 
     level: # values: installation, configuration, installation/configuration
