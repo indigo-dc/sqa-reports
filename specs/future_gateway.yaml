@@ -60,7 +60,7 @@ gitbook:
         - "Usage"
 config_management:
     status_complete: True
-    tool: bash script # e.g. ansible, ..
+    tool: ansible # e.g. ansible, ..
     url: https://github.com/indigo-dc/fgSetup/tree/master/ansible 
     level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:

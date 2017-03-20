@@ -58,10 +58,9 @@ gitbook:
         - Developer documentation.
         - Admin documentation.
 config_management:
-    wont_be_provided: True
     comments:
-        - "Team is working on a Puppet module for deploying the product, but won't be available for the 1st release."
-    tool:   # e.g. ansible, ..
+        - "Team is working on a Puppet module for deploying the product, but won't be available for the 1st release. So far relying on Kubernetes configuration file for automated deployment."
+    tool: kubernetes  # e.g. ansible, ..
     url:
     level:  # values: installation, configuration, installation/configuration
     jenkins_job:

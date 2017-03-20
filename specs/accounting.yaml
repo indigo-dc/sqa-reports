@@ -56,8 +56,8 @@ gitbook:
         - "User guide"
 config_management:
     comments:
-        - "Kubernetes YAML configuration files provided."
-    tool: ansible   # e.g. ansible, ..
+        - "Kubernetes YAML configuration files provided. Currently no Ansible role available."
+    tool: kubernetes   # e.g. ansible, ..
     url: https://github.com/indigo-dc/Accounting/tree/dev/yaml
     level:  deployment # values: installation, configuration, installation/configuration
     jenkins_job:

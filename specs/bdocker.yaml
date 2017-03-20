@@ -1,9 +1,9 @@
 id: "bdocker"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4769
-        progress: 68 
+        progress: 85 
     children:
         - name: "Repository synchronization"
           id: 4781
@@ -19,7 +19,7 @@ tasks:
           progress: 100
         - name: "Configuration management"
           id: 4784
-          progress: 0 
+          progress: 100 
         - name: "GitBook documentation"
           id: 4787
           progress: 100 
@@ -49,8 +49,8 @@ gitbook:
         - User guide
     comments:
 config_management:
-    tool:   puppet # e.g. ansible, ..
-    url: https://github.com/indigo-dc/puppet-ooi
+    tool: ansible # e.g. ansible, ..
+    url: https://github.com/indigo-dc/ansible-role-bdocker
     level:  installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
