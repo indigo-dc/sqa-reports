@@ -1,10 +1,10 @@
 id: "idh"
 name: "INDIGO-DataCLoud Identity-Harmonization Service"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2876 
-        progress: 92
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 3950
@@ -17,7 +17,7 @@ tasks:
           progress: 54
         - name: "Functional and integration testing coverage"
           id: 2894
-          progress: 90
+          progress: 50
         - name: "Configuration management"
           id: 2882
           progress: 100

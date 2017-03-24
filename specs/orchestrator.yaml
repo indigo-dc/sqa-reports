@@ -1,9 +1,9 @@
 id: "Orchestrator"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3089
-        progress: 88
+        progress: 80
     children:
         - name: "Repository synchronization"
           id: 3854
@@ -16,7 +16,7 @@ tasks:
           progress: 28
         - name: "Functional and integration testing coverage"
           id: 3428
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3092
           progress: 100

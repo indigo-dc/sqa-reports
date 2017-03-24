@@ -1,9 +1,9 @@
 id: "java-syncrepos"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3065 
-        progress: 83
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 3068
@@ -16,7 +16,7 @@ tasks:
           progress: 30
         - name: "Functional and integration testing coverage"
           id: 3077
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3080
           progress: 70

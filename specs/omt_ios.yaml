@@ -1,0 +1,57 @@
+id: "OMT-iOS"
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4941
+        progress: 
+    children:
+        - name: "Repository synchronization"
+          id: 4944 
+          progress: 100
+        - name: "Code style specification"
+          id: 4945
+          progress: 0
+        - name: "Unit testing coverage"
+          id: 4946
+          progress: 0
+        - name: "Functional and integration testing coverage"
+          id: 4947
+          progress: 0
+        - name: "Configuration management"
+          id: 4948
+          progress: 0
+        - name: "GitBook documentation"
+          id: 4949
+          progress: 0
+repository: 
+    url:
+        - https://github.com/indigo-dc/omt-ios
+code_style: 
+    standard:
+    exceptions:
+    jenkins_job:
+    comments:
+unit_test:
+    coverage:
+    jenkins_job:
+    comments:
+func_int_test:
+    url:
+    description:
+    report:
+gitbook:
+    url:
+    types:
+config_management:
+    comments:
+    tool: # e.g. ansible, ..
+    url: 
+    level: # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:

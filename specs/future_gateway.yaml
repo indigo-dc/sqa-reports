@@ -1,10 +1,10 @@
 id: "fgAPIServer"
 name: "FutureGateway API Server"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3809
-        progress: 82
+        progress: 73
     children:
         - name: "Repository synchronization"
           id: 3812
@@ -17,7 +17,7 @@ tasks:
           progress: 0
         - name: "Functional and integration testing coverage"
           id: 3821
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3824
           progress: 90

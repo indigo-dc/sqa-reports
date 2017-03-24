@@ -1,10 +1,10 @@
 id: "opie"
 name: "OpenStack Preemptible Instances Extension"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3767 
-        progress: 97
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 3770
@@ -17,7 +17,7 @@ tasks:
           progress: 75
         - name: "Functional and integration testing coverage"
           id: 3779
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3782
           progress: 100

@@ -1,10 +1,10 @@
 id: "im-java-api"
 name: "Infrastructure Manager Java API"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2981
-        progress: 98
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 3929
@@ -17,7 +17,7 @@ tasks:
           progress: 90
         - name: "Functional and integration testing coverage"
           id: 2984
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 2987
           progress: 100

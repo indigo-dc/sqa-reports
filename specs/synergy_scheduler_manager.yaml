@@ -1,9 +1,9 @@
 id: "Synergy Scheduler Manager"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3788 
-        progress: 85  
+        progress: 77 
     children:
         - name: "Repository synchronization"
           id: 3791
@@ -16,7 +16,7 @@ tasks:
           progress: 10
         - name: "Functional and integration testing coverage"
           id: 3800
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3803
           progress: 100

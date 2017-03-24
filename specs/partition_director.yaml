@@ -1,9 +1,9 @@
 id: "Partition Director"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3041
-        progress: 85 
+        progress: 77
     children:
         - name: "Repository synchronization"
           id: 3044
@@ -16,7 +16,7 @@ tasks:
           progress: 60
         - name: "Functional and integration testing coverage"
           id: 3056
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3059
           progress: 50

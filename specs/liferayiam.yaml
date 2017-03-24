@@ -1,9 +1,9 @@
 id: "LiferayIAM"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4037
-        progress: 85
+        progress: 77
     children:
         - name: "Repository synchronization"
           id: 4040
@@ -16,7 +16,7 @@ tasks:
           progress: 10
         - name: "Functional and integration testing coverage"
           id: 4049
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 4052
           progress: 100

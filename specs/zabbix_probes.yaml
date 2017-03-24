@@ -1,9 +1,9 @@
 id: "Zabbix Probes"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3221
-        progress: 80
+        progress: 73
     children:
         - name: "Repository synchronization"
           id: 3224 
@@ -16,7 +16,7 @@ tasks:
           progress: 40
         - name: "Functional and integration testing coverage"
           id: 3236
-          progress: 90
+          progress: 50
         - name: "Configuration management"
           id: 3239
           progress: 50

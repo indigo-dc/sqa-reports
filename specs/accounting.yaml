@@ -1,9 +1,9 @@
 id: "Accounting"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3269
-        progress: 98
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3272 
@@ -16,7 +16,7 @@ tasks:
           progress: 90 
         - name: "Functional and integration testing coverage"
           id: 3278
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3281
           progress: 100

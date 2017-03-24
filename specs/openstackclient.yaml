@@ -1,9 +1,9 @@
 id: "python-openstackclient"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3599 
-        progress: 93
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 3602
@@ -16,7 +16,7 @@ tasks:
           progress: 50
         - name: "Functional and integration testing coverage"
           id: 3611
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3614
           progress: 100

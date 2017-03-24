@@ -1,10 +1,10 @@
 id: "ophidia"
 name: "Ophidia analytics workflow interfaces"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3452
-        progress: 97
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 3455 
@@ -17,7 +17,7 @@ tasks:
           progress: 80
         - name: "Functional and integration testing coverage"
           id: 3461
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 3464
           progress: 100

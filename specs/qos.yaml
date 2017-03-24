@@ -1,10 +1,10 @@
 id: "CDMI"
 name: "INDIGO-DataCloud CDMI Server"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2888
-        progress: 88
+        progress: 82
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -17,7 +17,7 @@ tasks:
           progress: 40
         - name: "Functional and integration testing coverage"
           id: 2897
-          progress: 90
+          progress: 50
         - name: "Configuration management"
           id: 2900
           progress: 100

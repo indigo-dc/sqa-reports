@@ -1,9 +1,9 @@
 id: "cloud-info-provider"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4094
-        progress: 97
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 4097
@@ -16,7 +16,7 @@ tasks:
           progress: 80
         - name: "Functional and integration testing coverage"
           id: 4106
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 4109
           progress: 100

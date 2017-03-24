@@ -1,10 +1,10 @@
 id: "IM"
 name: "Infrastructure Manager"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2963
-        progress: 95
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3872
@@ -17,7 +17,7 @@ tasks:
           progress: 68
         - name: "Functional and integration testing coverage"
           id: 2972
-          progress: 100
+          progress: 50
         - name: "Configuration management"
           id: 2975
           progress: 100
