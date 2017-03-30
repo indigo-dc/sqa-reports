@@ -1,10 +1,10 @@
 id: "CDMI"
 name: "INDIGO-DataCloud CDMI Server"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2888
-        progress: 82
+        progress: 90
     children:
         - name: "Repository synchronization"
           id: 3941 
@@ -17,7 +17,7 @@ tasks:
           progress: 40
         - name: "Functional and integration testing coverage"
           id: 2897
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 2900
           progress: 100
@@ -37,27 +37,29 @@ unit_test:
     coverage: 38
     jenkins_job: qos-unittest
 func_int_test:
-    status_notcomplete: True
     url: 
         - qos-unittest
     description:
-        - CapabilityFilesystemTest
-        - CdmiObjectFilesystemTest
-        - ContainerFilesystemTest
-        - DataObjectFilesystemTest
-        - AuthorizationTest
-        - CapabilitiesTest
-        - CdmiObjectTest
-        - ContainerTest
-        - DataObjectTest
-        - DomainTest
-        - FilterJsonTest
-        - HttpClientTest
-        - UtilsTest
-        - CapabilityRedisTest
-        - CdmiObjectRedisTest
-        - ContainerRedisTest
-        - DataObjectRedisTest
+        - CapabilityFilesystemTest (INDIGO-1)
+        - CdmiObjectFilesystemTest (INDIGO-1)
+        - ContainerFilesystemTest (INDIGO-1)
+        - DataObjectFilesystemTest (INDIGO-1)
+        - AuthorizationTest (INDIGO-1)
+        - CapabilitiesTest (INDIGO-1)
+        - CdmiObjectTest (INDIGO-1)
+        - ContainerTest (INDIGO-1)
+        - DataObjectTest (INDIGO-1)
+        - DomainTest (INDIGO-1)
+        - FilterJsonTest (INDIGO-1)
+        - HttpClientTest (INDIGO-1)
+        - UtilsTest (INDIGO-1)
+        - CapabilityRedisTest (INDIGO-1)
+        - CdmiObjectRedisTest (INDIGO-1)
+        - ContainerRedisTest (INDIGO-1)
+        - DataObjectRedisTest (INDIGO-1)
+        - Integration of new CDMI capabilities for storage back-ends, alternative data access protocols and exposing container children (INDIGO-2)
+        - Integration of user identity for storage back-end modules (INDIGO-2)
+        - Update of the dummy filesystem module with configuration from JSON file (INDIGO-2)
 gitbook:
     url: https://indigo-dc.gitbooks.io/cdmi-qos/content/
     types:

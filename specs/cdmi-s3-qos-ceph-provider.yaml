@@ -1,49 +1,47 @@
-id: "OMT-iOS"
+id: "CDMI-S3-QOS-CEPH-PROVIDER"
+name: "CDMI-S3-QOS-CEPH-PROVIDER"
 status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
-        id: 4941
+        id: 4958 
         progress: 17
     children:
         - name: "Repository synchronization"
-          id: 4944 
+          id: 4963
           progress: 100
         - name: "Code style specification"
-          id: 4945
+          id: 4964
           progress: 0
         - name: "Unit testing coverage"
-          id: 4946
+          id: 4959
           progress: 0
         - name: "Functional and integration testing coverage"
-          id: 4947
+          id: 4960
           progress: 0
         - name: "Configuration management"
-          id: 4948
+          id: 4961
           progress: 0
         - name: "GitBook documentation"
-          id: 4949
+          id: 4962
           progress: 0
 repository: 
     url:
-        - https://github.com/indigo-dc/omt-ios
-code_style: 
+        - https://github.com/indigo-dc/cdmi-s3-qos-ceph-provider 
+code_style:
     standard:
     exceptions:
     jenkins_job:
-    comments:
 unit_test:
-    coverage:
+    coverage: 
     jenkins_job:
-    comments:
 func_int_test:
-    url:
+    url: 
     description:
-    report:
 gitbook:
     url:
     types:
-config_management:
     comments:
+config_management:
     tool: # e.g. ansible, ..
     url: 
     level: # values: installation, configuration, installation/configuration

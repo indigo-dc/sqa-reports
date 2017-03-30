@@ -1,49 +1,47 @@
-id: "OMT-iOS"
+id: "CDMI-HPSS"
+name: "CDMI-HPSS"
 status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
-        id: 4941
+        id: 4951 
         progress: 17
     children:
         - name: "Repository synchronization"
-          id: 4944 
+          id: 4956
           progress: 100
         - name: "Code style specification"
-          id: 4945
+          id: 4957
           progress: 0
         - name: "Unit testing coverage"
-          id: 4946
+          id: 4952
           progress: 0
         - name: "Functional and integration testing coverage"
-          id: 4947
+          id: 4953
           progress: 0
         - name: "Configuration management"
-          id: 4948
+          id: 4954
           progress: 0
         - name: "GitBook documentation"
-          id: 4949
+          id: 4955
           progress: 0
 repository: 
     url:
-        - https://github.com/indigo-dc/omt-ios
-code_style: 
+        - https://github.com/indigo-dc/cdmi-hpss 
+code_style:
     standard:
     exceptions:
     jenkins_job:
-    comments:
 unit_test:
-    coverage:
+    coverage: 
     jenkins_job:
-    comments:
 func_int_test:
-    url:
+    url: 
     description:
-    report:
 gitbook:
     url:
     types:
-config_management:
     comments:
+config_management:
     tool: # e.g. ansible, ..
     url: 
     level: # values: installation, configuration, installation/configuration
