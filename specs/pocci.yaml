@@ -1,9 +1,9 @@
 id: "pOCCI"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2945 
-        progress: 80
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 3935 
@@ -16,7 +16,7 @@ tasks:
           progress: 30
         - name: "Functional and integration testing coverage"
           id: 2954
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 2957
           progress: 100
@@ -36,10 +36,11 @@ unit_test:
     coverage: 33
     jenkins_job: pocci-unittest
 func_int_test:
-    status_inprogress: True
     url:
     description:
         - "Basic OCCI functionality over the whole chain (Cloud provider -> OCCI service -> pOCCI client)."
+    reports:
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/pOCCI/pocci%20indigo-2.pdf"
 gitbook:
     url: https://indigo-dc.gitbooks.io/pocci/content/
     types:

@@ -1,9 +1,9 @@
 id: "indigo-omt"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3434
-        progress: 78
+        progress: 87
     children:
         - name: "Repository synchronization"
           id: 3830
@@ -16,7 +16,7 @@ tasks:
           progress: 20
         - name: "Functional and integration testing coverage"
           id: 3440
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3443
           progress: 100
@@ -41,12 +41,18 @@ unit_test:
 func_int_test:
     url:
     description:
-        - "Listing tasks"
-        - "Filtering tasks by name, by status"
-        - "Creating new tasks"
-        - "Getting details of chosen task"
+        - "Listing tasks (INDIGO-1)"
+        - "Filtering tasks by name, by status (INDIGO-1)"
+        - "Creating new tasks (INDIGO-1)"
+        - "Getting details of chosen task (INDIGO-1)"
+        - "test\\_getAllApplications (INDIGO-2)"
+        - "getApplicationsById (INDIGO-2)"
+        - "getApplicationsByName (INDIGO-2)"
+        - "getApplicationsByWrongId (INDIGO-2)"
+        - "getApplicationsByWrongName (INDIGO-2)"
     report:
-        - https://owncloud.indigo-datacloud.eu/index.php/apps/files?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FINDIGO%20OMT
+        - "INDIGO 2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/OMT/Test_Results_-_ApplicationsActivity___.html"
+        - "INDIGO 1: https://owncloud.indigo-datacloud.eu/index.php/apps/files?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FINDIGO%20OMT"
 gitbook:
     url: https://indigo-dc.gitbooks.io/omt-android/content/
     types:

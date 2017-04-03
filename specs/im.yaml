@@ -1,10 +1,10 @@
 id: "IM"
 name: "Infrastructure Manager"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2963
-        progress: 87
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 3872
@@ -17,7 +17,7 @@ tasks:
           progress: 68
         - name: "Functional and integration testing coverage"
           id: 2972
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 2975
           progress: 100
@@ -38,18 +38,22 @@ unit_test:
     jenkins_job: 
         - im-unittest
 func_int_test:
-    wp3_in_progress: True
     jenkins_job:
+        - im-functional
     url_external: # links to external CIs
     description:
-        - "Create Infrastructure"
-        - "Get Infrastructure information"
-        - "Reconfigure a Infrastructure"
-        - "Add a node to a Infrastructure"
-        - "Remove a node from a Infrastructure"
-        - "Destroy a Infrastructure"
+        - "Create Infrastructure (INDIGO-1)"
+        - "Get Infrastructure information (INDIGO-1)"
+        - "Reconfigure a Infrastructure (INDIGO-1)"
+        - "Add a node to a Infrastructure (INDIGO-1)"
+        - "Remove a node from a Infrastructure (INDIGO-1)"
+        - "Destroy a Infrastructure (INDIGO-1)"
+        - "Add VMINFO\\_JSON conf var to enable the GetVMInfo function return JSON RADL (INDIGO-2)"
+        - "Improve OCCI cloud\\_init data process (INDIGO-2)"
+        - "Improve error messages in case of internal connector errors (INDIGO-2)"
+        - "Enrich the logging entries + stack trace with the infra id (INDIGO-2)"
     comments:
-        - "Functional tests have been provided and integration in Jenkins started: \\href{https://jenkins.indigo-datacloud.eu:8080/job/im-functional/}{im-functional}."
+        - "All the functionalities auto tested in INDIGO Jenkins CI" 
 gitbook:
     url: https://indigo-dc.gitbooks.io/im/content/
     types:

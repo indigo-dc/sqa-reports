@@ -1,9 +1,9 @@
 id: "Accounting"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3269
-        progress: 87
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 3272 
@@ -16,7 +16,7 @@ tasks:
           progress: 90 
         - name: "Functional and integration testing coverage"
           id: 3278
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3281
           progress: 100
@@ -42,11 +42,17 @@ func_int_test:
     url_external: # links to external CIs
     jenkins_job:
     description:
-        - "Returning Accounting Summaries"
-        - "Accepting Accounting Data"
-        - "End-to-end testing"
+        - "Returning Accounting Summaries (INDIGO-1)"
+        - "Accepting Accounting Data (INDIGO-1)"
+        - "End-to-end testing (INDIGO-1)"
+        - "Allow for the Identity and Access Management (IAM) URL to be set in settings.py (INDIGO-2)"
+        - "Add the ability to locally ban/allow POST requests (INDIGO-2)"
+        - "Add a simple script to sender to the APEL REST interface (INDIGO-2)"
+        - "Add ability to query summaries by GlobalUserName (INDIGO-2)"
+        - "Upgrade to APEL 1.6.0 (INDIGO-2)"
     report:
-        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FAccounting&files=wp3-3278.pdf
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FAccounting&files=wp3-3278.pdf"
+        - "INDIGO-1: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/Accounting/Accounting%20functional%20testing%20report.pdf"
 gitbook:
     url: https://www.gitbook.com/book/indigo-dc/accounting 
     types:

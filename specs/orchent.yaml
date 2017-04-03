@@ -1,6 +1,6 @@
 id: "orchent"
 name: "Orchestrator Command Line Client"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4565
@@ -40,6 +40,7 @@ unit_test:
     comments:
         - The product is a client tool, not providing UT
 func_int_test:
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     jenkins_job:
     description:
         - listing all deployments

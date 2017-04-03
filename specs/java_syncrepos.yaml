@@ -1,9 +1,9 @@
 id: "java-syncrepos"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3065 
-        progress: 75
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 3068
@@ -16,7 +16,7 @@ tasks:
           progress: 30
         - name: "Functional and integration testing coverage"
           id: 3077
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3080
           progress: 70
@@ -38,12 +38,12 @@ unit_test:
 func_int_test:
     url:
     description:
-        - "Image listing."
-        - "Image deletion."
-        - "Image insertion from DockerHub."
-        - "Automatic synchronization from a list of repositories."
+        - "Image listing (INDIGO-1)"
+        - "Image deletion (INDIGO-1)"
+        - "Image insertion from DockerHub (INDIGO-1)"
+        - "Automatic synchronization from a list of repositories (INDIGO-1)"
     comments:
-        - "Changes addressed in master branch but not yet available in Gitbook; facing some issues with the synchronization."
+        - "INDIGO-2: No new functionalities."
 gitbook:
     url: https://indigo-dc.gitbooks.io/java-syncrepos/content/
     types:

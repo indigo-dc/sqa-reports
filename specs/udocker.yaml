@@ -3,7 +3,7 @@ status_complete: True   # values: status_complete, status_notcomplete, status_in
 tasks: 
     parent: 
         id: 3641
-        progress: 80
+        progress: 88
     children: 
         - name: "Repository synchronization"
           id: 3644
@@ -38,10 +38,9 @@ unit_test:
     comments:
         - "Coverage is 25\\% since this is the current coverage value for \\texttt{lines}. The rest of coverage values are 100\\%."
 func_int_test:
-    wp3_in_progress: True
     url:
-    comments:
-        - "Product leader provided both functional and integration tests. WP3 is currently working on the Jenkins CI job definition."
+    reports:
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/udocker/udocker%20-%202nd%20release.pdf"
 gitbook:
     url: https://indigo-dc.gitbooks.io/udocker/content/
     types:

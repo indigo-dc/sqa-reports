@@ -1,9 +1,9 @@
 id: "Synergy Service"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2996
-        progress: 77
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 2999 
@@ -16,7 +16,7 @@ tasks:
           progress: 20
         - name: "Functional and integration testing coverage"
           id: 3926
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3002
           progress: 100

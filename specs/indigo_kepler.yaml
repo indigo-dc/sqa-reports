@@ -42,6 +42,7 @@ unit_test:
         - "For indigo-dc/indigokepler, there are no unit tests. Actors are just proxies for indigoclient calls. Actors work only as part of Kepler platform."
         - "Conditional coverage is the one at 86\\%, above the 70% threshold."
 func_int_test:
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     jenkins_job:
     url_external: # links to external CIs
     description:

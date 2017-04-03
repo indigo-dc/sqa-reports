@@ -39,6 +39,7 @@ unit_test:
     comments:
         - "Unit testing coverage has decreased from last report (30\\%)."
 func_int_test:
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     url:
     jenkins_job:
         - orchestrator-integration

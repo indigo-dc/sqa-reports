@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 2843 
-        progress: 90
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 3902 
@@ -17,7 +17,7 @@ tasks:
           progress: 90
         - name: "Functional and integration testing coverage"
           id: 3911
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 2849
           progress: 100

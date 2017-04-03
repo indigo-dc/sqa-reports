@@ -1,5 +1,5 @@
 id: "onedata"
-status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3101
@@ -36,13 +36,14 @@ code_style:
     exceptions: 0
     jenkins_job:
 unit_test:
-    wp3_in_progress: True
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     standard:
     coverage: 
     jenkins_job:
     comments:
         - "Command/s to check unit testing coverage have been provided, but not currently working. Need a report or link to external CI where the coverage value is computed."
 func_int_test:
+    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     url:
     comments:
         - "Command/s to check functional testing coverage have been provided, but not currently working. Need support from product team."

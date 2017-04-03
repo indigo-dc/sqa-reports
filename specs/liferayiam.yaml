@@ -1,9 +1,9 @@
 id: "LiferayIAM"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4037
-        progress: 77
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 4040
@@ -16,7 +16,7 @@ tasks:
           progress: 10
         - name: "Functional and integration testing coverage"
           id: 4049
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 4052
           progress: 100
@@ -41,10 +41,16 @@ func_int_test:
     jenkins_job:
     url_external: # links to external CIs
     report:
-        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FLiferayIAM
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/LiferayPlugins/report2.pdf"
+        - "INDIGO-1: https://owncloud.indigo-datacloud.eu/index.php/apps/files/?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FLiferayIAM"
     description:
-        - LifeRay portal Integration with IAM.
-        - Token retrieval from the remote web service.
+        - "LifeRay portal Integration with IAM (INDIGO-1)"
+        - "Token retrieval from the remote web service (INDIGO-1)"
+        - "Authentication: basic functionality (INDIGO-2)"
+        - "Admin portlet: POST items to app \\& infra resources (INDIGO-2)"
+        - "Admin portlet: GET task resources (INDIGO-2)"
+        - "Admin portlet: DELETE task resources (INDIGO-2)"
+        - "Generic portlet: simulation of the execution of the application (INDIGO-2)"
 gitbook:
     url: https://indigo-dc.gitbooks.io/liferay-iam-connector/content/ 
     types:

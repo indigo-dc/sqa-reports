@@ -137,3 +137,12 @@ dcache:
         no_errors: 
         no_warnings: 
         url: https://goo.gl/4Ra3Na
+
+swift:
+    name: "The Official raywenderlich.com Swift Style Guide"
+    url: https://github.com/raywenderlich/swift-style-guide
+    richness:
+        number: 40
+        no_errors: 
+        no_warnings: 
+        url: 

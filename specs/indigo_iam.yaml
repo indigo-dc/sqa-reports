@@ -42,7 +42,7 @@ unit_test:
     comments:
         - "\\href{https://jenkins.indigo-datacloud.eu:8080/job/iam-unittest}{Unit test job} at INDIGO Jenkins CI is defined but currently failing (WP3 duty). Meanwhile relying on the URL of the external CI."
 func_int_test:
-    wp3_in_progress: True
+    status_notcomplete: True 
     jenkins_job:
     url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-master/lastBuild/testReport/
     description:

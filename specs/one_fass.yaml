@@ -34,11 +34,13 @@ code_style:
     jenkins_job:
         - one-fass-codesytle
 unit_test:
+    status_notcomplete: True
     coverage:
     jenkins_job: #accounting-unittest
     url_external: # links to external CIs
     comments:
 func_int_test:
+    status_notcomplete: True
     url_external: # links to external CIs
     jenkins_job:
     description:

@@ -3,23 +3,23 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4941
-        progress: 17
+        progress: 65
     children:
         - name: "Repository synchronization"
           id: 4944 
           progress: 100
         - name: "Code style specification"
           id: 4945
-          progress: 0
+          progress: 100
         - name: "Unit testing coverage"
           id: 4946
-          progress: 0
+          progress: 90
         - name: "Functional and integration testing coverage"
           id: 4947
           progress: 0
         - name: "Configuration management"
           id: 4948
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 4949
           progress: 0
@@ -28,12 +28,15 @@ repository:
         - https://github.com/indigo-dc/omt-ios
 code_style: 
     standard:
-    exceptions:
+        - swift
+    exceptions: 0
     jenkins_job:
     comments:
+        - "Trying to figure out how to integrate this in Jenkins CI."
 unit_test:
-    coverage:
+    coverage: 88
     jenkins_job:
+    url_external: http://htmlpreview.github.io/?https://github.com/indigo-dc/omt-ios/blob/master/unit_tests_coverage/index.html
     comments:
 func_int_test:
     url:
@@ -43,6 +46,7 @@ gitbook:
     url:
     types:
 config_management:
+    wont_be_provided: True
     comments:
     tool: # e.g. ansible, ..
     url: 

@@ -39,7 +39,7 @@ unit_test:
     comments:
         - "No Jenkins job have been defined yet (WP3 duty)."
 func_int_test:
-    wp3_in_progress: True
+    status_notcomplete: True
     url:
     comments:
         - "Integration testing recipe has been provided, requiring an OpenNebula installation. Still considering to implement this in Jenkins."
