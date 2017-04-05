@@ -1,0 +1,66 @@
+id: "keystoneauth"
+name: "KeystoneAuth"
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
+tasks:
+    parent:
+        id: 4979 
+        progress: 100 
+    children:
+        - name: "Repository synchronization"
+          id: 4980
+          progress: 100
+        - name: "Code style specification"
+          id: 4981
+          progress: 100
+        - name: "Unit testing coverage"
+          id: 4982
+          progress: 100
+        - name: "Functional and integration testing coverage"
+          id: 4983
+          progress: 100
+        - name: "Configuration management"
+          id: 4984
+          progress: 100
+        - name: "GitBook documentation"
+          id: 4985
+          progress: 100
+repository: 
+    url: 
+        - https://github.com/indigo-dc/keystoneauth-oidc-authz-code
+code_style:
+    standard:
+        - hacking
+    exceptions: 0
+    jenkins_job:
+        - keystoneauth-codestyle
+unit_test:
+    coverage: 95
+    jenkins_job: keystoneauth-unittest
+func_int_test:
+    comments:
+    url:
+    description:
+        - "Adding support for the OpenID Connect authentication code grant type"
+    reports:
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/KeystoneAuth/keystone_func_testing.odt"
+gitbook:
+    url: https://indigo-dc.gitbooks.io/keystone-with-oidc-documentation/content/ 
+    types:
+        - Readme
+        - Deployment and administration documentation
+        - User documentation
+    comments:
+config_management:
+    wont_be_provided: True
+    comments:
+    tool:   # e.g. ansible, ..
+    url:
+    level:  # values: installation, configuration, installation/configuration
+    jenkins_job:
+    build:
+        - version: Ubuntu 14.04 LTS
+          successful:   # True, False
+          url:
+        - version: CentOS7
+          successful:   # True, False
+          url:

@@ -1,9 +1,9 @@
 id: "OMT-iOS"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4941
-        progress: 65
+        progress: 98
     children:
         - name: "Repository synchronization"
           id: 4944 
@@ -16,13 +16,13 @@ tasks:
           progress: 90
         - name: "Functional and integration testing coverage"
           id: 4947
-          progress: 0
+          progress: 100
         - name: "Configuration management"
           id: 4948
           progress: 100
         - name: "GitBook documentation"
           id: 4949
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/omt-ios
@@ -42,9 +42,13 @@ func_int_test:
     url:
     description:
     report:
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/OMT-iOS/report_OMT_iOS.html"
 gitbook:
-    url:
+    url: https://indigo-dc.gitbooks.io/omt-ios/content/
     types:
+        - Readme
+        - Developer documentation
+        - API documentation
 config_management:
     wont_be_provided: True
     comments:

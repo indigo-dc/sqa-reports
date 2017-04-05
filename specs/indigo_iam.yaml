@@ -1,10 +1,10 @@
 id: "INDIGO IAM"
 name: "INDIGO Identity Access Management"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3248
-        progress: 70
+        progress: 78
     children:
         - name: "Repository synchronization"
           id: 3254 
@@ -14,10 +14,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3257
-          progress: 64
+          progress: 70
         - name: "Functional and integration testing coverage"
           id: 3260
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3263
           progress: 100
@@ -32,22 +32,32 @@ code_style:
         - java_google
     exceptions: 0
     jenkins_job:
-    url_external: http://radiohead.cnaf.infn.it:9999/job/iam-master/
+    url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-develop-cobertura/checkstyle
     comments:
         - "\\href{https://jenkins.indigo-datacloud.eu:8080/job/iam-codestyle}{Code style job} at INDIGO Jenkins CI is defined but currently failing (WP3 duty). Meanwhile relying on the URL of the external CI."
 unit_test:
-    coverage: 59
+    coverage: 71
     jenkins_job:
-    url_external: http://radiohead.cnaf.infn.it:9999/job/iam-master/
+    url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-develop-cobertura/
     comments:
         - "\\href{https://jenkins.indigo-datacloud.eu:8080/job/iam-unittest}{Unit test job} at INDIGO Jenkins CI is defined but currently failing (WP3 duty). Meanwhile relying on the URL of the external CI."
 func_int_test:
-    status_notcomplete: True 
     jenkins_job:
-    url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/iam-master/lastBuild/testReport/
+    url_external: http://radiohead.cnaf.infn.it:9999/view/1_IAM/job/deployment_IAM_docker/lastSuccessfulBuild/robot/
     description:
-        - "Endpoints extended from \\href{https://github.com/mitreid-connect/OpenID-Connect-Java-Spring-Server}{mitreid-connect}."
-        - "Endpoints added by IAM, some integration tests are provided through unit tests."
+        - "Endpoints extended from \\href{https://github.com/mitreid-connect/OpenID-Connect-Java-Spring-Server}{mitreid-connect} (INDIGO-1)"
+        - "Endpoints added by IAM, some integration tests are provided through unit tests (INDIGO-1)"
+        - "Password reset email should include IAM account username kind/bug (INDIGO-2)"
+        - "Scope policies management API (INDIGO-2)"
+        - "Migrate client management to IAM dashboard kind/feature (INDIGO-2)"
+        - "Support for displaying and managing hierarchical groups component/dashboard (INDIGO-2)"
+        - "As a user, I can authenticate to the IAM using my Github credentials kind/feature (INDIGO-2)"
+        - "Migrate dashboard to angular 2 component/dashboard kind/task (INDIGO-2)"
+        - "Support for Acceptable Usage Policy (AUP) acceptance enforcement kind/feature (INDIGO-2)"
+        - "Migrate scope management to IAM dashboard kind/feature (INDIGO-2)"
+        - "Support for ORCID external authentication kind/feature (INDIGO-2)"
+        - "SAML Attribute query integration in SAML authentication flow kind/feature (INDIGO-2)"
+        - "SAML Attribute Authorities management API kind/feature (INDIGO-2)"
     comments:
         - "\\href{https://jenkins.indigo-datacloud.eu:8080/job/iam-functional}{Functional job} at INDIGO Jenkins CI is defined but currently failing (WP3 duty)."
 gitbook:

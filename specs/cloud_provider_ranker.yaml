@@ -1,22 +1,22 @@
 id: "CloudProviderRanker"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3287
-        progress: 85
+        progress: 93
     children:
         - name: "Repository synchronization"
           id: 3836 
           progress: 100
         - name: "Code style specification"
           id: 3839
-          progress: 100
+          progress: 50
         - name: "Unit testing coverage"
           id: 3290
           progress: 60
         - name: "Functional and integration testing coverage"
           id: 3293
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3296
           progress: 100
@@ -27,6 +27,7 @@ repository:
     url:
         - https://github.com/indigo-dc/CloudProviderRanker.git 
 code_style:
+    status_notcomplete: True
     standard:
         - java_google
     exceptions: 0
@@ -37,7 +38,6 @@ unit_test:
     jenkins_job: 
         - cloudproviderranker-unittest
 func_int_test:
-    status_notcomplete: True
     jenkins_job:
         - cloudproviderranker-functional
     comments:

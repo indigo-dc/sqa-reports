@@ -1,10 +1,10 @@
 id: "tts"
 name: "Token Translation Service"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 2867
-        progress: 88
+        progress: 97
     children:
         - name: "Repository synchronization"
           id: 3956 
@@ -17,7 +17,7 @@ tasks:
           progress: 80
         - name: "Functional and integration testing coverage"
           id: 3392
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 2870
           progress: 100
@@ -38,7 +38,6 @@ unit_test:
     jenkins_job: 
         - tts-unittest
 func_int_test:
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     jenkins_job:
         - tts-functional
     description:
