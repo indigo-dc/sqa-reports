@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3026
-        progress: 83
+        progress: 92
     children:
         - name: "Repository synchronization"
           id: 3896
@@ -13,7 +13,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 3029
-          progress: 50
+          progress: 100
         - name: "Functional and integration testing coverage"
           id: 3032
           progress: 50
@@ -39,11 +39,9 @@ unit_test:
     comments:
         - "No Jenkins job have been defined yet (WP3 duty)."
 func_int_test:
-    status_notcomplete: True
-    url:
+    url: https://github.com/indigo-dc/onedock/tree/master/test
     comments:
-        - "Integration testing recipe has been provided, requiring an OpenNebula installation. Still considering to implement this in Jenkins."
-        - "A description of the tests and a link to the test pipeline were provided."
+        - "Missing report for INDIGO-2"
 gitbook:
     url: https://indigo-dc.gitbooks.io/onedock/content/
     types:
