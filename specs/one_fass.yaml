@@ -1,10 +1,10 @@
 id: "one-fass"
 name: "OpenNebula Fair Share Scheduler"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4748
-        progress: 58
+        progress: 75
     children:
         - name: "Repository synchronization"
           id: 4760
@@ -17,7 +17,7 @@ tasks:
           progress: 0 
         - name: "Functional and integration testing coverage"
           id: 4757
-          progress: 0
+          progress: 100
         - name: "Configuration management"
           id: 4763
           progress: 100
@@ -34,17 +34,16 @@ code_style:
     jenkins_job:
         - one-fass-codesytle
 unit_test:
-    status_notcomplete: True
     coverage:
     jenkins_job: #accounting-unittest
     url_external: # links to external CIs
     comments:
 func_int_test:
-    status_notcomplete: True
     url_external: # links to external CIs
     jenkins_job:
     description:
     report:
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/one-fass/Report-DummyTest.txt"
 gitbook:
     url: https://indigo-dc.gitbooks.io/one-fass/content/
     types:
