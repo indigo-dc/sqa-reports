@@ -1,9 +1,9 @@
 id: "onedata"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3101
-        progress: 67
+        progress: 85
     children:
         - name: "Repository synchronization"
           id: 3104
@@ -13,10 +13,10 @@ tasks:
           progress: 50
         - name: "Unit testing coverage"
           id: 3107
-          progress: 0
+          progress: 60
         - name: "Functional and integration testing coverage"
           id: 3110
-          progress: 90
+          progress: 100
         - name: "Configuration management"
           id: 3113
           progress: 100
@@ -36,19 +36,17 @@ code_style:
     exceptions: 0
     jenkins_job:
 unit_test:
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
-    standard:
-    coverage: 
+    coverage: 59
     jenkins_job:
     comments:
-        - "Command/s to check unit testing coverage have been provided, but not currently working. Need a report or link to external CI where the coverage value is computed."
+        - "INDIGO-2: See reports in https://owncloud.indigo-datacloud.eu/index.php/apps/files?dir=/INDIGO-DC%20testing%20reports/unit/indigo_2/onedata"
 func_int_test:
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     url:
     comments:
         - "Command/s to check functional testing coverage have been provided, but not currently working. Need support from product team."
     report:
-        - https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOnedata&files=acceptence_test_scenarios.txt
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/onedata/Test%20Report.pdf"
+        - "INDIGO-1: https://owncloud.indigo-datacloud.eu/index.php/apps/files/ajax/download.php?dir=%2FINDIGO-DC%20testing%20reports%2Ffunctional%2Findigo_1%2FOnedata&files=acceptence_test_scenarios.txt"
     description:
         - Authorization
         - Directory CRUD

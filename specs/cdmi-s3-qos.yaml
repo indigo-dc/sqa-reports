@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4649
-        progress: 93
+        progress: 95
     children:
         - name: "Repository synchronization"
           id: 4652 
@@ -14,7 +14,7 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 4658
-          progress: 60
+          progress: 70
         - name: "Functional and integration testing coverage"
           id: 4661
           progress: 100
@@ -34,7 +34,7 @@ code_style:
     jenkins_job:
         - cdmi-s3-qos-codestyle
 unit_test:
-    coverage: 56
+    coverage: 71
     jenkins_job:
         - cdmi-s3-qos-unittest
 func_int_test:

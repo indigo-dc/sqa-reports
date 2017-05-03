@@ -1,9 +1,9 @@
 id: "Orchestrator"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 3089
-        progress: 80
+        progress: 88
     children:
         - name: "Repository synchronization"
           id: 3854
@@ -16,7 +16,7 @@ tasks:
           progress: 28
         - name: "Functional and integration testing coverage"
           id: 3428
-          progress: 50
+          progress: 100
         - name: "Configuration management"
           id: 3092
           progress: 100
@@ -39,10 +39,11 @@ unit_test:
     comments:
         - "Unit testing coverage has decreased from last report (30\\%)."
 func_int_test:
-    status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
     url:
     jenkins_job:
         - orchestrator-integration
+    report:
+        - "INDIGO-2: https://owncloud.indigo-datacloud.eu/remote.php/webdav/INDIGO-DC%20testing%20reports/functional/indigo_2/Orchestrator/Orchestrator_1.3.0-FINAL.doc"
     description:
         - "\\underline{Functional tests}: WF tasks related to the external Services, using mocks (CloudProviderRanker, CMDB, SLAM, Monitoring, Notification callbacks) - 40\\%."
         - "\\underline{Integration tests}: (without mock) for external services (CloudProviderRanker, CMDB, SLAM - we had some problems with the last couple, but we will fix them soon)."
