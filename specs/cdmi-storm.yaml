@@ -4,47 +4,50 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4972
-        progress: 42 
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 4977
           progress: 100
         - name: "Code style specification"
           id: 4978
-          progress: 50
+          progress: 100
         - name: "Unit testing coverage"
           id: 4973
           progress: 100
         - name: "Functional and integration testing coverage"
           id: 4974
-          progress: 0
+          progress: 100
         - name: "Configuration management"
           id: 4975
           progress: 0
         - name: "GitBook documentation"
           id: 4976
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/cdmi-hpss 
 code_style:
     standard:
+        - java_google
     exceptions:
     jenkins_job:
     url_external: https://ci.cloud.cnaf.infn.it/view/storm/job/cdmi-storm/lastSuccessfulBuild/checkstyleResult/
-    comments:
-        - Provide the code style standard you are using (google, sun, ..)
-        - Warnings need to be fixed; this policy has been fulfilled by the rest of teams
 unit_test:
     coverage: 97
     url_external: https://ci.cloud.cnaf.infn.it/view/storm/job/cdmi-storm/lastSuccessfulBuild/cobertura/
     jenkins_job:
 func_int_test:
-    url: 
+    url: https://ci.cloud.cnaf.infn.it/view/storm/job/run-storm-testsuite
     description:
 gitbook:
-    url:
+    url: https://indigo-dc.gitbooks.io/iam/content/
     types:
+        - Readme
+        - Developer documentation
+        - Deployment documentation
+        - Administration documentation
+        - User documentation
     comments:
         - Documentation will be fetched from the GitHub repository at indigo-dc. Whenever this is available please let us know so to link it with GitBook.
 config_management:

@@ -4,17 +4,17 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4997 
-        progress: 17
+        progress: 58
     children:
         - name: "Repository synchronization"
           id: 4998
           progress: 100 
         - name: "Code style specification"
           id: 4999
-          progress: 0 
+          progress: 100 
         - name: "Unit testing coverage"
           id: 5000 
-          progress: 0
+          progress: 50
         - name: "Functional and integration testing coverage"
           id: 5001
           progress: 0
@@ -23,24 +23,30 @@ tasks:
           progress: 0
         - name: "GitBook documentation"
           id: 5003
-          progress: 0
+          progress: 100
 repository: 
     url:
         - https://github.com/indigo-dc/analytics-portlets
 code_style: 
     standard:
+        - java_sun
     exceptions:
     jenkins_job:
+        - analytics-portlets-codestyle
 unit_test:
-    coverage:
-    jenkins_job: 
+    coverage: 50
+    jenkins_job:
+        - analytics-portlets-unittest
 func_int_test:
     jenkins_job: 
     report:
     description:
 gitbook:
-    url:
+    url: https://indigo-dc.gitbooks.io/analytics-portlets/content/
     types:
+        - "Readme"
+        - "Administration documentation"
+        - "User documentation"
 config_management:
     tool:  # e.g. ansible, ..
     url: 

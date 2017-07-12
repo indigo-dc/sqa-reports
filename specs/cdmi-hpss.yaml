@@ -1,10 +1,10 @@
 id: "CDMI-HPSS"
 name: "CDMI-HPSS"
-status_notcomplete: True   # values: status_complete, status_notcomplete, status_inprogress
+status_complete: True   # values: status_complete, status_notcomplete, status_inprogress
 tasks:
     parent:
         id: 4951 
-        progress: 67
+        progress: 83
     children:
         - name: "Repository synchronization"
           id: 4956
@@ -20,7 +20,7 @@ tasks:
           progress: 50
         - name: "Configuration management"
           id: 4954
-          progress: 0
+          progress: 100
         - name: "GitBook documentation"
           id: 4955
           progress: 100 
@@ -53,12 +53,9 @@ gitbook:
         - "User documentation"
     comments:
 config_management:
-    comments:
-        - Dockerfile are not valid
-        - Configuration management refers to an Ansible role or Puppet module to deploy automatically the product, so no package or container provisioning is asked for this task
-    tool: # e.g. ansible, ..
-    url: 
-    level: # values: installation, configuration, installation/configuration
+    tool: ansible # e.g. ansible, ..
+    url: https://github.com/indigo-dc/ansible-role-cdmi-hpss
+    level: installation/configuration # values: installation, configuration, installation/configuration
     jenkins_job:
     build:
         - version: Ubuntu 14.04 LTS

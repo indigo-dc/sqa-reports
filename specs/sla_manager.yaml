@@ -3,7 +3,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 3194
-        progress: 63
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 3200
@@ -22,7 +22,7 @@ tasks:
           progress: 50 
         - name: "GitBook documentation"
           id: 3212
-          progress: 50
+          progress: 70
 repository: 
     url:
         - https://github.com/indigo-dc/slam
