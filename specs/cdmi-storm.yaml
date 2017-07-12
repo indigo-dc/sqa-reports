@@ -4,17 +4,17 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4972
-        progress: 0 
+        progress: 42 
     children:
         - name: "Repository synchronization"
           id: 4977
-          progress: 0
+          progress: 100
         - name: "Code style specification"
           id: 4978
-          progress: 0
+          progress: 50
         - name: "Unit testing coverage"
           id: 4973
-          progress: 0
+          progress: 100
         - name: "Functional and integration testing coverage"
           id: 4974
           progress: 0
@@ -31,8 +31,13 @@ code_style:
     standard:
     exceptions:
     jenkins_job:
+    url_external: https://ci.cloud.cnaf.infn.it/view/storm/job/cdmi-storm/lastSuccessfulBuild/checkstyleResult/
+    comments:
+        - Provide the code style standard you are using (google, sun, ..)
+        - Warnings need to be fixed; this policy has been fulfilled by the rest of teams
 unit_test:
-    coverage: 
+    coverage: 97
+    url_external: https://ci.cloud.cnaf.infn.it/view/storm/job/cdmi-storm/lastSuccessfulBuild/cobertura/
     jenkins_job:
 func_int_test:
     url: 
@@ -41,7 +46,10 @@ gitbook:
     url:
     types:
     comments:
+        - Documentation will be fetched from the GitHub repository at indigo-dc. Whenever this is available please let us know so to link it with GitBook.
 config_management:
+    comments:
+        - Provide a link to the automated deployment solution for the product. Ansible roles are preferred.
     tool: # e.g. ansible, ..
     url: 
     level: # values: installation, configuration, installation/configuration

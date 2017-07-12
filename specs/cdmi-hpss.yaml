@@ -4,7 +4,7 @@ status_notcomplete: True   # values: status_complete, status_notcomplete, status
 tasks:
     parent:
         id: 4951 
-        progress: 50
+        progress: 67
     children:
         - name: "Repository synchronization"
           id: 4956
@@ -14,10 +14,10 @@ tasks:
           progress: 100
         - name: "Unit testing coverage"
           id: 4952
-          progress: 0
+          progress: 50
         - name: "Functional and integration testing coverage"
           id: 4953
-          progress: 0
+          progress: 50
         - name: "Configuration management"
           id: 4954
           progress: 0
@@ -32,14 +32,17 @@ code_style:
         - java_google 
     exceptions: 0
     jenkins_job:
-        - cdmi-hpss-codestyle
+        - cdmi-hpss-codestyle-pipe
 unit_test:
-    coverage: 60
+    coverage: 50
     jenkins_job:
-        - cdmi-hpss-unittest
+        - cdmi-hpss-unittest-pipe
+    comments:
+        - https://github.com/indigo-dc/cdmi-hpss/blob/master/jacoco.tar.gz
 func_int_test:
     url: 
     description:
+        - https://github.com/indigo-dc/cdmi-hpss/blob/master/jacoco.tar.gz
 gitbook:
     url: https://indigo-dc.gitbooks.io/cdmi-hpss/content/
     types:
@@ -50,6 +53,9 @@ gitbook:
         - "User documentation"
     comments:
 config_management:
+    comments:
+        - Dockerfile are not valid
+        - Configuration management refers to an Ansible role or Puppet module to deploy automatically the product, so no package or container provisioning is asked for this task
     tool: # e.g. ansible, ..
     url: 
     level: # values: installation, configuration, installation/configuration
