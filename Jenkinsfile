@@ -17,5 +17,13 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Test tag building') {
+            when {
+                buildingTag()
+            }
+            steps {
+                echo 'STep 1 when building tags'
+            }
+        }
     }
 }
