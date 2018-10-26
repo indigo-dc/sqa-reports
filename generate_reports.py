@@ -220,7 +220,7 @@ def main(specdir, period, output=None, code_style=None):
             logger.debug("Building LaTeX doc: %s" % f)
             cmd = ["pdflatex", "-output-directory=%s" % pdfdir, f]
             logger.debug("Running command: %s" % ' '.join(cmd))
-            #p = Popen(["timeout", "60"]+cmd, stdout=PIPE, stderr=PIPE)
+            # p = Popen(["timeout", "60"]+cmd, stdout=PIPE, stderr=PIPE)
             logfile = '.'.join([texfile, ".log"])
             p = Popen(["timeout", "60"]+cmd, stdout=PIPE)
             stdout, stderr = p.communicate()
