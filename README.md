@@ -47,3 +47,4 @@ python generate_reports.py templates/report.tex specs/ "20-24 Jun 2016" --output
 ```
 
 TEX and PDF reports should be available in /srv/sqa-reports/build.
+add one more line
